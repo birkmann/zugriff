@@ -49,7 +49,7 @@ h1 span {display: inline-block}
 .capture-expand {position: absolute; right: 16px; bottom: 16px; background: #10110fe6; border: 1px solid #777b67; color: var(--text); width: 40px; height: 40px; display: grid; place-items: center; font-size: 24px}
 .capture figcaption {display: flex; justify-content: space-between; gap: 12px; padding: 15px 18px; font-size: 9px; letter-spacing: .1em; color: var(--muted)}
 .capture figcaption>span:first-child {color: var(--accent)}
-.capture-picker {display: grid; grid-template-columns: repeat(4, minmax(0, 200px)); justify-content: center; gap: 14px; margin: 20px auto 0}
+.capture-picker {display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); justify-content: center; gap: 14px; margin: 20px auto 0}
 .capture-choice {display: block; border-bottom: 2px solid var(--line); padding-bottom: 10px; color: var(--muted); transition: border-color .2s, color .2s}
 .capture-choice img {width: 100%; height: auto; aspect-ratio: 16/9; opacity: .7; transition: opacity .2s}
 .capture-choice>span {display: flex; justify-content: center; gap: 10px; font-size: 9px; letter-spacing: .06em; line-height: 1.5; margin-top: 10px}
@@ -58,7 +58,7 @@ h1 span {display: inline-block}
 .capture-choice[aria-current=true] img, .capture-choice:hover img {opacity: 1}
 .capture-choice[aria-current=true] b {color: var(--accent)}
 .capture-dialog{padding:16px;border:1px solid #525744;background:#10110f;color:var(--text);width:min(96vw,1954px);max-width:none;max-height:96svh;overflow:auto}.capture-dialog::backdrop{background:#000e;backdrop-filter:blur(8px)}.viewer-toolbar,.viewer-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:10px;letter-spacing:.06em}.viewer-toolbar{margin-bottom:12px;color:var(--accent)}.viewer-controls{margin-top:12px}.viewer-controls>span{font-size:8px;color:var(--muted)}.capture-dialog button{background:transparent;border:1px solid #4e5343;padding:12px;color:var(--text);font:600 10px Inter,sans-serif;cursor:pointer}.capture-dialog button:hover{border-color:var(--accent);color:var(--accent)}button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}#viewer-image{width:100%;max-height:calc(96svh - 140px);object-fit:contain}body:has(.capture-dialog[open]){overflow:hidden}
-@media(max-width:1000px) {.header .brand-code {display: none}}
+@media(max-width:1000px) {.header .brand-code {display: none}.capture-picker {grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:700px) {
   .header {height: 72px; padding-inline: 18px; grid-template-columns: 1fr auto}
   .header .brand {font-size: 27px; gap: 8px}
