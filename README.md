@@ -4,7 +4,11 @@ A standalone tactical shooter built with Rust and Bevy. Play 5v5 with bots, host
 or join a dedicated server. Bomb defusal, hostage rescue and deathmatch across Hafen, Altstadt and
 Fliegerhorst. Early development; the in-game interface is German.
 
-[Downloads](https://github.com/birkmann/zugriff/releases) · [Website](https://birkmann.github.io/zugriff/)
+[Download the latest release](https://github.com/birkmann/zugriff/releases/latest) · [Website](https://birkmann.github.io/zugriff/) · [Game guide](docs/GAME.md)
+
+[![Zugriff main menu with a KSK operator, map selection and match settings](website/assets/menu.webp)](website/assets/menu.webp)
+
+Choose your map, side and match settings, then deploy. Captured in the game at 1920 × 1080.
 
 ## Play
 
@@ -19,6 +23,19 @@ Download a package from Releases and extract it completely. Keep `assets/` besid
 No Rust installation is required for a downloaded build. Offline bot matches need no server.
 WASD moves, mouse aims, left click fires, R reloads, B opens the buy menu, E interacts, Tab shows the
 scoreboard, Escape opens the menu. The Controls screen lists all bindings.
+
+## Screenshots
+
+Real in-game captures. Select an image to view it at full resolution.
+
+| In action — Altstadt | Arsenal — weapons and finishes |
+| --- | --- |
+| [![First-person G95 firefight across Altstadt's colorful market square](website/assets/altstadt-action.webp)](website/assets/altstadt-action.webp) | [![Arsenal showing weapon models and selectable G95 finishes](website/assets/arsenal.webp)](website/assets/arsenal.webp) |
+
+| Hafen | Altstadt | Fliegerhorst |
+| --- | --- | --- |
+| [![Frigate, cargo crane and container yard at Hafen](website/assets/hafen.webp)](website/assets/hafen.webp) | [![Altstadt church square with its fountain and colorful shopfronts](website/assets/altstadt.webp)](website/assets/altstadt.webp) | [![NH90 helicopter outside the hangar at Fliegerhorst](website/assets/fliegerhorst.webp)](website/assets/fliegerhorst.webp) |
+| Warehouses, cargo and contested sightlines. | Town squares, narrow streets and market stalls. | Hangars, open ground and the air-base apron. |
 
 ## Develop
 
