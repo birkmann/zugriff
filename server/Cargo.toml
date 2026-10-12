@@ -1,0 +1,17 @@
+[package]
+name = "zugriff_server"
+version = "0.1.0"
+edition.workspace = true
+publish.workspace = true
+description = "ZUGRIFF's dedicated server: rooms (matches) over WebSockets, the sim authoritative, bots filling free slots."
+
+[[bin]]
+name = "zugriff-server"
+path = "src/main.rs"
+
+[dependencies]
+zugriff_sim = { path = "../crates/zugriff_sim" }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time", "sync", "io-util"] }
+tokio-tungstenite = "0.26"
+futures-util = { version = "0.3", default-features = false, features = ["sink", "std"] }
+serde_json.workspace = true

@@ -1,0 +1,3 @@
+# Downloaded sources (fetch.py): not ours to commit; the built GLBs in ../../assets/models are.
+.cache/
+__pycache__/

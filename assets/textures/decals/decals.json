@@ -1,0 +1,1021 @@
+{
+  "atlas": [
+    2048,
+    2560
+  ],
+  "notes": {
+    "rect": "u0, v0, u1, v1 in 0..1 with v down (image rows); the rect is the decal's content, padded by >= 16 px of transparent texels in its cell",
+    "size": "suggested world size in metres (width, height) of the rect",
+    "alpha": "out = mix(base, rgb, a), straight alpha",
+    "multiply": "out = base * mix(1, rgb, a): rgb is the multiply colour, a its strength",
+    "normal": "normal.ktx2 (BC5, OpenGL convention) has the same layout; flat where a decal has no relief"
+  },
+  "decals": {
+    "leak_water_a": {
+      "rect": [
+        0.632812,
+        0.35625,
+        0.742188,
+        0.54375
+      ],
+      "size": [
+        0.7,
+        1.5
+      ],
+      "blend": "multiply",
+      "surface": "wall",
+      "tags": [
+        "leak",
+        "water",
+        "streak",
+        "tall"
+      ]
+    },
+    "leak_window": {
+      "rect": [
+        0.757812,
+        0.00625,
+        0.992188,
+        0.09375
+      ],
+      "size": [
+        1.6,
+        0.747
+      ],
+      "blend": "multiply",
+      "surface": "wall",
+      "tags": [
+        "leak",
+        "water",
+        "streak",
+        "window",
+        "zg_altstadt"
+      ]
+    },
+    "leak_rust_pipe": {
+      "rect": [
+        0.445312,
+        0.70625,
+        0.492188,
+        0.89375
+      ],
+      "size": [
+        0.3,
+        1.5
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "leak",
+        "rust",
+        "streak",
+        "pipe",
+        "tall",
+        "zg_hafen"
+      ]
+    },
+    "leak_rust_bolts": {
+      "rect": [
+        0.382812,
+        0.70625,
+        0.429688,
+        0.89375
+      ],
+      "size": [
+        0.35,
+        1.75
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "leak",
+        "rust",
+        "streak",
+        "metal",
+        "tall",
+        "zg_hafen"
+      ]
+    },
+    "grime_base_a": {
+      "rect": [
+        0.007812,
+        0.00625,
+        0.367188,
+        0.09375
+      ],
+      "size": [
+        3.0,
+        0.913
+      ],
+      "blend": "multiply",
+      "surface": "wall",
+      "tags": [
+        "grime",
+        "dirt",
+        "wall-base"
+      ]
+    },
+    "grime_base_b": {
+      "rect": [
+        0.757812,
+        0.50625,
+        0.992188,
+        0.54375
+      ],
+      "size": [
+        1.6,
+        0.32
+      ],
+      "blend": "multiply",
+      "surface": "wall",
+      "tags": [
+        "grime",
+        "dirt",
+        "wall-base"
+      ]
+    },
+    "damp_base": {
+      "rect": [
+        0.132812,
+        0.50625,
+        0.367188,
+        0.54375
+      ],
+      "size": [
+        2.0,
+        0.4
+      ],
+      "blend": "multiply",
+      "surface": "wall",
+      "tags": [
+        "damp",
+        "water",
+        "wall-base",
+        "zg_altstadt"
+      ]
+    },
+    "moss_base": {
+      "rect": [
+        0.007812,
+        0.55625,
+        0.242188,
+        0.59375
+      ],
+      "size": [
+        1.6,
+        0.32
+      ],
+      "blend": "alpha",
+      "surface": "any",
+      "tags": [
+        "moss",
+        "wall-base",
+        "zg_altstadt",
+        "zg_hafen"
+      ]
+    },
+    "ivy_a": {
+      "rect": [
+        0.382812,
+        0.30625,
+        0.492188,
+        0.49375
+      ],
+      "size": [
+        1.7,
+        3.643
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "ivy",
+        "plant",
+        "zg_altstadt"
+      ]
+    },
+    "ivy_b": {
+      "rect": [
+        0.507812,
+        0.35625,
+        0.617188,
+        0.54375
+      ],
+      "size": [
+        1.7,
+        3.643
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "ivy",
+        "plant",
+        "zg_altstadt"
+      ]
+    },
+    "grime_patch_a": {
+      "rect": [
+        0.757812,
+        0.55625,
+        0.867188,
+        0.64375
+      ],
+      "size": [
+        1.0,
+        1.0
+      ],
+      "blend": "multiply",
+      "surface": "any",
+      "tags": [
+        "grime",
+        "dirt",
+        "patch"
+      ]
+    },
+    "grime_patch_b": {
+      "rect": [
+        0.882812,
+        0.55625,
+        0.992188,
+        0.64375
+      ],
+      "size": [
+        0.8,
+        0.8
+      ],
+      "blend": "multiply",
+      "surface": "any",
+      "tags": [
+        "grime",
+        "smear",
+        "patch"
+      ]
+    },
+    "crack_wall_a": {
+      "rect": [
+        0.132812,
+        0.40625,
+        0.242188,
+        0.49375
+      ],
+      "size": [
+        0.8,
+        0.8
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "crack"
+      ]
+    },
+    "crack_wall_b": {
+      "rect": [
+        0.257812,
+        0.30625,
+        0.367188,
+        0.49375
+      ],
+      "size": [
+        0.7,
+        1.5
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "crack",
+        "tall"
+      ]
+    },
+    "crack_floor": {
+      "rect": [
+        0.882812,
+        0.10625,
+        0.992188,
+        0.19375
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "crack"
+      ]
+    },
+    "floor_damage": {
+      "rect": [
+        0.507812,
+        0.55625,
+        0.617188,
+        0.64375
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "crack",
+        "damage",
+        "asphalt"
+      ]
+    },
+    "oil_stain_a": {
+      "rect": [
+        0.507812,
+        0.65625,
+        0.617188,
+        0.74375
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "oil",
+        "stain",
+        "zg_hafen",
+        "zg_fliegerhorst"
+      ]
+    },
+    "oil_stain_b": {
+      "rect": [
+        0.632812,
+        0.65625,
+        0.742188,
+        0.74375
+      ],
+      "size": [
+        0.9,
+        0.9
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "oil",
+        "stain",
+        "drips",
+        "zg_hafen",
+        "zg_fliegerhorst"
+      ]
+    },
+    "puddle": {
+      "rect": [
+        0.757812,
+        0.65625,
+        0.867188,
+        0.74375
+      ],
+      "size": [
+        1.6,
+        1.6
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "water",
+        "puddle",
+        "damp"
+      ]
+    },
+    "tyre_track": {
+      "rect": [
+        0.007812,
+        0.25625,
+        0.492188,
+        0.29375
+      ],
+      "size": [
+        3.2,
+        0.31
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "tyre",
+        "mud",
+        "track"
+      ]
+    },
+    "skid_mark": {
+      "rect": [
+        0.007812,
+        0.20625,
+        0.492188,
+        0.24375
+      ],
+      "size": [
+        4.0,
+        0.387
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "tyre",
+        "rubber",
+        "skid"
+      ]
+    },
+    "manhole_cover": {
+      "rect": [
+        0.382812,
+        0.60625,
+        0.492188,
+        0.69375
+      ],
+      "size": [
+        1.1,
+        1.1
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "manhole",
+        "cobblestone",
+        "zg_altstadt"
+      ]
+    },
+    "footprints_mud": {
+      "rect": [
+        0.320312,
+        0.70625,
+        0.367188,
+        0.89375
+      ],
+      "size": [
+        0.5,
+        2.5
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "footprints",
+        "mud"
+      ]
+    },
+    "sign_betreten_verboten": {
+      "rect": [
+        0.515625,
+        0.25625,
+        0.734375,
+        0.34375
+      ],
+      "size": [
+        0.5,
+        0.25
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "prohibition",
+        "text"
+      ]
+    },
+    "sign_notausgang": {
+      "rect": [
+        0.757812,
+        0.25625,
+        0.992188,
+        0.34375
+      ],
+      "size": [
+        0.6,
+        0.28
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "exit",
+        "text"
+      ]
+    },
+    "sign_rauchen_verboten": {
+      "rect": [
+        0.007812,
+        0.4125,
+        0.117188,
+        0.5375
+      ],
+      "size": [
+        0.25,
+        0.357
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "prohibition",
+        "text"
+      ]
+    },
+    "sign_hochspannung": {
+      "rect": [
+        0.882812,
+        0.35625,
+        0.992188,
+        0.49375
+      ],
+      "size": [
+        0.3,
+        0.471
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "warning",
+        "electric",
+        "text"
+      ]
+    },
+    "sign_lager_3": {
+      "rect": [
+        0.257812,
+        0.55625,
+        0.492188,
+        0.59375
+      ],
+      "size": [
+        0.8,
+        0.16
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "text",
+        "zg_hafen"
+      ]
+    },
+    "sign_parking": {
+      "rect": [
+        0.882812,
+        0.65625,
+        0.992188,
+        0.74375
+      ],
+      "size": [
+        0.6,
+        0.6
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "parking"
+      ]
+    },
+    "sign_hafenbetrieb_nord": {
+      "rect": [
+        0.382812,
+        0.15625,
+        0.867188,
+        0.19375
+      ],
+      "size": [
+        3.1,
+        0.3
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "text",
+        "company",
+        "zg_hafen"
+      ]
+    },
+    "sign_kai_4": {
+      "rect": [
+        0.382812,
+        0.50625,
+        0.492188,
+        0.54375
+      ],
+      "size": [
+        1.0,
+        0.429
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "text",
+        "zg_hafen"
+      ]
+    },
+    "street_lange_gasse": {
+      "rect": [
+        0.882812,
+        0.75625,
+        0.992188,
+        0.79375
+      ],
+      "size": [
+        0.75,
+        0.321
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "street",
+        "text",
+        "zg_altstadt"
+      ]
+    },
+    "street_marktstrasse": {
+      "rect": [
+        0.007812,
+        0.80625,
+        0.117188,
+        0.84375
+      ],
+      "size": [
+        0.75,
+        0.321
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "street",
+        "text",
+        "zg_altstadt"
+      ]
+    },
+    "street_kirchgasse": {
+      "rect": [
+        0.632812,
+        0.75625,
+        0.742188,
+        0.79375
+      ],
+      "size": [
+        0.75,
+        0.321
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "street",
+        "text",
+        "zg_altstadt"
+      ]
+    },
+    "street_schmiedgasse": {
+      "rect": [
+        0.632812,
+        0.80625,
+        0.742188,
+        0.84375
+      ],
+      "size": [
+        0.75,
+        0.321
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "street",
+        "text",
+        "zg_altstadt"
+      ]
+    },
+    "street_mauergasse": {
+      "rect": [
+        0.132812,
+        0.80625,
+        0.242188,
+        0.84375
+      ],
+      "size": [
+        0.75,
+        0.321
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "street",
+        "text",
+        "zg_altstadt"
+      ]
+    },
+    "street_baeckergasse": {
+      "rect": [
+        0.507812,
+        0.75625,
+        0.617188,
+        0.79375
+      ],
+      "size": [
+        0.75,
+        0.321
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "street",
+        "text",
+        "zg_altstadt"
+      ]
+    },
+    "street_rathausplatz": {
+      "rect": [
+        0.507812,
+        0.80625,
+        0.617188,
+        0.84375
+      ],
+      "size": [
+        0.75,
+        0.321
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "street",
+        "text",
+        "zg_altstadt"
+      ]
+    },
+    "street_kirchplatz": {
+      "rect": [
+        0.757812,
+        0.75625,
+        0.867188,
+        0.79375
+      ],
+      "size": [
+        0.75,
+        0.321
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "sign",
+        "street",
+        "text",
+        "zg_altstadt"
+      ]
+    },
+    "stencil_halle_1": {
+      "rect": [
+        0.382812,
+        0.00625,
+        0.742188,
+        0.09375
+      ],
+      "size": [
+        4.0,
+        1.217
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "stencil",
+        "text",
+        "zg_fliegerhorst"
+      ]
+    },
+    "stencil_halle_2": {
+      "rect": [
+        0.007812,
+        0.10625,
+        0.367188,
+        0.19375
+      ],
+      "size": [
+        4.0,
+        1.217
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "stencil",
+        "text",
+        "zg_fliegerhorst"
+      ]
+    },
+    "site_a": {
+      "rect": [
+        0.007812,
+        0.70625,
+        0.117188,
+        0.79375
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "blend": "alpha",
+      "surface": "any",
+      "tags": [
+        "stencil",
+        "bombsite"
+      ]
+    },
+    "site_b": {
+      "rect": [
+        0.132812,
+        0.70625,
+        0.242188,
+        0.79375
+      ],
+      "size": [
+        1.2,
+        1.2
+      ],
+      "blend": "alpha",
+      "surface": "any",
+      "tags": [
+        "stencil",
+        "bombsite"
+      ]
+    },
+    "hangar_01": {
+      "rect": [
+        0.007812,
+        0.60625,
+        0.117188,
+        0.69375
+      ],
+      "size": [
+        1.6,
+        1.6
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "stencil",
+        "number",
+        "zg_fliegerhorst"
+      ]
+    },
+    "hangar_02": {
+      "rect": [
+        0.132812,
+        0.60625,
+        0.242188,
+        0.69375
+      ],
+      "size": [
+        1.6,
+        1.6
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "stencil",
+        "number",
+        "zg_fliegerhorst"
+      ]
+    },
+    "hangar_03": {
+      "rect": [
+        0.257812,
+        0.60625,
+        0.367188,
+        0.69375
+      ],
+      "size": [
+        1.6,
+        1.6
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "stencil",
+        "number",
+        "zg_fliegerhorst"
+      ]
+    },
+    "hazard_stripes": {
+      "rect": [
+        0.382812,
+        0.10625,
+        0.867188,
+        0.14375
+      ],
+      "size": [
+        2.5,
+        0.242
+      ],
+      "blend": "alpha",
+      "surface": "any",
+      "tags": [
+        "marking",
+        "hazard",
+        "zg_hafen",
+        "zg_fliegerhorst"
+      ]
+    },
+    "floor_arrow": {
+      "rect": [
+        0.257812,
+        0.70625,
+        0.304688,
+        0.89375
+      ],
+      "size": [
+        0.5,
+        2.5
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "marking",
+        "road",
+        "arrow"
+      ]
+    },
+    "stop_line": {
+      "rect": [
+        0.007812,
+        0.30625,
+        0.242188,
+        0.39375
+      ],
+      "size": [
+        3.0,
+        1.4
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "marking",
+        "road",
+        "text"
+      ]
+    },
+    "taxiway_line": {
+      "rect": [
+        0.507812,
+        0.20625,
+        0.992188,
+        0.24375
+      ],
+      "size": [
+        3.0,
+        0.29
+      ],
+      "blend": "alpha",
+      "surface": "floor",
+      "tags": [
+        "marking",
+        "taxiway",
+        "zg_fliegerhorst"
+      ]
+    },
+    "poster_stadtfest": {
+      "rect": [
+        0.757812,
+        0.3625,
+        0.867188,
+        0.4875
+      ],
+      "size": [
+        0.59,
+        0.843
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "poster",
+        "paper",
+        "text",
+        "zg_altstadt"
+      ]
+    },
+    "flyer_zimmer_frei": {
+      "rect": [
+        0.648438,
+        0.55625,
+        0.726562,
+        0.64375
+      ],
+      "size": [
+        0.15,
+        0.21
+      ],
+      "blend": "alpha",
+      "surface": "wall",
+      "tags": [
+        "poster",
+        "paper",
+        "text",
+        "zg_altstadt"
+      ]
+    }
+  }
+}

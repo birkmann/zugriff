@@ -1,0 +1,10 @@
+/target/
+/dist/
+/prebuilt/
+/game/dist/
+/packaging/tools/
+__pycache__/
+*.pyc
+.DS_Store
+
+/.vscode/

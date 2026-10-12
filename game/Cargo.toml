@@ -1,0 +1,32 @@
+[package]
+name = "zugriff"
+version = "0.1.0"
+edition.workspace = true
+publish.workspace = true
+description = "ZUGRIFF: the Bevy client (web via Trunk + WebGPU, and native desktop)."
+
+[dependencies]
+zugriff_sim = { path = "../crates/zugriff_sim" }
+# Picked explicitly instead of bevy's platform groups: those turn on WebGL2 next to WebGPU. 3d_bevy_render brings pbr,
+# gltf (+ animation), post processing and anti-aliasing; ui_api + ui_bevy_render the in-game UI; ktx2 + zstd the
+# compressed textures with mips; tonemapping/smaa LUTs are part of 3d_api.
+bevy = { workspace = true, features = [
+    "default_app", "bevy_winit", "webgpu", "3d_bevy_render", "ui_api", "ui_bevy_render", "bevy_ui_widgets", "bevy_picking", "ui_picking",
+    "default_font", "keyboard", "mouse", "png", "jpeg", "ktx2", "zstd_rust", "std",
+] }
+kira.workspace = true
+# kira takes positions and rotations as mint types.
+mint = "0.5"
+serde.workspace = true
+serde_json.workspace = true
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+bevy = { workspace = true, features = ["multi_threaded", "x11", "wayland"] }
+# Online play natively: a WebSocket on its own thread (ws:// and wss://).
+tungstenite = { version = "0.26", features = ["rustls-tls-webpki-roots"] }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+console_error_panic_hook.workspace = true
+wasm-bindgen.workspace = true
+web-sys = { workspace = true, features = ["Window", "Document", "Element", "HtmlElement", "Location", "UrlSearchParams", "Storage", "Performance", "WebSocket", "BinaryType", "MessageEvent", "CloseEvent", "Event"] }
+js-sys.workspace = true

@@ -1,0 +1,8 @@
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.rs text eol=lf
+*.glb binary
+*.ktx2 binary
+*.hdr binary
+*.nav binary

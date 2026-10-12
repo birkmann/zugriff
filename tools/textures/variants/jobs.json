@@ -1,0 +1,361 @@
+{
+ "concrete_wall_b": {
+  "color": "../.cache/graded/concrete_wall_b_color.png",
+  "normal": "../.cache/ph/concrete_wall_008/concrete_wall_008_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/concrete_wall_008/concrete_wall_008_AO_2k.jpg",
+  "rough": "../.cache/ph/concrete_wall_008/concrete_wall_008_Rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   141,
+   134,
+   112
+  ],
+  "mean": [
+   126,
+   125,
+   121
+  ]
+ },
+ "concrete_wall_c": {
+  "color": "../.cache/graded/concrete_wall_c_color.png",
+  "normal": "../.cache/ph/concrete_wall_006/concrete_wall_006_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/concrete_wall_006/concrete_wall_006_ao_2k.jpg",
+  "rough": "../.cache/ph/concrete_wall_006/concrete_wall_006_rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   92,
+   81,
+   69
+  ],
+  "mean": [
+   116,
+   113,
+   107
+  ]
+ },
+ "plaster_b": {
+  "color": "../.cache/graded/plaster_b_color.png",
+  "normal": "../.cache/ph/beige_wall_001/beige_wall_001_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/beige_wall_001/beige_wall_001_ao_2k.jpg",
+  "rough": "../.cache/ph/beige_wall_001/beige_wall_001_rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   158,
+   140,
+   120
+  ],
+  "mean": [
+   184,
+   174,
+   154
+  ]
+ },
+ "plaster_c": {
+  "color": "../.cache/graded/plaster_c_color.png",
+  "normal": "../.cache/ph/grey_plaster_02/grey_plaster_02_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/grey_plaster_02/grey_plaster_02_ao_2k.jpg",
+  "rough": "../.cache/ph/grey_plaster_02/grey_plaster_02_rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   141,
+   129,
+   108
+  ],
+  "mean": [
+   168,
+   167,
+   162
+  ]
+ },
+ "brick_b": {
+  "color": "../.cache/graded/brick_b_color.png",
+  "normal": "../.cache/ph/medieval_red_brick/medieval_red_brick_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/medieval_red_brick/medieval_red_brick_AO_2k.jpg",
+  "rough": "../.cache/ph/medieval_red_brick/medieval_red_brick_Rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   130,
+   99,
+   80
+  ],
+  "mean": [
+   130,
+   99,
+   80
+  ]
+ },
+ "asphalt_b": {
+  "color": "../.cache/graded/asphalt_b_color.png",
+  "normal": "../.cache/ph/asphalt_02/asphalt_02_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/asphalt_02/asphalt_02_ao_2k.jpg",
+  "rough": "../.cache/ph/asphalt_02/asphalt_02_rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   91,
+   90,
+   85
+  ],
+  "mean": [
+   70,
+   70,
+   68
+  ]
+ },
+ "concrete_slabs": {
+  "color": "../.cache/graded/concrete_slabs_color.png",
+  "normal": "../.cache/ph/large_square_pattern_01/large_square_pattern_01_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/large_square_pattern_01/large_square_pattern_01_ao_2k.jpg",
+  "rough": "../.cache/ph/large_square_pattern_01/large_square_pattern_01_rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   124,
+   120,
+   108
+  ],
+  "mean": [
+   125,
+   125,
+   121
+  ]
+ },
+ "paving_b": {
+  "color": "../.cache/graded/paving_b_color.png",
+  "normal": "../.cache/ph/rectangular_paving/rectangular_paving_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/rectangular_paving/rectangular_paving_AO_2k.jpg",
+  "rough": "../.cache/ph/rectangular_paving/rectangular_paving_Rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   127,
+   108,
+   86
+  ],
+  "mean": [
+   128,
+   128,
+   125
+  ]
+ },
+ "metal_corrugated_b": {
+  "color": "../.cache/graded/metal_corrugated_b_color.png",
+  "normal": "../.cache/ph/corrugated_iron/corrugated_iron_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/corrugated_iron/corrugated_iron_AO_2k.jpg",
+  "rough": "../.cache/ph/corrugated_iron/corrugated_iron_Rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   170,
+   179,
+   174
+  ],
+  "mean": [
+   104,
+   114,
+   102
+  ]
+ },
+ "planks_b": {
+  "color": "../.cache/graded/planks_b_color.png",
+  "normal": "../.cache/ph/wood_planks_grey/wood_planks_grey_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/wood_planks_grey/wood_planks_grey_ao_2k.jpg",
+  "rough": "../.cache/ph/wood_planks_grey/wood_planks_grey_rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   70,
+   68,
+   63
+  ],
+  "mean": [
+   88,
+   84,
+   78
+  ]
+ },
+ "roof_b": {
+  "color": "../.cache/graded/roof_b_color.png",
+  "normal": "../.cache/ph/grey_roof_tiles_02/grey_roof_tiles_02_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/grey_roof_tiles_02/grey_roof_tiles_02_ao_2k.jpg",
+  "rough": "../.cache/ph/grey_roof_tiles_02/grey_roof_tiles_02_rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   120,
+   122,
+   120
+  ],
+  "mean": [
+   80,
+   82,
+   86
+  ]
+ },
+ "tiles_floor_b": {
+  "color": "../.cache/graded/tiles_floor_b_color.png",
+  "normal": "../.cache/ph/floor_tiles_08/floor_tiles_08_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/floor_tiles_08/floor_tiles_08_ao_2k.jpg",
+  "rough": "../.cache/ph/floor_tiles_08/floor_tiles_08_rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   135,
+   117,
+   100
+  ],
+  "mean": [
+   128,
+   128,
+   125
+  ]
+ },
+ "dirt_b": {
+  "color": "../.cache/graded/dirt_b_color.png",
+  "normal": "../.cache/ph/rocky_trail/rocky_trail_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/rocky_trail/rocky_trail_ao_2k.jpg",
+  "rough": "../.cache/ph/rocky_trail/rocky_trail_rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   147,
+   128,
+   107
+  ],
+  "mean": [
+   136,
+   120,
+   100
+  ]
+ },
+ "window_frame": {
+  "color": "../.cache/graded/window_frame_color.png",
+  "normal": "../.cache/acg/Plastic010/Plastic010_2K-JPG_NormalGL.jpg",
+  "ao": "-",
+  "rough": "../.cache/acg/Plastic010/Plastic010_2K-JPG_Roughness.jpg",
+  "metal": "-",
+  "src_mean": [
+   163,
+   166,
+   171
+  ],
+  "mean": [
+   192,
+   192,
+   189
+  ]
+ },
+ "metal_dark": {
+  "color": "../.cache/graded/metal_dark_color.png",
+  "normal": "../.cache/acg/Metal028/Metal028_2K-JPG_NormalGL.jpg",
+  "ao": "-",
+  "rough": "../.cache/acg/Metal028/Metal028_2K-JPG_Roughness.jpg",
+  "metal": "-",
+  "src_mean": [
+   29,
+   33,
+   32
+  ],
+  "mean": [
+   60,
+   62,
+   64
+  ]
+ },
+ "rubber": {
+  "color": "../.cache/graded/rubber_color.png",
+  "normal": "../.cache/acg/Rubber004/Rubber004_2K-JPG_NormalGL.jpg",
+  "ao": "-",
+  "rough": "../.cache/acg/Rubber004/Rubber004_2K-JPG_Roughness.jpg",
+  "metal": "-",
+  "src_mean": [
+   42,
+   43,
+   50
+  ],
+  "mean": [
+   40,
+   40,
+   40
+  ]
+ },
+ "door_steel": {
+  "color": "../.cache/graded/door_steel_color.png",
+  "normal": "../.cache/ph/blue_metal_plate/blue_metal_plate_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/blue_metal_plate/blue_metal_plate_AO_2k.jpg",
+  "rough": "../.cache/ph/blue_metal_plate/blue_metal_plate_Rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   41,
+   62,
+   76
+  ],
+  "mean": [
+   96,
+   106,
+   96
+  ]
+ },
+ "rollershutter": {
+  "color": "../.cache/graded/rollershutter_color.png",
+  "normal": "../.cache/ph/painted_metal_shutter/painted_metal_shutter_nor_gl_2k.jpg",
+  "ao": "../.cache/ph/painted_metal_shutter/painted_metal_shutter_ao_2k.jpg",
+  "rough": "../.cache/ph/painted_metal_shutter/painted_metal_shutter_rough_2k.jpg",
+  "metal": "-",
+  "src_mean": [
+   128,
+   131,
+   134
+  ],
+  "mean": [
+   130,
+   131,
+   132
+  ]
+ },
+ "sign_plate": {
+  "color": "../.cache/graded/sign_plate_color.png",
+  "normal": "../.cache/acg/PaintedMetal012/PaintedMetal012_2K-JPG_NormalGL.jpg",
+  "ao": "../.cache/acg/PaintedMetal012/PaintedMetal012_2K-JPG_AmbientOcclusion.jpg",
+  "rough": "../.cache/acg/PaintedMetal012/PaintedMetal012_2K-JPG_Roughness.jpg",
+  "metal": "../.cache/acg/PaintedMetal012/PaintedMetal012_2K-JPG_Metalness.jpg",
+  "src_mean": [
+   214,
+   212,
+   211
+  ],
+  "mean": [
+   196,
+   192,
+   182
+  ]
+ },
+ "glass_window": {
+  "color": "../.cache/graded/glass_window_color.png",
+  "normal": "../.cache/graded/flat_normal.png",
+  "ao": "-",
+  "rough": "../.cache/graded/glass_window_rough.png",
+  "metal": "-",
+  "mean": [
+   63,
+   75,
+   88
+  ]
+ },
+ "lamp_glass": {
+  "color": "../.cache/graded/lamp_glass_color.png",
+  "normal": "../.cache/graded/flat_normal.png",
+  "ao": "-",
+  "rough": "../.cache/graded/lamp_glass_rough.png",
+  "metal": "-",
+  "mean": [
+   226,
+   222,
+   208
+  ]
+ },
+ "vent_grille": {
+  "color": "../.cache/graded/vent_grille_color.png",
+  "normal": "../.cache/graded/vent_grille_normal.png",
+  "ao": "../.cache/graded/vent_grille_ao.png",
+  "rough": "../.cache/graded/vent_grille_rough.png",
+  "metal": "-",
+  "mean": [
+   58,
+   60,
+   61
+  ]
+ }
+}

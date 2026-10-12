@@ -1,0 +1,4344 @@
+{
+ "concrete_road_barrier": {
+  "tris": 3000,
+  "bytes": 739192,
+  "size": [
+   1.545,
+   0.833,
+   0.636
+  ],
+  "area": 4.161,
+  "lightmap_fill": 0.503,
+  "collide": [
+   0.772,
+   0.416,
+   0.318
+  ],
+  "albedo": [
+   0.465,
+   0.415,
+   0.35
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "concrete_road_barrier_02": {
+  "tris": 2998,
+  "bytes": 795716,
+  "size": [
+   1.564,
+   1.11,
+   0.439
+  ],
+  "area": 4.35,
+  "lightmap_fill": 0.45,
+  "collide": [
+   0.782,
+   0.555,
+   0.22
+  ],
+  "albedo": [
+   0.684,
+   0.612,
+   0.521
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "metal_trash_can": {
+  "tris": 3000,
+  "bytes": 324956,
+  "size": [
+   0.651,
+   0.906,
+   0.552
+  ],
+  "area": 3.554,
+  "lightmap_fill": 0.21,
+  "collide": [
+   0.325,
+   0.453,
+   0.276
+  ],
+  "albedo": [
+   0.406,
+   0.386,
+   0.359
+  ],
+  "theme": [
+   "altstadt",
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "trashbag": {
+  "tris": 3000,
+  "bytes": 325716,
+  "size": [
+   0.528,
+   0.575,
+   0.463
+  ],
+  "area": 0.9,
+  "lightmap_fill": 0.11,
+  "collide": null,
+  "albedo": [
+   0.084,
+   0.077,
+   0.075
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "fire_hydrant": {
+  "tris": 3000,
+  "bytes": 334852,
+  "size": [
+   0.274,
+   0.8,
+   0.318
+  ],
+  "area": 1.059,
+  "lightmap_fill": 0.092,
+  "collide": [
+   0.137,
+   0.4,
+   0.159
+  ],
+  "albedo": [
+   0.55,
+   0.284,
+   0.229
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "street_lamp_01": {
+  "tris": 3000,
+  "bytes": 532136,
+  "size": [
+   0.705,
+   3.871,
+   0.384
+  ],
+  "area": 2.773,
+  "lightmap_fill": 0.112,
+  "collide": [
+   0.12,
+   1.935,
+   0.12
+  ],
+  "albedo": [
+   0.242,
+   0.243,
+   0.243
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "street_lamp_02": {
+  "tris": 3000,
+  "bytes": 298504,
+  "size": [
+   0.385,
+   1.674,
+   0.806
+  ],
+  "area": 1.852,
+  "lightmap_fill": 0.103,
+  "collide": null,
+  "albedo": [
+   0.267,
+   0.267,
+   0.266
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall"
+ },
+ "security_light": {
+  "tris": 2999,
+  "bytes": 343068,
+  "size": [
+   0.322,
+   0.531,
+   0.417
+  ],
+  "area": 0.87,
+  "lightmap_fill": 0.123,
+  "collide": null,
+  "albedo": [
+   0.393,
+   0.405,
+   0.37
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "wall"
+ },
+ "security_camera_01": {
+  "tris": 3000,
+  "bytes": 284108,
+  "size": [
+   0.17,
+   0.286,
+   0.554
+  ],
+  "area": 0.581,
+  "lightmap_fill": 0.137,
+  "collide": null,
+  "albedo": [
+   0.666,
+   0.658,
+   0.632
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "wall"
+ },
+ "painted_wooden_bench": {
+  "tris": 630,
+  "bytes": 545912,
+  "size": [
+   1.165,
+   0.889,
+   0.497
+  ],
+  "area": 4.59,
+  "lightmap_fill": 0.416,
+  "collide": [
+   0.582,
+   0.445,
+   0.248
+  ],
+  "albedo": [
+   0.325,
+   0.191,
+   0.154
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "wooden_picnic_table": {
+  "tris": 3000,
+  "bytes": 444852,
+  "size": [
+   2.241,
+   0.746,
+   3.021
+  ],
+  "area": 19.111,
+  "lightmap_fill": 0.19,
+  "collide": [
+   1.12,
+   0.373,
+   1.511
+  ],
+  "albedo": [
+   0.377,
+   0.286,
+   0.209
+  ],
+  "theme": [
+   "altstadt",
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "modular_street_seating": {
+  "tris": 2999,
+  "bytes": 578952,
+  "size": [
+   2.452,
+   0.867,
+   0.67
+  ],
+  "area": 5.717,
+  "lightmap_fill": 0.114,
+  "collide": [
+   1.226,
+   0.433,
+   0.335
+  ],
+  "albedo": [
+   0.366,
+   0.275,
+   0.244
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "exterior_aircon_unit": {
+  "tris": 3000,
+  "bytes": 828072,
+  "size": [
+   0.8,
+   0.928,
+   0.374
+  ],
+  "area": 2.996,
+  "lightmap_fill": 0.079,
+  "collide": [
+   0.4,
+   0.464,
+   0.187
+  ],
+  "albedo": [
+   0.407,
+   0.398,
+   0.385
+  ],
+  "theme": [
+   "altstadt",
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "power_box_01": {
+  "tris": 3000,
+  "bytes": 388940,
+  "size": [
+   0.461,
+   0.503,
+   0.399
+  ],
+  "area": 1.042,
+  "lightmap_fill": 0.082,
+  "collide": [
+   0.231,
+   0.251,
+   0.199
+  ],
+  "albedo": [
+   0.557,
+   0.555,
+   0.556
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "wall"
+ },
+ "utility_box_01": {
+  "tris": 3000,
+  "bytes": 353596,
+  "size": [
+   0.52,
+   1.12,
+   0.432
+  ],
+  "area": 2.75,
+  "lightmap_fill": 0.136,
+  "collide": [
+   0.26,
+   0.56,
+   0.216
+  ],
+  "albedo": [
+   0.419,
+   0.436,
+   0.456
+  ],
+  "theme": [
+   "altstadt",
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "utility_box_02": {
+  "tris": 3000,
+  "bytes": 711704,
+  "size": [
+   0.92,
+   1.12,
+   0.432
+  ],
+  "area": 4.033,
+  "lightmap_fill": 0.125,
+  "collide": [
+   0.46,
+   0.56,
+   0.216
+  ],
+  "albedo": [
+   0.461,
+   0.486,
+   0.387
+  ],
+  "theme": [
+   "altstadt",
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "rollershutter_door": {
+  "tris": 552,
+  "bytes": 164632,
+  "size": [
+   1.08,
+   2.4,
+   0.3
+  ],
+  "area": 6.297,
+  "lightmap_fill": 0.342,
+  "collide": [
+   0.54,
+   1.2,
+   0.15
+  ],
+  "albedo": [
+   0.793,
+   0.779,
+   0.791
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "wall"
+ },
+ "rollershutter_door_graffiti": {
+  "tris": 552,
+  "bytes": 179524,
+  "size": [
+   1.08,
+   2.4,
+   0.3
+  ],
+  "area": 6.297,
+  "lightmap_fill": 0.369,
+  "collide": [
+   0.54,
+   1.2,
+   0.15
+  ],
+  "albedo": [
+   0.772,
+   0.749,
+   0.757
+  ],
+  "theme": [
+   "altstadt",
+   "hafen"
+  ],
+  "mount": "wall"
+ },
+ "hanging_industrial_lamp": {
+  "tris": 3000,
+  "bytes": 290840,
+  "size": [
+   0.55,
+   1.356,
+   0.55
+  ],
+  "area": 1.726,
+  "lightmap_fill": 0.074,
+  "collide": null,
+  "albedo": [
+   0.682,
+   0.678,
+   0.65
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "ceiling"
+ },
+ "mounted_fluorescent_lights": {
+  "tris": 2920,
+  "bytes": 181436,
+  "size": [
+   0.912,
+   0.035,
+   0.04
+  ],
+  "area": 0.183,
+  "lightmap_fill": 0.107,
+  "collide": null,
+  "albedo": [
+   0.687,
+   0.678,
+   0.683
+  ],
+  "theme": [
+   "fliegerhorst",
+   "all"
+  ],
+  "mount": "ceiling"
+ },
+ "water_manhole_cover": {
+  "tris": 3000,
+  "bytes": 330624,
+  "size": [
+   0.691,
+   0.068,
+   0.691
+  ],
+  "area": 1.128,
+  "lightmap_fill": 0.168,
+  "collide": null,
+  "albedo": [
+   0.375,
+   0.305,
+   0.27
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "flush"
+ },
+ "old_military_crate": {
+  "tris": 3000,
+  "bytes": 342400,
+  "size": [
+   0.816,
+   0.3,
+   0.538
+  ],
+  "area": 3.38,
+  "lightmap_fill": 0.16,
+  "collide": [
+   0.408,
+   0.15,
+   0.269
+  ],
+  "albedo": [
+   0.451,
+   0.383,
+   0.279
+  ],
+  "theme": [
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "wooden_military_crate": {
+  "tris": 2999,
+  "bytes": 892800,
+  "size": [
+   1.241,
+   0.464,
+   0.518
+  ],
+  "area": 5.928,
+  "lightmap_fill": 0.13,
+  "collide": [
+   0.62,
+   0.232,
+   0.259
+  ],
+  "albedo": [
+   0.288,
+   0.157,
+   0.085
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "ammo_box": {
+  "tris": 2999,
+  "bytes": 261456,
+  "size": [
+   0.087,
+   0.177,
+   0.258
+  ],
+  "area": 0.24,
+  "lightmap_fill": 0.144,
+  "collide": [
+   0.043,
+   0.089,
+   0.129
+  ],
+  "albedo": [
+   0.195,
+   0.129,
+   0.03
+  ],
+  "theme": [
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "metal_jerrycan_green": {
+  "tris": 3000,
+  "bytes": 370328,
+  "size": [
+   0.36,
+   0.5,
+   0.171
+  ],
+  "area": 0.573,
+  "lightmap_fill": 0.099,
+  "collide": [
+   0.18,
+   0.25,
+   0.085
+  ],
+  "albedo": [
+   0.194,
+   0.207,
+   0.179
+  ],
+  "theme": [
+   "fliegerhorst",
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "propane_tank": {
+  "tris": 3000,
+  "bytes": 302772,
+  "size": [
+   0.337,
+   0.554,
+   0.338
+  ],
+  "area": 0.75,
+  "lightmap_fill": 0.133,
+  "collide": [
+   0.169,
+   0.277,
+   0.169
+  ],
+  "albedo": [
+   0.523,
+   0.239,
+   0.235
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "portable_generator": {
+  "tris": 2992,
+  "bytes": 454004,
+  "size": [
+   0.816,
+   0.578,
+   0.564
+  ],
+  "area": 4.097,
+  "lightmap_fill": 0.058,
+  "collide": [
+   0.408,
+   0.289,
+   0.282
+  ],
+  "albedo": [
+   0.359,
+   0.304,
+   0.217
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "old_tyre": {
+  "tris": 2880,
+  "bytes": 274964,
+  "size": [
+   0.6,
+   0.165,
+   0.6
+  ],
+  "area": 1.154,
+  "lightmap_fill": 0.29,
+  "collide": [
+   0.3,
+   0.082,
+   0.3
+  ],
+  "albedo": [
+   0.133,
+   0.119,
+   0.108
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "cardboard_box_01": {
+  "tris": 3000,
+  "bytes": 267432,
+  "size": [
+   0.387,
+   0.341,
+   0.516
+  ],
+  "area": 0.888,
+  "lightmap_fill": 0.317,
+  "collide": [
+   0.194,
+   0.171,
+   0.258
+  ],
+  "albedo": [
+   0.631,
+   0.549,
+   0.396
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "cement_bag": {
+  "tris": 844,
+  "bytes": 125972,
+  "size": [
+   0.462,
+   0.18,
+   0.7
+  ],
+  "area": 0.873,
+  "lightmap_fill": 0.51,
+  "collide": null,
+  "albedo": [
+   0.768,
+   0.553,
+   0.438
+  ],
+  "theme": [
+   "altstadt",
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "plastic_crate_01": {
+  "tris": 3000,
+  "bytes": 451820,
+  "size": [
+   0.298,
+   0.265,
+   0.411
+  ],
+  "area": 0.868,
+  "lightmap_fill": 0.054,
+  "collide": [
+   0.149,
+   0.132,
+   0.205
+  ],
+  "albedo": [
+   0.397,
+   0.174,
+   0.174
+  ],
+  "theme": [
+   "hafen",
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "steel_frame_shelves_01": {
+  "tris": 3000,
+  "bytes": 552756,
+  "size": [
+   1.097,
+   2.141,
+   0.502
+  ],
+  "area": 7.792,
+  "lightmap_fill": 0.161,
+  "collide": [
+   0.549,
+   1.07,
+   0.251
+  ],
+  "albedo": [
+   0.701,
+   0.519,
+   0.339
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "worn_metal_rack": {
+  "tris": 3000,
+  "bytes": 668572,
+  "size": [
+   0.915,
+   1.9,
+   0.6
+  ],
+  "area": 6.453,
+  "lightmap_fill": 0.154,
+  "collide": [
+   0.458,
+   0.95,
+   0.3
+  ],
+  "albedo": [
+   0.412,
+   0.379,
+   0.345
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "industrial_storage_cart": {
+  "tris": 3000,
+  "bytes": 713076,
+  "size": [
+   1.603,
+   1.378,
+   1.103
+  ],
+  "area": 25.202,
+  "lightmap_fill": 0.159,
+  "collide": [
+   0.802,
+   0.689,
+   0.551
+  ],
+  "albedo": [
+   0.291,
+   0.296,
+   0.23
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "hand_truck": {
+  "tris": 2999,
+  "bytes": 375900,
+  "size": [
+   0.593,
+   1.402,
+   0.692
+  ],
+  "area": 0.991,
+  "lightmap_fill": 0.063,
+  "collide": [
+   0.297,
+   0.701,
+   0.346
+  ],
+  "albedo": [
+   0.436,
+   0.324,
+   0.306
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "metal_tool_chest": {
+  "tris": 3000,
+  "bytes": 356312,
+  "size": [
+   0.685,
+   0.652,
+   0.407
+  ],
+  "area": 2.349,
+  "lightmap_fill": 0.13,
+  "collide": [
+   0.343,
+   0.326,
+   0.204
+  ],
+  "albedo": [
+   0.556,
+   0.255,
+   0.247
+  ],
+  "theme": [
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "metal_office_desk": {
+  "tris": 3000,
+  "bytes": 553712,
+  "size": [
+   2.0,
+   0.788,
+   0.947
+  ],
+  "area": 19.463,
+  "lightmap_fill": 0.224,
+  "collide": [
+   1.0,
+   0.394,
+   0.474
+  ],
+  "albedo": [
+   0.363,
+   0.363,
+   0.373
+  ],
+  "theme": [
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "drawer_cabinet": {
+  "tris": 2999,
+  "bytes": 545748,
+  "size": [
+   1.141,
+   1.881,
+   0.488
+  ],
+  "area": 14.354,
+  "lightmap_fill": 0.126,
+  "collide": [
+   0.571,
+   0.941,
+   0.244
+  ],
+  "albedo": [
+   0.587,
+   0.438,
+   0.295
+  ],
+  "theme": [
+   "fliegerhorst",
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "schoolchair_01": {
+  "tris": 3000,
+  "bytes": 254856,
+  "size": [
+   0.566,
+   1.006,
+   0.676
+  ],
+  "area": 1.426,
+  "lightmap_fill": 0.153,
+  "collide": [
+   0.283,
+   0.503,
+   0.338
+  ],
+  "albedo": [
+   0.335,
+   0.349,
+   0.382
+  ],
+  "theme": [
+   "fliegerhorst",
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "wetfloorsign_01": {
+  "tris": 228,
+  "bytes": 103120,
+  "size": [
+   0.3,
+   0.63,
+   0.359
+  ],
+  "area": 0.75,
+  "lightmap_fill": 0.387,
+  "collide": [
+   0.15,
+   0.315,
+   0.179
+  ],
+  "albedo": [
+   0.793,
+   0.733,
+   0.186
+  ],
+  "theme": [
+   "fliegerhorst",
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "barrel_01": {
+  "tris": 2682,
+  "bytes": 285736,
+  "size": [
+   0.563,
+   0.88,
+   0.563
+  ],
+  "area": 2.062,
+  "lightmap_fill": 0.32,
+  "collide": [
+   0.282,
+   0.44,
+   0.282
+  ],
+  "albedo": [
+   0.327,
+   0.338,
+   0.26
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "barrel_02": {
+  "tris": 2688,
+  "bytes": 221760,
+  "size": [
+   0.488,
+   0.88,
+   0.485
+  ],
+  "area": 1.614,
+  "lightmap_fill": 0.35,
+  "collide": [
+   0.244,
+   0.44,
+   0.242
+  ],
+  "albedo": [
+   0.091,
+   0.339,
+   0.58
+  ],
+  "theme": [
+   "hafen",
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "barrel_03": {
+  "tris": 1473,
+  "bytes": 219284,
+  "size": [
+   0.634,
+   0.93,
+   0.639
+  ],
+  "area": 2.553,
+  "lightmap_fill": 0.224,
+  "collide": [
+   0.317,
+   0.465,
+   0.319
+  ],
+  "albedo": [
+   0.247,
+   0.336,
+   0.439
+  ],
+  "theme": [
+   "hafen",
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "wooden_barrels_01": {
+  "tris": 3000,
+  "bytes": 370860,
+  "size": [
+   0.741,
+   0.919,
+   0.741
+  ],
+  "area": 8.244,
+  "lightmap_fill": 0.074,
+  "collide": [
+   0.371,
+   0.459,
+   0.371
+  ],
+  "albedo": [
+   0.323,
+   0.202,
+   0.118
+  ],
+  "theme": [
+   "altstadt",
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "wine_barrel_01": {
+  "tris": 3000,
+  "bytes": 350464,
+  "size": [
+   0.742,
+   0.87,
+   0.756
+  ],
+  "area": 7.133,
+  "lightmap_fill": 0.087,
+  "collide": [
+   0.371,
+   0.435,
+   0.378
+  ],
+  "albedo": [
+   0.321,
+   0.237,
+   0.173
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "ocean_buoy": {
+  "tris": 3000,
+  "bytes": 973224,
+  "size": [
+   1.067,
+   2.657,
+   0.951
+  ],
+  "area": 7.164,
+  "lightmap_fill": 0.118,
+  "collide": [
+   0.533,
+   1.328,
+   0.475
+  ],
+  "albedo": [
+   0.744,
+   0.333,
+   0.266
+  ],
+  "theme": [
+   "hafen"
+  ],
+  "mount": "water",
+  "waterline": 0.81
+ },
+ "lifebuoy": {
+  "tris": 2999,
+  "bytes": 339756,
+  "size": [
+   0.783,
+   0.842,
+   0.155
+  ],
+  "area": 1.168,
+  "lightmap_fill": 0.122,
+  "collide": null,
+  "albedo": [
+   0.591,
+   0.379,
+   0.365
+  ],
+  "theme": [
+   "hafen"
+  ],
+  "mount": "wall"
+ },
+ "shrub_01": {
+  "tris": 2499,
+  "bytes": 714364,
+  "size": [
+   0.231,
+   0.372,
+   0.206
+  ],
+  "area": 0.077,
+  "lightmap_fill": 0.41,
+  "collide": null,
+  "albedo": [
+   0.491,
+   0.566,
+   0.262
+  ],
+  "theme": [
+   "altstadt",
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "shrub_02": {
+  "tris": 5242,
+  "bytes": 727876,
+  "size": [
+   1.11,
+   1.506,
+   1.28
+  ],
+  "area": 0.505,
+  "lightmap_fill": 0.233,
+  "collide": null,
+  "albedo": [
+   0.441,
+   0.406,
+   0.293
+  ],
+  "theme": [
+   "altstadt",
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "tree_small_02": {
+  "tris": 3715,
+  "bytes": 895508,
+  "size": [
+   3.039,
+   4.571,
+   4.279
+  ],
+  "area": 72.948,
+  "lightmap_fill": 0.48,
+  "collide": [
+   0.15,
+   2.286,
+   0.15
+  ],
+  "albedo": [
+   0.359,
+   0.426,
+   0.259
+  ],
+  "theme": [
+   "altstadt",
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "fir_sapling": {
+  "tris": 1442,
+  "bytes": 510676,
+  "size": [
+   0.911,
+   1.29,
+   0.838
+  ],
+  "area": 5.964,
+  "lightmap_fill": 0.537,
+  "collide": null,
+  "albedo": [
+   0.367,
+   0.415,
+   0.239
+  ],
+  "theme": [
+   "fliegerhorst",
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "planter_box_01": {
+  "tris": 3000,
+  "bytes": 345020,
+  "size": [
+   0.913,
+   0.425,
+   0.413
+  ],
+  "area": 5.512,
+  "lightmap_fill": 0.189,
+  "collide": [
+   0.456,
+   0.212,
+   0.207
+  ],
+  "albedo": [
+   0.245,
+   0.201,
+   0.151
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "modular_metal_gutter": {
+  "tris": 740,
+  "bytes": 194604,
+  "size": [
+   1.511,
+   0.137,
+   0.389
+  ],
+  "area": 1.797,
+  "lightmap_fill": 0.337,
+  "collide": null,
+  "albedo": [
+   0.401,
+   0.408,
+   0.413
+  ],
+  "theme": [
+   "altstadt",
+   "all"
+  ],
+  "mount": "wall"
+ },
+ "modular_metal_gutter_downpipe": {
+  "tris": 894,
+  "bytes": 192016,
+  "size": [
+   0.157,
+   1.0,
+   0.161
+  ],
+  "area": 0.494,
+  "lightmap_fill": 0.392,
+  "collide": null,
+  "albedo": [
+   0.483,
+   0.489,
+   0.503
+  ],
+  "theme": [
+   "altstadt",
+   "all"
+  ],
+  "mount": "wall"
+ },
+ "modular_pipes": {
+  "tris": 288,
+  "bytes": 188700,
+  "size": [
+   2.0,
+   0.1,
+   0.1
+  ],
+  "area": 0.627,
+  "lightmap_fill": 0.129,
+  "collide": null,
+  "albedo": [
+   0.574,
+   0.588,
+   0.596
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "covered_car": {
+  "tris": 5000,
+  "bytes": 712112,
+  "size": [
+   1.793,
+   1.413,
+   4.372
+  ],
+  "area": 38.374,
+  "lightmap_fill": 0.116,
+  "collide": [
+   0.897,
+   0.707,
+   2.186
+  ],
+  "albedo": [
+   0.299,
+   0.269,
+   0.248
+  ],
+  "theme": [
+   "altstadt",
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor"
+ },
+ "planter_box_02": {
+  "tris": 3000,
+  "bytes": 356968,
+  "size": [
+   1.25,
+   0.452,
+   0.465
+  ],
+  "area": 7.405,
+  "lightmap_fill": 0.183,
+  "collide": [
+   0.625,
+   0.226,
+   0.233
+  ],
+  "albedo": [
+   0.245,
+   0.2,
+   0.148
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "planter_box_03": {
+  "tris": 2995,
+  "bytes": 371588,
+  "size": [
+   0.914,
+   0.854,
+   0.654
+  ],
+  "area": 7.712,
+  "lightmap_fill": 0.172,
+  "collide": [
+   0.457,
+   0.427,
+   0.327
+  ],
+  "albedo": [
+   0.261,
+   0.215,
+   0.162
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "potted_plant_02": {
+  "tris": 4997,
+  "bytes": 1112944,
+  "size": [
+   0.701,
+   0.842,
+   0.658
+  ],
+  "area": 2.391,
+  "lightmap_fill": 0.256,
+  "collide": null,
+  "albedo": [
+   0.544,
+   0.426,
+   0.285
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "wooden_crate_02": {
+  "tris": 2999,
+  "bytes": 325460,
+  "size": [
+   0.529,
+   0.464,
+   1.166
+  ],
+  "area": 5.249,
+  "lightmap_fill": 0.198,
+  "collide": [
+   0.265,
+   0.232,
+   0.583
+  ],
+  "albedo": [
+   0.435,
+   0.285,
+   0.179
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "lantern_01": {
+  "tris": 3000,
+  "bytes": 277396,
+  "size": [
+   0.123,
+   0.294,
+   0.097
+  ],
+  "area": 0.129,
+  "lightmap_fill": 0.021,
+  "collide": null,
+  "albedo": [
+   0.314,
+   0.254,
+   0.189
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "industrial_wall_lamp": {
+  "tris": 3000,
+  "bytes": 249860,
+  "size": [
+   0.273,
+   0.43,
+   0.14
+  ],
+  "area": 0.447,
+  "lightmap_fill": 0.122,
+  "collide": null,
+  "albedo": [
+   0.456,
+   0.446,
+   0.443
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "wall"
+ },
+ "barrel_stove": {
+  "tris": 3000,
+  "bytes": 286788,
+  "size": [
+   0.593,
+   0.857,
+   0.593
+  ],
+  "area": 3.669,
+  "lightmap_fill": 0.222,
+  "collide": [
+   0.296,
+   0.428,
+   0.296
+  ],
+  "albedo": [
+   0.573,
+   0.427,
+   0.349
+  ],
+  "theme": [
+   "hafen"
+  ],
+  "mount": "floor"
+ },
+ "wooden_bucket_01": {
+  "tris": 2999,
+  "bytes": 347424,
+  "size": [
+   0.367,
+   0.55,
+   0.342
+  ],
+  "area": 0.896,
+  "lightmap_fill": 0.091,
+  "collide": null,
+  "albedo": [
+   0.397,
+   0.262,
+   0.172
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "metal_jerrycan": {
+  "tris": 3000,
+  "bytes": 363080,
+  "size": [
+   0.35,
+   0.455,
+   0.172
+  ],
+  "area": 0.613,
+  "lightmap_fill": 0.093,
+  "collide": null,
+  "albedo": [
+   0.512,
+   0.22,
+   0.149
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "hanging_picture_frame_01": {
+  "tris": 2586,
+  "bytes": 189140,
+  "size": [
+   0.594,
+   0.841,
+   0.016
+  ],
+  "area": 1.555,
+  "lightmap_fill": 0.278,
+  "collide": null,
+  "albedo": [
+   0.421,
+   0.396,
+   0.374
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "wall"
+ },
+ "wall_clock": {
+  "tris": 2999,
+  "bytes": 203444,
+  "size": [
+   0.32,
+   0.32,
+   0.047
+  ],
+  "area": 0.305,
+  "lightmap_fill": 0.199,
+  "collide": null,
+  "albedo": [
+   0.662,
+   0.681,
+   0.698
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "wall"
+ },
+ "korean_fire_extinguisher_01": {
+  "tris": 3000,
+  "bytes": 270564,
+  "size": [
+   0.28,
+   0.659,
+   0.367
+  ],
+  "area": 0.67,
+  "lightmap_fill": 0.149,
+  "collide": null,
+  "albedo": [
+   0.558,
+   0.278,
+   0.254
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "fire_alarm": {
+  "tris": 2702,
+  "bytes": 302536,
+  "size": [
+   0.099,
+   0.144,
+   0.026
+  ],
+  "area": 0.054,
+  "lightmap_fill": 0.063,
+  "collide": null,
+  "albedo": [
+   0.658,
+   0.496,
+   0.491
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "wall"
+ },
+ "steel_frame_shelves_02": {
+  "tris": 3000,
+  "bytes": 565364,
+  "size": [
+   0.593,
+   2.142,
+   0.502
+  ],
+  "area": 4.721,
+  "lightmap_fill": 0.143,
+  "collide": [
+   0.297,
+   1.071,
+   0.251
+  ],
+  "albedo": [
+   0.658,
+   0.488,
+   0.324
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "stone_01": {
+  "tris": 1200,
+  "bytes": 268112,
+  "size": [
+   0.146,
+   0.071,
+   0.089
+  ],
+  "area": 0.031,
+  "lightmap_fill": 0.105,
+  "collide": null,
+  "albedo": [
+   0.518,
+   0.384,
+   0.301
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "standing_chalkboard_01": {
+  "tris": 1200,
+  "bytes": 134016,
+  "size": [
+   0.92,
+   1.509,
+   0.759
+  ],
+  "area": 6.021,
+  "lightmap_fill": 0.368,
+  "collide": null,
+  "albedo": [
+   0.39,
+   0.262,
+   0.173
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "watering_can_metal_01": {
+  "tris": 1199,
+  "bytes": 268004,
+  "size": [
+   0.191,
+   0.197,
+   0.452
+  ],
+  "area": 0.281,
+  "lightmap_fill": 0.132,
+  "collide": null,
+  "albedo": [
+   0.547,
+   0.546,
+   0.55
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor"
+ },
+ "rock_moss_01": {
+  "tris": 1200,
+  "bytes": 186840,
+  "size": [
+   2.244,
+   1.481,
+   3.359
+  ],
+  "area": 15.893,
+  "lightmap_fill": 0.321,
+  "collide": null,
+  "albedo": [
+   0.388,
+   0.304,
+   0.191
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "rock_moss_03": {
+  "tris": 1200,
+  "bytes": 173716,
+  "size": [
+   2.106,
+   1.097,
+   2.071
+  ],
+  "area": 10.834,
+  "lightmap_fill": 0.442,
+  "collide": null,
+  "albedo": [
+   0.321,
+   0.265,
+   0.189
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor"
+ },
+ "win_town_green": {
+  "tris": 1496,
+  "bytes": 385428,
+  "size": [
+   2.36,
+   1.74,
+   0.124
+  ],
+  "area": 14.061,
+  "lightmap_fill": 0.33,
+  "collide": null,
+  "albedo": [
+   0.329,
+   0.336,
+   0.31
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.02,
+    1.47
+   ],
+   "open_z": 0.1,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_town_brown": {
+  "tris": 1496,
+  "bytes": 385088,
+  "size": [
+   2.36,
+   1.74,
+   0.124
+  ],
+  "area": 14.061,
+  "lightmap_fill": 0.33,
+  "collide": null,
+  "albedo": [
+   0.345,
+   0.32,
+   0.298
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.02,
+    1.47
+   ],
+   "open_z": 0.1,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_town_blue": {
+  "tris": 1496,
+  "bytes": 394216,
+  "size": [
+   2.36,
+   1.74,
+   0.124
+  ],
+  "area": 14.061,
+  "lightmap_fill": 0.33,
+  "collide": null,
+  "albedo": [
+   0.343,
+   0.349,
+   0.346
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.02,
+    1.47
+   ],
+   "open_z": 0.1,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_town_grey": {
+  "tris": 1496,
+  "bytes": 400484,
+  "size": [
+   2.36,
+   1.74,
+   0.124
+  ],
+  "area": 14.061,
+  "lightmap_fill": 0.33,
+  "collide": null,
+  "albedo": [
+   0.387,
+   0.381,
+   0.363
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.02,
+    1.47
+   ],
+   "open_z": 0.1,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_town_red": {
+  "tris": 1496,
+  "bytes": 392264,
+  "size": [
+   2.36,
+   1.74,
+   0.124
+  ],
+  "area": 14.061,
+  "lightmap_fill": 0.33,
+  "collide": null,
+  "albedo": [
+   0.377,
+   0.32,
+   0.302
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.02,
+    1.47
+   ],
+   "open_z": 0.1,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_town_green_flowers": {
+  "tris": 2200,
+  "bytes": 475600,
+  "size": [
+   2.36,
+   1.89,
+   0.368
+  ],
+  "area": 15.45,
+  "lightmap_fill": 0.292,
+  "collide": null,
+  "albedo": [
+   0.333,
+   0.329,
+   0.299
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.02,
+    1.47
+   ],
+   "open_z": 0.25,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_town_brown_flowers": {
+  "tris": 2200,
+  "bytes": 480172,
+  "size": [
+   2.36,
+   1.89,
+   0.37
+  ],
+  "area": 15.35,
+  "lightmap_fill": 0.298,
+  "collide": null,
+  "albedo": [
+   0.349,
+   0.316,
+   0.29
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.02,
+    1.47
+   ],
+   "open_z": 0.25,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_town_bare": {
+  "tris": 952,
+  "bytes": 322732,
+  "size": [
+   1.42,
+   1.81,
+   0.13
+  ],
+  "area": 11.141,
+  "lightmap_fill": 0.442,
+  "collide": null,
+  "albedo": [
+   0.364,
+   0.353,
+   0.336
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.02,
+    1.47
+   ],
+   "open_z": 0.1,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_town_bare_flowers": {
+  "tris": 1656,
+  "bytes": 432696,
+  "size": [
+   1.42,
+   1.96,
+   0.368
+  ],
+  "area": 12.515,
+  "lightmap_fill": 0.406,
+  "collide": null,
+  "albedo": [
+   0.361,
+   0.338,
+   0.315
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.02,
+    1.47
+   ],
+   "open_z": 0.25,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "door_town_brown": {
+  "tris": 1844,
+  "bytes": 434092,
+  "size": [
+   1.93,
+   2.73,
+   0.38
+  ],
+  "area": 17.103,
+  "lightmap_fill": 0.501,
+  "collide": null,
+  "albedo": [
+   0.288,
+   0.248,
+   0.218
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.22,
+    2.44
+   ],
+   "open_z": 0.0,
+   "open_x": -0.085
+  },
+  "made": "arch.py"
+ },
+ "door_town_green": {
+  "tris": 1324,
+  "bytes": 381616,
+  "size": [
+   1.93,
+   2.73,
+   0.38
+  ],
+  "area": 18.145,
+  "lightmap_fill": 0.525,
+  "collide": null,
+  "albedo": [
+   0.243,
+   0.265,
+   0.232
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.22,
+    2.44
+   ],
+   "open_z": 0.0,
+   "open_x": -0.085
+  },
+  "made": "arch.py"
+ },
+ "door_town_wood": {
+  "tris": 1844,
+  "bytes": 482144,
+  "size": [
+   1.93,
+   2.73,
+   0.38
+  ],
+  "area": 17.103,
+  "lightmap_fill": 0.501,
+  "collide": null,
+  "albedo": [
+   0.258,
+   0.223,
+   0.203
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.22,
+    2.44
+   ],
+   "open_z": 0.0,
+   "open_x": -0.085
+  },
+  "made": "arch.py"
+ },
+ "balcony_iron": {
+  "tris": 1044,
+  "bytes": 398956,
+  "size": [
+   1.7,
+   1.317,
+   0.6
+  ],
+  "area": 5.4,
+  "lightmap_fill": 0.305,
+  "collide": null,
+  "albedo": [
+   0.29,
+   0.273,
+   0.251
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.49
+  },
+  "made": "arch.py"
+ },
+ "container40_red": {
+  "tris": 2884,
+  "bytes": 1555700,
+  "size": [
+   12.305,
+   2.59,
+   2.45
+  ],
+  "area": 145.467,
+  "lightmap_fill": 0.496,
+  "collide": null,
+  "albedo": [
+   0.514,
+   0.211,
+   0.181
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    12.19,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container20_blue": {
+  "tris": 2428,
+  "bytes": 574836,
+  "size": [
+   6.175,
+   2.59,
+   2.45
+  ],
+  "area": 87.551,
+  "lightmap_fill": 0.505,
+  "collide": null,
+  "albedo": [
+   0.194,
+   0.276,
+   0.414
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    6.06,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container40_blue": {
+  "tris": 2884,
+  "bytes": 1569472,
+  "size": [
+   12.305,
+   2.59,
+   2.45
+  ],
+  "area": 145.467,
+  "lightmap_fill": 0.496,
+  "collide": null,
+  "albedo": [
+   0.198,
+   0.283,
+   0.425
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    12.19,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container40_green": {
+  "tris": 2884,
+  "bytes": 1551792,
+  "size": [
+   12.305,
+   2.59,
+   2.45
+  ],
+  "area": 145.467,
+  "lightmap_fill": 0.496,
+  "collide": null,
+  "albedo": [
+   0.266,
+   0.356,
+   0.27
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    12.19,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container40_grey": {
+  "tris": 2884,
+  "bytes": 1741752,
+  "size": [
+   12.305,
+   2.59,
+   2.45
+  ],
+  "area": 145.467,
+  "lightmap_fill": 0.496,
+  "collide": null,
+  "albedo": [
+   0.513,
+   0.518,
+   0.501
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    12.19,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container40_orange": {
+  "tris": 2884,
+  "bytes": 1743728,
+  "size": [
+   12.305,
+   2.59,
+   2.45
+  ],
+  "area": 145.467,
+  "lightmap_fill": 0.496,
+  "collide": null,
+  "albedo": [
+   0.667,
+   0.389,
+   0.193
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    12.19,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container40_brown": {
+  "tris": 2884,
+  "bytes": 1563080,
+  "size": [
+   12.305,
+   2.59,
+   2.45
+  ],
+  "area": 145.467,
+  "lightmap_fill": 0.496,
+  "collide": null,
+  "albedo": [
+   0.432,
+   0.275,
+   0.204
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    12.19,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container20_red": {
+  "tris": 2428,
+  "bytes": 576780,
+  "size": [
+   6.175,
+   2.59,
+   2.45
+  ],
+  "area": 87.551,
+  "lightmap_fill": 0.505,
+  "collide": null,
+  "albedo": [
+   0.5,
+   0.207,
+   0.177
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    6.06,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container20_green": {
+  "tris": 2428,
+  "bytes": 570208,
+  "size": [
+   6.175,
+   2.59,
+   2.45
+  ],
+  "area": 87.551,
+  "lightmap_fill": 0.505,
+  "collide": null,
+  "albedo": [
+   0.259,
+   0.347,
+   0.264
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    6.06,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container20_grey": {
+  "tris": 2428,
+  "bytes": 609396,
+  "size": [
+   6.175,
+   2.59,
+   2.45
+  ],
+  "area": 87.551,
+  "lightmap_fill": 0.505,
+  "collide": null,
+  "albedo": [
+   0.5,
+   0.504,
+   0.487
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    6.06,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container20_orange": {
+  "tris": 2428,
+  "bytes": 618152,
+  "size": [
+   6.175,
+   2.59,
+   2.45
+  ],
+  "area": 87.551,
+  "lightmap_fill": 0.505,
+  "collide": null,
+  "albedo": [
+   0.649,
+   0.379,
+   0.189
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    6.06,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "container20_brown": {
+  "tris": 2428,
+  "bytes": 573184,
+  "size": [
+   6.175,
+   2.59,
+   2.45
+  ],
+  "area": 87.551,
+  "lightmap_fill": 0.505,
+  "collide": null,
+  "albedo": [
+   0.421,
+   0.269,
+   0.2
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "box": [
+    6.06,
+    2.44,
+    2.59
+   ]
+  },
+  "made": "arch.py"
+ },
+ "veh_tornado": {
+  "tris": 40000,
+  "bytes": 3609356,
+  "size": [
+   13.84,
+   5.987,
+   16.623
+  ],
+  "area": 385.115,
+  "lightmap_fill": 0.394,
+  "collide": [
+   1.6,
+   2.994,
+   7.75
+  ],
+  "albedo": [
+   0.414,
+   0.432,
+   0.437
+  ],
+  "theme": [
+   "fliegerhorst"
+  ],
+  "bottom": 0.0,
+  "mount": "floor",
+  "made": "arch.py"
+ },
+ "veh_nh90": {
+  "tris": 23801,
+  "bytes": 2824076,
+  "size": [
+   12.188,
+   5.539,
+   17.586
+  ],
+  "area": 478.422,
+  "lightmap_fill": 0.391,
+  "collide": [
+   1.5,
+   2.769,
+   7.5
+  ],
+  "albedo": [
+   0.298,
+   0.311,
+   0.31
+  ],
+  "theme": [
+   "fliegerhorst"
+  ],
+  "bottom": -0.0,
+  "mount": "floor",
+  "made": "arch.py"
+ },
+ "veh_leopard": {
+  "tris": 24146,
+  "bytes": 4581864,
+  "size": [
+   4.424,
+   4.62,
+   10.653
+  ],
+  "area": 408.8,
+  "lightmap_fill": 0.122,
+  "collide": [
+   1.9,
+   2.31,
+   4.75
+  ],
+  "albedo": [
+   0.156,
+   0.153,
+   0.132
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "bottom": -0.019,
+  "mount": "floor",
+  "made": "arch.py"
+ },
+ "veh_patriot": {
+  "tris": 23412,
+  "bytes": 3797488,
+  "size": [
+   3.3,
+   7.845,
+   11.7
+  ],
+  "area": 434.698,
+  "lightmap_fill": 0.175,
+  "collide": [
+   1.5,
+   3.922,
+   5.5
+  ],
+  "albedo": [
+   0.182,
+   0.177,
+   0.132
+  ],
+  "theme": [
+   "fliegerhorst"
+  ],
+  "bottom": 0.005,
+  "mount": "floor",
+  "made": "arch.py"
+ },
+ "shop_town_30_green": {
+  "tris": 924,
+  "bytes": 259728,
+  "size": [
+   3.44,
+   3.65,
+   0.2
+  ],
+  "area": 34.644,
+  "lightmap_fill": 0.498,
+  "collide": null,
+  "albedo": [
+   0.278,
+   0.308,
+   0.277
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    3.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "awning_34_red": {
+  "tris": 552,
+  "bytes": 278484,
+  "size": [
+   3.44,
+   0.957,
+   1.312
+  ],
+  "area": 13.634,
+  "lightmap_fill": 0.598,
+  "collide": null,
+  "albedo": [
+   0.699,
+   0.569,
+   0.537
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "shop_town_20_green": {
+  "tris": 748,
+  "bytes": 233844,
+  "size": [
+   2.44,
+   3.65,
+   0.2
+  ],
+  "area": 23.917,
+  "lightmap_fill": 0.533,
+  "collide": null,
+  "albedo": [
+   0.276,
+   0.309,
+   0.276
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    2.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "shop_town_20_brown": {
+  "tris": 748,
+  "bytes": 234480,
+  "size": [
+   2.44,
+   3.65,
+   0.2
+  ],
+  "area": 23.917,
+  "lightmap_fill": 0.533,
+  "collide": null,
+  "albedo": [
+   0.322,
+   0.281,
+   0.255
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    2.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "shop_town_20_blue": {
+  "tris": 748,
+  "bytes": 241148,
+  "size": [
+   2.44,
+   3.65,
+   0.2
+  ],
+  "area": 23.917,
+  "lightmap_fill": 0.533,
+  "collide": null,
+  "albedo": [
+   0.31,
+   0.336,
+   0.353
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    2.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "shop_town_20_red": {
+  "tris": 748,
+  "bytes": 238060,
+  "size": [
+   2.44,
+   3.65,
+   0.2
+  ],
+  "area": 23.917,
+  "lightmap_fill": 0.533,
+  "collide": null,
+  "albedo": [
+   0.381,
+   0.271,
+   0.259
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    2.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "shop_town_30_brown": {
+  "tris": 924,
+  "bytes": 260412,
+  "size": [
+   3.44,
+   3.65,
+   0.2
+  ],
+  "area": 34.644,
+  "lightmap_fill": 0.498,
+  "collide": null,
+  "albedo": [
+   0.32,
+   0.282,
+   0.257
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    3.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "shop_town_30_blue": {
+  "tris": 924,
+  "bytes": 267860,
+  "size": [
+   3.44,
+   3.65,
+   0.2
+  ],
+  "area": 34.644,
+  "lightmap_fill": 0.498,
+  "collide": null,
+  "albedo": [
+   0.31,
+   0.334,
+   0.35
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    3.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "shop_town_30_red": {
+  "tris": 924,
+  "bytes": 265036,
+  "size": [
+   3.44,
+   3.65,
+   0.2
+  ],
+  "area": 34.644,
+  "lightmap_fill": 0.498,
+  "collide": null,
+  "albedo": [
+   0.377,
+   0.273,
+   0.261
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    3.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "shop_town_40_green": {
+  "tris": 1100,
+  "bytes": 263140,
+  "size": [
+   4.44,
+   3.65,
+   0.2
+  ],
+  "area": 45.371,
+  "lightmap_fill": 0.465,
+  "collide": null,
+  "albedo": [
+   0.278,
+   0.308,
+   0.277
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    4.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "shop_town_40_brown": {
+  "tris": 1100,
+  "bytes": 263776,
+  "size": [
+   4.44,
+   3.65,
+   0.2
+  ],
+  "area": 45.371,
+  "lightmap_fill": 0.465,
+  "collide": null,
+  "albedo": [
+   0.319,
+   0.283,
+   0.258
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    4.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "shop_town_40_blue": {
+  "tris": 1100,
+  "bytes": 270568,
+  "size": [
+   4.44,
+   3.65,
+   0.2
+  ],
+  "area": 45.371,
+  "lightmap_fill": 0.465,
+  "collide": null,
+  "albedo": [
+   0.309,
+   0.333,
+   0.348
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    4.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "shop_town_40_red": {
+  "tris": 1100,
+  "bytes": 267892,
+  "size": [
+   4.44,
+   3.65,
+   0.2
+  ],
+  "area": 45.371,
+  "lightmap_fill": 0.465,
+  "collide": null,
+  "albedo": [
+   0.375,
+   0.274,
+   0.262
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    4.0,
+    2.4
+   ],
+   "open_z": 0.6,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "awning_24_red": {
+  "tris": 408,
+  "bytes": 219440,
+  "size": [
+   2.44,
+   0.957,
+   1.312
+  ],
+  "area": 9.721,
+  "lightmap_fill": 0.583,
+  "collide": null,
+  "albedo": [
+   0.694,
+   0.564,
+   0.531
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "awning_24_green": {
+  "tris": 408,
+  "bytes": 205632,
+  "size": [
+   2.44,
+   0.957,
+   1.312
+  ],
+  "area": 9.721,
+  "lightmap_fill": 0.583,
+  "collide": null,
+  "albedo": [
+   0.567,
+   0.597,
+   0.536
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "awning_24_blue": {
+  "tris": 408,
+  "bytes": 214604,
+  "size": [
+   2.44,
+   0.957,
+   1.312
+  ],
+  "area": 9.721,
+  "lightmap_fill": 0.583,
+  "collide": null,
+  "albedo": [
+   0.574,
+   0.586,
+   0.609
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "awning_24_ochre": {
+  "tris": 408,
+  "bytes": 210436,
+  "size": [
+   2.44,
+   0.957,
+   1.312
+  ],
+  "area": 9.721,
+  "lightmap_fill": 0.583,
+  "collide": null,
+  "albedo": [
+   0.7,
+   0.634,
+   0.521
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "awning_34_green": {
+  "tris": 552,
+  "bytes": 258200,
+  "size": [
+   3.44,
+   0.957,
+   1.312
+  ],
+  "area": 13.634,
+  "lightmap_fill": 0.598,
+  "collide": null,
+  "albedo": [
+   0.572,
+   0.601,
+   0.541
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "awning_34_blue": {
+  "tris": 552,
+  "bytes": 271300,
+  "size": [
+   3.44,
+   0.957,
+   1.312
+  ],
+  "area": 13.634,
+  "lightmap_fill": 0.598,
+  "collide": null,
+  "albedo": [
+   0.579,
+   0.592,
+   0.614
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "awning_34_ochre": {
+  "tris": 552,
+  "bytes": 264516,
+  "size": [
+   3.44,
+   0.957,
+   1.312
+  ],
+  "area": 13.634,
+  "lightmap_fill": 0.598,
+  "collide": null,
+  "albedo": [
+   0.704,
+   0.638,
+   0.526
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "awning_44_red": {
+  "tris": 696,
+  "bytes": 296112,
+  "size": [
+   4.44,
+   0.957,
+   1.312
+  ],
+  "area": 17.548,
+  "lightmap_fill": 0.605,
+  "collide": null,
+  "albedo": [
+   0.701,
+   0.57,
+   0.538
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "awning_44_green": {
+  "tris": 696,
+  "bytes": 274220,
+  "size": [
+   4.44,
+   0.957,
+   1.312
+  ],
+  "area": 17.548,
+  "lightmap_fill": 0.605,
+  "collide": null,
+  "albedo": [
+   0.574,
+   0.603,
+   0.542
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "awning_44_blue": {
+  "tris": 696,
+  "bytes": 288340,
+  "size": [
+   4.44,
+   0.957,
+   1.312
+  ],
+  "area": 17.548,
+  "lightmap_fill": 0.605,
+  "collide": null,
+  "albedo": [
+   0.581,
+   0.593,
+   0.615
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "awning_44_ochre": {
+  "tris": 696,
+  "bytes": 280496,
+  "size": [
+   4.44,
+   0.957,
+   1.312
+  ],
+  "area": 17.548,
+  "lightmap_fill": 0.605,
+  "collide": null,
+  "albedo": [
+   0.706,
+   0.64,
+   0.527
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "top": 0.96
+  },
+  "made": "arch.py"
+ },
+ "cafe_set": {
+  "tris": 1284,
+  "bytes": 354804,
+  "size": [
+   1.655,
+   0.9,
+   1.3
+  ],
+  "area": 3.315,
+  "lightmap_fill": 0.28,
+  "collide": [
+   0.7,
+   0.45,
+   0.7
+  ],
+  "albedo": [
+   0.262,
+   0.3,
+   0.258
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "cafe_set_red": {
+  "tris": 1140,
+  "bytes": 289744,
+  "size": [
+   2.711,
+   2.62,
+   2.711
+  ],
+  "area": 17.03,
+  "lightmap_fill": 0.421,
+  "collide": [
+   0.7,
+   1.31,
+   0.7
+  ],
+  "albedo": [
+   0.653,
+   0.406,
+   0.377
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "cafe_set_green": {
+  "tris": 1484,
+  "bytes": 323020,
+  "size": [
+   2.711,
+   2.62,
+   2.711
+  ],
+  "area": 17.771,
+  "lightmap_fill": 0.385,
+  "collide": [
+   0.7,
+   1.31,
+   0.7
+  ],
+  "albedo": [
+   0.404,
+   0.484,
+   0.406
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "cafe_set_ochre": {
+  "tris": 1140,
+  "bytes": 297176,
+  "size": [
+   2.711,
+   2.62,
+   2.711
+  ],
+  "area": 17.03,
+  "lightmap_fill": 0.423,
+  "collide": [
+   0.7,
+   1.31,
+   0.7
+  ],
+  "albedo": [
+   0.672,
+   0.572,
+   0.392
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "market_stall_red": {
+  "tris": 1508,
+  "bytes": 646752,
+  "size": [
+   2.9,
+   2.46,
+   1.86
+  ],
+  "area": 29.525,
+  "lightmap_fill": 0.371,
+  "collide": [
+   1.35,
+   1.23,
+   0.8
+  ],
+  "albedo": [
+   0.591,
+   0.468,
+   0.425
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "market_stall_green": {
+  "tris": 1508,
+  "bytes": 629488,
+  "size": [
+   2.9,
+   2.46,
+   1.86
+  ],
+  "area": 29.525,
+  "lightmap_fill": 0.37,
+  "collide": [
+   1.35,
+   1.23,
+   0.8
+  ],
+  "albedo": [
+   0.497,
+   0.487,
+   0.426
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "market_stall_blue": {
+  "tris": 1508,
+  "bytes": 639196,
+  "size": [
+   2.9,
+   2.46,
+   1.86
+  ],
+  "area": 29.525,
+  "lightmap_fill": 0.365,
+  "collide": [
+   1.35,
+   1.23,
+   0.8
+  ],
+  "albedo": [
+   0.513,
+   0.485,
+   0.481
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "planter_stone": {
+  "tris": 3268,
+  "bytes": 528120,
+  "size": [
+   0.88,
+   1.112,
+   0.908
+  ],
+  "area": 13.541,
+  "lightmap_fill": 0.411,
+  "collide": [
+   0.44,
+   0.556,
+   0.44
+  ],
+  "albedo": [
+   0.198,
+   0.203,
+   0.165
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "sign_bakery": {
+  "tris": 880,
+  "bytes": 281204,
+  "size": [
+   0.56,
+   0.876,
+   0.9
+  ],
+  "area": 0.889,
+  "lightmap_fill": 0.372,
+  "collide": null,
+  "albedo": [
+   0.553,
+   0.472,
+   0.273
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "win_office_tall": {
+  "tris": 204,
+  "bytes": 158004,
+  "size": [
+   1.1,
+   1.46,
+   0.1
+  ],
+  "area": 6.952,
+  "lightmap_fill": 0.601,
+  "collide": null,
+  "albedo": [
+   0.351,
+   0.352,
+   0.35
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.0,
+    1.4
+   ],
+   "open_z": 0.06,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_office_sq": {
+  "tris": 204,
+  "bytes": 148796,
+  "size": [
+   1.2,
+   1.16,
+   0.1
+  ],
+  "area": 6.14,
+  "lightmap_fill": 0.533,
+  "collide": null,
+  "albedo": [
+   0.355,
+   0.356,
+   0.352
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.1,
+    1.1
+   ],
+   "open_z": 0.06,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_office_wide": {
+  "tris": 204,
+  "bytes": 160100,
+  "size": [
+   1.7,
+   1.36,
+   0.1
+  ],
+  "area": 10.058,
+  "lightmap_fill": 0.478,
+  "collide": null,
+  "albedo": [
+   0.359,
+   0.359,
+   0.354
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.6,
+    1.3
+   ],
+   "open_z": 0.06,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_factory_tall": {
+  "tris": 240,
+  "bytes": 155524,
+  "size": [
+   1.1,
+   1.46,
+   0.1
+  ],
+  "area": 7.233,
+  "lightmap_fill": 0.536,
+  "collide": null,
+  "albedo": [
+   0.276,
+   0.279,
+   0.274
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.0,
+    1.4
+   ],
+   "open_z": 0.06,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_factory_sq": {
+  "tris": 228,
+  "bytes": 145148,
+  "size": [
+   1.2,
+   1.16,
+   0.1
+  ],
+  "area": 6.278,
+  "lightmap_fill": 0.544,
+  "collide": null,
+  "albedo": [
+   0.279,
+   0.282,
+   0.277
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.1,
+    1.1
+   ],
+   "open_z": 0.06,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "win_factory_wide": {
+  "tris": 264,
+  "bytes": 169096,
+  "size": [
+   1.7,
+   1.36,
+   0.1
+  ],
+  "area": 10.759,
+  "lightmap_fill": 0.498,
+  "collide": null,
+  "albedo": [
+   0.277,
+   0.28,
+   0.275
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.6,
+    1.3
+   ],
+   "open_z": 0.06,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "fuel_tank_green": {
+  "tris": 4376,
+  "bytes": 1377676,
+  "size": [
+   6.935,
+   7.6,
+   7.63
+  ],
+  "area": 299.217,
+  "lightmap_fill": 0.268,
+  "collide": null,
+  "albedo": [
+   0.285,
+   0.345,
+   0.275
+  ],
+  "theme": [
+   "hafen",
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "veh_f124": {
+  "tris": 45932,
+  "bytes": 3556472,
+  "size": [
+   20.072,
+   41.16,
+   145.75
+  ],
+  "area": 22170.39,
+  "lightmap_fill": 0.428,
+  "collide": null,
+  "albedo": [
+   0.219,
+   0.218,
+   0.216
+  ],
+  "theme": [
+   "hafen"
+  ],
+  "bottom": -6.1,
+  "mount": "floor",
+  "made": "arch.py"
+ },
+ "crate_pine": {
+  "tris": 1500,
+  "bytes": 505012,
+  "size": [
+   1.054,
+   1.0,
+   1.054
+  ],
+  "area": 14.247,
+  "lightmap_fill": 0.359,
+  "collide": null,
+  "albedo": [
+   0.394,
+   0.229,
+   0.104
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "crate_old": {
+  "tris": 1500,
+  "bytes": 898164,
+  "size": [
+   1.054,
+   1.0,
+   1.054
+  ],
+  "area": 14.247,
+  "lightmap_fill": 0.359,
+  "collide": null,
+  "albedo": [
+   0.337,
+   0.295,
+   0.246
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "sandbags_1m": {
+  "tris": 3760,
+  "bytes": 446140,
+  "size": [
+   0.984,
+   0.989,
+   0.545
+  ],
+  "area": 6.89,
+  "lightmap_fill": 0.452,
+  "collide": null,
+  "albedo": [
+   0.314,
+   0.291,
+   0.228
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "truck_box_green": {
+  "tris": 6540,
+  "bytes": 1140412,
+  "size": [
+   3.01,
+   3.782,
+   16.082
+  ],
+  "area": 559.83,
+  "lightmap_fill": 0.302,
+  "collide": null,
+  "albedo": [
+   0.287,
+   0.298,
+   0.244
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "front": 2.25
+  },
+  "made": "arch.py"
+ },
+ "truck_flat_red": {
+  "tris": 5928,
+  "bytes": 1147452,
+  "size": [
+   3.01,
+   3.132,
+   16.082
+  ],
+  "area": 226.326,
+  "lightmap_fill": 0.254,
+  "collide": null,
+  "albedo": [
+   0.295,
+   0.232,
+   0.23
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "front": 2.25
+  },
+  "made": "arch.py"
+ },
+ "truck_flat_green": {
+  "tris": 5928,
+  "bytes": 1141696,
+  "size": [
+   3.01,
+   3.132,
+   16.082
+  ],
+  "area": 226.326,
+  "lightmap_fill": 0.254,
+  "collide": null,
+  "albedo": [
+   0.239,
+   0.251,
+   0.238
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "front": 2.25
+  },
+  "made": "arch.py"
+ },
+ "truck_flat_blue": {
+  "tris": 5928,
+  "bytes": 1144356,
+  "size": [
+   3.01,
+   3.132,
+   16.082
+  ],
+  "area": 226.326,
+  "lightmap_fill": 0.254,
+  "collide": null,
+  "albedo": [
+   0.231,
+   0.246,
+   0.279
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "floor",
+  "anchor": {
+   "front": 2.25
+  },
+  "made": "arch.py"
+ },
+ "hand_cart": {
+  "tris": 1636,
+  "bytes": 754344,
+  "size": [
+   1.42,
+   1.062,
+   3.028
+  ],
+  "area": 12.267,
+  "lightmap_fill": 0.282,
+  "collide": null,
+  "albedo": [
+   0.314,
+   0.27,
+   0.221
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "hand_cart_sacks": {
+  "tris": 2036,
+  "bytes": 731944,
+  "size": [
+   1.42,
+   1.106,
+   3.028
+  ],
+  "area": 14.294,
+  "lightmap_fill": 0.293,
+  "collide": null,
+  "albedo": [
+   0.324,
+   0.283,
+   0.233
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "hand_cart_barrels": {
+  "tris": 2268,
+  "bytes": 810068,
+  "size": [
+   1.42,
+   1.282,
+   3.028
+  ],
+  "area": 15.873,
+  "lightmap_fill": 0.298,
+  "collide": null,
+  "albedo": [
+   0.299,
+   0.255,
+   0.208
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "van_green": {
+  "tris": 3256,
+  "bytes": 419856,
+  "size": [
+   2.29,
+   2.312,
+   5.22
+  ],
+  "area": 73.163,
+  "lightmap_fill": 0.379,
+  "collide": null,
+  "albedo": [
+   0.234,
+   0.277,
+   0.223
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "van_blue": {
+  "tris": 3256,
+  "bytes": 424788,
+  "size": [
+   2.29,
+   2.312,
+   5.22
+  ],
+  "area": 73.163,
+  "lightmap_fill": 0.379,
+  "collide": null,
+  "albedo": [
+   0.207,
+   0.267,
+   0.393
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "van_white": {
+  "tris": 3256,
+  "bytes": 449428,
+  "size": [
+   2.29,
+   2.312,
+   5.22
+  ],
+  "area": 73.163,
+  "lightmap_fill": 0.379,
+  "collide": null,
+  "albedo": [
+   0.584,
+   0.583,
+   0.576
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "pallet": {
+  "tris": 264,
+  "bytes": 388108,
+  "size": [
+   1.22,
+   0.15,
+   1.02
+  ],
+  "area": 4.14,
+  "lightmap_fill": 0.478,
+  "collide": null,
+  "albedo": [
+   0.396,
+   0.234,
+   0.113
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "pallet_boxes": {
+  "tris": 1272,
+  "bytes": 348724,
+  "size": [
+   1.22,
+   1.132,
+   1.02
+  ],
+  "area": 23.432,
+  "lightmap_fill": 0.422,
+  "collide": null,
+  "albedo": [
+   0.364,
+   0.303,
+   0.228
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "pallet_sacks": {
+  "tris": 1128,
+  "bytes": 296912,
+  "size": [
+   1.22,
+   0.915,
+   1.022
+  ],
+  "area": 15.259,
+  "lightmap_fill": 0.496,
+  "collide": null,
+  "albedo": [
+   0.363,
+   0.318,
+   0.262
+  ],
+  "theme": [
+   "all"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "t_wall": {
+  "tris": 400,
+  "bytes": 501512,
+  "size": [
+   1.21,
+   2.332,
+   1.0
+  ],
+  "area": 11.153,
+  "lightmap_fill": 0.667,
+  "collide": null,
+  "albedo": [
+   0.339,
+   0.298,
+   0.253
+  ],
+  "theme": [
+   "fliegerhorst",
+   "hafen"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "fuel_bowser": {
+  "tris": 5696,
+  "bytes": 1107416,
+  "size": [
+   2.95,
+   3.932,
+   10.605
+  ],
+  "area": 195.698,
+  "lightmap_fill": 0.267,
+  "collide": null,
+  "albedo": [
+   0.269,
+   0.296,
+   0.236
+  ],
+  "theme": [
+   "fliegerhorst"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "wagon_red": {
+  "tris": 2568,
+  "bytes": 1099400,
+  "size": [
+   3.0,
+   4.05,
+   15.25
+  ],
+  "area": 358.463,
+  "lightmap_fill": 0.56,
+  "collide": null,
+  "albedo": [
+   0.406,
+   0.358,
+   0.332
+  ],
+  "theme": [
+   "hafen"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "wagon_green": {
+  "tris": 2568,
+  "bytes": 1103216,
+  "size": [
+   3.0,
+   4.05,
+   15.25
+  ],
+  "area": 358.463,
+  "lightmap_fill": 0.56,
+  "collide": null,
+  "albedo": [
+   0.358,
+   0.379,
+   0.346
+  ],
+  "theme": [
+   "hafen"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "fountain_town": {
+  "tris": 1812,
+  "bytes": 443592,
+  "size": [
+   5.913,
+   3.625,
+   5.913
+  ],
+  "area": 189.952,
+  "lightmap_fill": 0.451,
+  "collide": null,
+  "albedo": [
+   0.261,
+   0.242,
+   0.214
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "floor",
+  "anchor": {},
+  "made": "arch.py"
+ },
+ "win_church": {
+  "tris": 656,
+  "bytes": 252020,
+  "size": [
+   2.1,
+   5.16,
+   0.2
+  ],
+  "area": 37.792,
+  "lightmap_fill": 0.543,
+  "collide": null,
+  "albedo": [
+   0.299,
+   0.288,
+   0.267
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    1.6,
+    4.8
+   ],
+   "open_z": 0.12,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ },
+ "door_church": {
+  "tris": 2360,
+  "bytes": 705184,
+  "size": [
+   4.16,
+   4.88,
+   0.16
+  ],
+  "area": 48.746,
+  "lightmap_fill": 0.342,
+  "collide": null,
+  "albedo": [
+   0.355,
+   0.31,
+   0.263
+  ],
+  "theme": [
+   "altstadt"
+  ],
+  "mount": "wall",
+  "anchor": {
+   "open": [
+    3.6,
+    4.6
+   ],
+   "open_z": 0.0,
+   "open_x": -0.0
+  },
+  "made": "arch.py"
+ }
+}

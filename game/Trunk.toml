@@ -1,0 +1,20 @@
+[build]
+target = "index.html"
+dist = "dist"
+
+[watch]
+# The game and its simulation crate (a change in either rebuilds).
+watch = [".", "../crates/zugriff_sim"]
+ignore = ["./dist", "../prebuilt"]
+
+[serve]
+address = "127.0.0.1"
+port = 5195
+open = false
+
+# Trunk's own wasm-opt step is off (index.html: data-wasm-opt="0"); this runs binaryen on release builds instead.
+# binaryen 133+ enables its experimental compact import section with --all-features, which browsers reject.
+[[hooks]]
+stage = "post_build"
+command = "sh"
+command_arguments = ["-c", "[ \"$TRUNK_PROFILE\" = release ] || exit 0; W=$(command -v wasm-opt || ls \"${XDG_CACHE_HOME:-$HOME/.cache}\"/trunk/wasm-opt-*/bin/wasm-opt \"$HOME\"/Library/Caches/dev.trunkrs.trunk/wasm-opt-*/bin/wasm-opt 2>/dev/null | head -1); [ -n \"$W\" ] || { echo '[trunk] wasm-opt not found; skipping'; exit 0; }; for f in \"$TRUNK_STAGING_DIR\"/*_bg.wasm; do before=$(wc -c < \"$f\"); \"$W\" --all-features --disable-compact-imports -Oz -o \"$f.tmp\" \"$f\" && mv \"$f.tmp\" \"$f\"; echo \"[trunk] wasm-opt: $before -> $(wc -c < \"$f\") bytes\"; done"]

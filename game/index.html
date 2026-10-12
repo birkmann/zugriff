@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZUGRIFF</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0d10'/%3E%3Cpath d='M16 5v8M16 19v8M5 16h8M19 16h8' stroke='%23ffb000' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link data-trunk rel="rust" data-wasm-opt="0" data-bin="zugriff" />
+    <link data-trunk rel="copy-dir" href="../assets" />
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #0b0d10; }
+      canvas { display: block; width: 100%; height: 100%; outline: none; cursor: crosshair; }
+      #boot { position: fixed; inset: 0; display: grid; place-items: center; background: radial-gradient(ellipse at 50% 40%, #1b2026, #07090b 70%); color: #e8e2d4; font: 600 15px/1.5 system-ui, sans-serif; letter-spacing: 0.04em; transition: opacity 0.4s; z-index: 5; }
+      #boot.gone { opacity: 0; pointer-events: none; }
+      #boot b { display: block; margin-bottom: 10px; color: #ffb000; font-size: 44px; letter-spacing: 0.3em; }
+      #boot .bar { width: 240px; height: 3px; margin: 18px auto 0; background: rgba(255, 255, 255, 0.1); overflow: hidden; border-radius: 2px; }
+      #boot .bar i { display: block; width: 40%; height: 100%; background: #ffb000; animation: slide 1.1s ease-in-out infinite; }
+      #boot.error .bar { display: none; }
+      #boot.error p { color: #ff8a70; }
+      @keyframes slide { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" tabindex="0"></canvas>
+    <div id="boot"><div style="text-align: center"><b>ZUGRIFF</b><p>Lädt …</p><div class="bar"><i></i></div></div></div>
+    <script>
+      // WebGPU is required (the engine is built without the WebGL2 fallback).
+      const boot = document.getElementById("boot");
+      if (!navigator.gpu) {
+        boot.classList.add("error");
+        boot.querySelector("p").textContent = "Dieser Browser unterstützt kein WebGPU. Bitte einen aktuellen Chrome, Edge oder Firefox verwenden.";
+      }
+      addEventListener("TrunkApplicationStarted", () => setTimeout(() => boot.classList.add("gone"), 300));
+      // Capture the mouse with raw (unaccelerated) motion where the browser supports it, when the game asks for it
+      // (in a match, no menu open: the game sets data-lock on the body). Escape releases (the browser's). On pointer
+      // up, so the click that closes a menu (handled by the game on press) can capture straight away. (Not mouseup:
+      // the engine cancels pointerdown, which suppresses the mouse events that would follow.)
+      const canvas = document.getElementById("canvas");
+      canvas.addEventListener("pointerup", async () => {
+        if (document.pointerLockElement === canvas || document.body.dataset.lock !== "1") return;
+        try {
+          await canvas.requestPointerLock({ unadjustedMovement: true });
+        } catch (first) {
+          try {
+            await canvas.requestPointerLock();
+          } catch (second) {
+            console.warn("pointer lock refused:", first?.name, second?.name, second?.message);
+          }
+        }
+      });
+      // Ctrl is crouch, so Ctrl + W (walking) is the browser's "close tab" and Ctrl + R (reloading) "reload page";
+      // a page can't stop either. In a match (the mouse captured) the browser asks before leaving instead.
+      addEventListener("beforeunload", (e) => {
+        if (document.body.dataset.lock !== "1") return;
+        e.preventDefault();
+        e.returnValue = "";
+      });
+      // In fullscreen, take the game's keys from the browser too (Keyboard Lock, Chromium): Ctrl + W and the rest
+      // reach the game. Escape stays the browser's, so it still lets go of the mouse.
+      const GAME_KEYS = [
+        ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((c) => "Key" + c),
+        ..."0123456789".split("").map((d) => "Digit" + d),
+        "Tab", "Space", "ControlLeft", "ControlRight", "ShiftLeft", "ShiftRight", "AltLeft", "AltRight", "Backquote",
+        "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10",
+      ];
+      document.addEventListener("fullscreenchange", () => {
+        if (!navigator.keyboard || !navigator.keyboard.lock) return;
+        if (document.fullscreenElement) navigator.keyboard.lock(GAME_KEYS).catch(() => {});
+        else navigator.keyboard.unlock();
+      });
+      canvas.addEventListener("contextmenu", (e) => e.preventDefault());
+    </script>
+  </body>
+</html>

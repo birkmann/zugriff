@@ -1,0 +1,46 @@
+[workspace]
+resolver = "3"
+members = ["crates/zugriff_sim", "game", "server", "tools/textures"]
+
+[workspace.package]
+edition = "2024"
+publish = false
+
+[workspace.dependencies]
+bevy = { version = "=0.19.0", default-features = false }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# ZUGRIFF (crates/zugriff_sim, game). glam matches the version bevy 0.19 re-exports.
+glam = { version = "0.32", features = ["serde"] }
+kira = { version = "0.12", default-features = false, features = ["cpal", "ogg", "vorbis", "wav"] }
+# The CLI that build.sh runs (Trunk's cached wasm-bindgen 0.2.129) must match this exactly.
+wasm-bindgen = "=0.2.129"
+wasm-bindgen-futures = "0.4.79"
+js-sys = "0.3.106"
+web-sys = "0.3.106"
+console_error_panic_hook = "0.1"
+
+# Size first for the wasm download, as in the spike.
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = "symbols"
+
+# Keep the simulation fast in development.
+[profile.dev.package.zugriff_sim]
+opt-level = 2
+
+# Native desktop builds of ZUGRIFF (`cargo run --profile native -p zugriff`): speed, not size.
+[profile.native]
+inherits = "release"
+opt-level = 3
+lto = false
+codegen-units = 16
+incremental = false
+strip = "symbols"
+
+# Bevy's PBR crate with one change: entities that share a lightmap image share its slot. Upstream gives each entity its
+# own, which cost ZUGRIFF about 3 ms of the render thread a frame and its batching. See vendor/bevy_pbr-0.19.1/PATCHED.md.
+[patch.crates-io]
+bevy_pbr = { path = "vendor/bevy_pbr-0.19.1" }

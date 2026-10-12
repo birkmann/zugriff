@@ -1,0 +1,893 @@
+{
+ "rifle": {
+  "uid": "662fc74dda2646cfb48fc610705768ef",
+  "title": "M4 - FPS Weapon Animations Pack (v.1)",
+  "author": "barcodegames",
+  "url": "https://sketchfab.com/3d-models/662fc74dda2646cfb48fc610705768ef",
+  "license": "CC BY 4.0"
+ },
+ "pistol": {
+  "uid": "0d7a343dcb6f401197a73c91aee93f6d",
+  "title": "FPS pistol animations",
+  "author": "ccransh (hands: FP Arms by bumstrum; pistol: Springfield Armory XD Mod.2 Sub-Compact by raimeiyonke)",
+  "url": "https://sketchfab.com/3d-models/0d7a343dcb6f401197a73c91aee93f6d",
+  "license": "CC BY 4.0"
+ },
+ "knife": {
+  "uid": "b3c3a8c7c28349268f6631567cf01d8a",
+  "title": "Fighting Ka-Bar knifes",
+  "author": "vitvitskyi",
+  "url": "https://sketchfab.com/3d-models/b3c3a8c7c28349268f6631567cf01d8a",
+  "license": "CC BY 4.0"
+ },
+ "knife-fp-b": {
+  "uid": "e5db6b73878f4123baa48cea6d9af84c",
+  "title": "knife animated",
+  "author": "DJMaesen (bumstrum)",
+  "url": "https://sketchfab.com/3d-models/e5db6b73878f4123baa48cea6d9af84c",
+  "license": "CC BY 4.0"
+ },
+ "grenade": {
+  "uid": "e94d90f68bdb4fd68d7a0aac6d9c5dd0",
+  "title": "M69 Frag Grenade",
+  "author": "rileylewandowski",
+  "url": "https://sketchfab.com/3d-models/e94d90f68bdb4fd68d7a0aac6d9c5dd0",
+  "license": "CC BY 4.0"
+ },
+ "soldier-blue": {
+  "uid": "850593a8c7114c188395ba1849a66eb9",
+  "title": "Soldier Full Tactical Gear (LowPolyGameReady)",
+  "author": "1799danly",
+  "url": "https://sketchfab.com/3d-models/850593a8c7114c188395ba1849a66eb9",
+  "license": "CC BY 4.0"
+ },
+ "soldier-red": {
+  "uid": "cc995450452744ec8f852d8bf5f335d6",
+  "title": "Army soldier Character",
+  "author": "joneborden123",
+  "url": "https://sketchfab.com/3d-models/cc995450452744ec8f852d8bf5f335d6",
+  "license": "CC BY 4.0"
+ },
+ "anims": {
+  "itch": "https://quaternius.itch.io/universal-animation-library",
+  "file": "Universal Animation Library[Standard].zip",
+  "title": "Universal Animation Library",
+  "author": "Quaternius",
+  "url": "https://quaternius.com/packs/universalanimationlibrary.html",
+  "license": "CC0 1.0"
+ },
+ "ak": {
+  "uid": "94be8385c402474cacd39bc096c6ca14",
+  "title": "FPS AK-74m animations",
+  "author": "ccransh (AK-74M: creationwasteland; FP Arms: bumstrum)",
+  "url": "https://sketchfab.com/3d-models/94be8385c402474cacd39bc096c6ca14",
+  "license": "CC BY 4.0"
+ },
+ "sniper": {
+  "uid": "c15ae8393d824f5b929e3f69691cdd31",
+  "title": "FPS animations sniper rifle",
+  "author": "ccransh (sniper rifle: Oleg Anufriev / olgnchsart; FP Arms: bumstrum)",
+  "url": "https://sketchfab.com/3d-models/c15ae8393d824f5b929e3f69691cdd31",
+  "license": "CC BY 4.0"
+ },
+ "sniper-rifle": {
+  "uid": "fcd0458ca107414999d7e70413eabd8e",
+  "title": "Sniper",
+  "author": "DJMaesen (bumstrum)",
+  "url": "https://sketchfab.com/3d-models/fcd0458ca107414999d7e70413eabd8e",
+  "license": "CC BY 4.0"
+ },
+ "shotgun": {
+  "uid": "e68ef617fe8a48cca8610d016ffd5881",
+  "title": "FPS Arms remington (shotgun)",
+  "author": "ccransh (Remington 870: tris09; FP Arms: bumstrum)",
+  "url": "https://sketchfab.com/3d-models/e68ef617fe8a48cca8610d016ffd5881",
+  "license": "CC BY 4.0"
+ },
+ "smg": {
+  "uid": "ca37ea9148dc4fcc9cc632175d311b23",
+  "title": "SMG FPS Animations",
+  "author": "ccransh (Masterpiece Arms 30 SST: eNse7en; FP Arms: bumstrum)",
+  "url": "https://sketchfab.com/3d-models/ca37ea9148dc4fcc9cc632175d311b23",
+  "license": "CC BY 4.0"
+ },
+ "mg": {
+  "uid": "8c24d7374ea64bdab1c30f49c69d5ed8",
+  "title": "LMG",
+  "author": "DJMaesen (bumstrum)",
+  "url": "https://sketchfab.com/3d-models/8c24d7374ea64bdab1c30f49c69d5ed8",
+  "license": "CC BY 4.0"
+ },
+ "hostage": {
+  "uid": "143a2b1ea5eb4385ae90a73657aca3bc",
+  "title": "Nathan Animated 003 - Walking 3D Man",
+  "author": "Renderpeople",
+  "url": "https://sketchfab.com/3d-models/143a2b1ea5eb4385ae90a73657aca3bc",
+  "license": "CC BY 4.0"
+ },
+ "concrete_road_barrier": {
+  "source": "polyhaven",
+  "id": "concrete_road_barrier",
+  "title": "Concrete Road Barrier",
+  "author": "Amal Kumar",
+  "url": "https://polyhaven.com/a/concrete_road_barrier",
+  "license": "CC0"
+ },
+ "concrete_road_barrier_02": {
+  "source": "polyhaven",
+  "id": "concrete_road_barrier_02",
+  "title": "Concrete Road Barrier 02",
+  "author": "Amal Kumar",
+  "url": "https://polyhaven.com/a/concrete_road_barrier_02",
+  "license": "CC0"
+ },
+ "metal_trash_can": {
+  "source": "polyhaven",
+  "id": "metal_trash_can",
+  "title": "Metal Trash Can",
+  "author": "GurJas Studios",
+  "url": "https://polyhaven.com/a/metal_trash_can",
+  "license": "CC0"
+ },
+ "trashbag": {
+  "source": "polyhaven",
+  "id": "trashbag",
+  "title": "Trashbag",
+  "author": "Benny Weimer",
+  "url": "https://polyhaven.com/a/trashbag",
+  "license": "CC0"
+ },
+ "fire_hydrant": {
+  "source": "polyhaven",
+  "id": "fire_hydrant",
+  "title": "Fire Hydrant",
+  "author": "Gon\u00e7alo Fel\u00edcio",
+  "url": "https://polyhaven.com/a/fire_hydrant",
+  "license": "CC0"
+ },
+ "street_lamp_01": {
+  "source": "polyhaven",
+  "id": "street_lamp_01",
+  "title": "Street Lamp 01",
+  "author": "Josh Dean",
+  "url": "https://polyhaven.com/a/street_lamp_01",
+  "license": "CC0"
+ },
+ "street_lamp_02": {
+  "source": "polyhaven",
+  "id": "street_lamp_02",
+  "title": "Street Lamp 02",
+  "author": "Josh Dean",
+  "url": "https://polyhaven.com/a/street_lamp_02",
+  "license": "CC0"
+ },
+ "security_light": {
+  "source": "polyhaven",
+  "id": "security_light",
+  "title": "Security Light",
+  "author": "Maximilian Schuster",
+  "url": "https://polyhaven.com/a/security_light",
+  "license": "CC0"
+ },
+ "security_camera_01": {
+  "source": "polyhaven",
+  "id": "security_camera_01",
+  "title": "Security Camera 01",
+  "author": "Alexander Otterbeck (Modeling & Texturing), Yann Kervran (Rigging)",
+  "url": "https://polyhaven.com/a/security_camera_01",
+  "license": "CC0"
+ },
+ "painted_wooden_bench": {
+  "source": "polyhaven",
+  "id": "painted_wooden_bench",
+  "title": "Painted Wooden Bench",
+  "author": "Kirill Sannikov",
+  "url": "https://polyhaven.com/a/painted_wooden_bench",
+  "license": "CC0"
+ },
+ "wooden_picnic_table": {
+  "source": "polyhaven",
+  "id": "wooden_picnic_table",
+  "title": "Wooden Picnic Table",
+  "author": "Ulan Cabanilla",
+  "url": "https://polyhaven.com/a/wooden_picnic_table",
+  "license": "CC0"
+ },
+ "modular_street_seating": {
+  "source": "polyhaven",
+  "id": "modular_street_seating",
+  "title": "Modular Street Seating",
+  "author": "Stuart Attenborrow",
+  "url": "https://polyhaven.com/a/modular_street_seating",
+  "license": "CC0"
+ },
+ "exterior_aircon_unit": {
+  "source": "polyhaven",
+  "id": "exterior_aircon_unit",
+  "title": "Exterior Aircon Unit",
+  "author": "Monsta3D",
+  "url": "https://polyhaven.com/a/exterior_aircon_unit",
+  "license": "CC0",
+  "variant": "02"
+ },
+ "power_box_01": {
+  "source": "polyhaven",
+  "id": "power_box_01",
+  "title": "Power Box 01",
+  "author": "Rico Cilliers (Modeling & Texturing), Yann Kervran (Rigging)",
+  "url": "https://polyhaven.com/a/power_box_01",
+  "license": "CC0"
+ },
+ "utility_box_01": {
+  "source": "polyhaven",
+  "id": "utility_box_01",
+  "title": "Utility Box 01",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/utility_box_01",
+  "license": "CC0"
+ },
+ "utility_box_02": {
+  "source": "polyhaven",
+  "id": "utility_box_02",
+  "title": "Utility Box 02",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/utility_box_02",
+  "license": "CC0"
+ },
+ "rollershutter_door": {
+  "source": "polyhaven",
+  "id": "rollershutter_door",
+  "title": "Rollershutter Door",
+  "author": "MP",
+  "url": "https://polyhaven.com/a/rollershutter_door",
+  "license": "CC0"
+ },
+ "hanging_industrial_lamp": {
+  "source": "polyhaven",
+  "id": "hanging_industrial_lamp",
+  "title": "Hanging Industrial Lamp",
+  "author": "Kuutti Siitonen",
+  "url": "https://polyhaven.com/a/hanging_industrial_lamp",
+  "license": "CC0"
+ },
+ "mounted_fluorescent_lights": {
+  "source": "polyhaven",
+  "id": "mounted_fluorescent_lights",
+  "title": "Mounted Fluorescent Lights",
+  "author": "Ulan Cabanilla",
+  "url": "https://polyhaven.com/a/mounted_fluorescent_lights",
+  "license": "CC0"
+ },
+ "water_manhole_cover": {
+  "source": "polyhaven",
+  "id": "water_manhole_cover",
+  "title": "Water Manhole Cover",
+  "author": "Raunox",
+  "url": "https://polyhaven.com/a/water_manhole_cover",
+  "license": "CC0"
+ },
+ "old_military_crate": {
+  "source": "polyhaven",
+  "id": "old_military_crate",
+  "title": "Old Military Crate",
+  "author": "Jack Mava",
+  "url": "https://polyhaven.com/a/old_military_crate",
+  "license": "CC0"
+ },
+ "wooden_military_crate": {
+  "source": "polyhaven",
+  "id": "wooden_military_crate",
+  "title": "Wooden Military Crate",
+  "author": "Prabhjinder Singh",
+  "url": "https://polyhaven.com/a/wooden_military_crate",
+  "license": "CC0"
+ },
+ "ammo_box": {
+  "source": "polyhaven",
+  "id": "ammo_box",
+  "title": "Ammo Box",
+  "author": "DanKit",
+  "url": "https://polyhaven.com/a/ammo_box",
+  "license": "CC0"
+ },
+ "metal_jerrycan_green": {
+  "source": "polyhaven",
+  "id": "metal_jerrycan_green",
+  "title": "Metal Jerrycan Green",
+  "author": "Ulan Cabanilla",
+  "url": "https://polyhaven.com/a/metal_jerrycan_green",
+  "license": "CC0"
+ },
+ "propane_tank": {
+  "source": "polyhaven",
+  "id": "propane_tank",
+  "title": "Propane Tank",
+  "author": "Slinc",
+  "url": "https://polyhaven.com/a/propane_tank",
+  "license": "CC0"
+ },
+ "portable_generator": {
+  "source": "polyhaven",
+  "id": "portable_generator",
+  "title": "Portable Generator",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/portable_generator",
+  "license": "CC0"
+ },
+ "old_tyre": {
+  "source": "polyhaven",
+  "id": "old_tyre",
+  "title": "Old Tyre",
+  "author": "MP",
+  "url": "https://polyhaven.com/a/old_tyre",
+  "license": "CC0"
+ },
+ "cardboard_box_01": {
+  "source": "polyhaven",
+  "id": "cardboard_box_01",
+  "title": "Cardboard Box 01",
+  "author": "Rahul Chaudhary",
+  "url": "https://polyhaven.com/a/cardboard_box_01",
+  "license": "CC0"
+ },
+ "cement_bag": {
+  "source": "polyhaven",
+  "id": "cement_bag",
+  "title": "Cement Bag",
+  "author": "PierreB3D",
+  "url": "https://polyhaven.com/a/cement_bag",
+  "license": "CC0"
+ },
+ "plastic_crate_01": {
+  "source": "polyhaven",
+  "id": "plastic_crate_01",
+  "title": "Plastic Crate 01",
+  "author": "PierreB3D",
+  "url": "https://polyhaven.com/a/plastic_crate_01",
+  "license": "CC0"
+ },
+ "steel_frame_shelves_01": {
+  "source": "polyhaven",
+  "id": "steel_frame_shelves_01",
+  "title": "Steel Frame Shelves 01",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/steel_frame_shelves_01",
+  "license": "CC0"
+ },
+ "worn_metal_rack": {
+  "source": "polyhaven",
+  "id": "worn_metal_rack",
+  "title": "Worn Metal Rack",
+  "author": "Luca B",
+  "url": "https://polyhaven.com/a/worn_metal_rack",
+  "license": "CC0"
+ },
+ "industrial_storage_cart": {
+  "source": "polyhaven",
+  "id": "industrial_storage_cart",
+  "title": "Industrial Storage Cart",
+  "author": "Jule Bielitz",
+  "url": "https://polyhaven.com/a/industrial_storage_cart",
+  "license": "CC0"
+ },
+ "hand_truck": {
+  "source": "polyhaven",
+  "id": "hand_truck",
+  "title": "Hand Truck",
+  "author": "Mutanzom3D",
+  "url": "https://polyhaven.com/a/hand_truck",
+  "license": "CC0"
+ },
+ "metal_tool_chest": {
+  "source": "polyhaven",
+  "id": "metal_tool_chest",
+  "title": "Metal Tool Chest",
+  "author": "Yann Kervran (Rigging), John Hutcheson (Modeling & Texturing)",
+  "url": "https://polyhaven.com/a/metal_tool_chest",
+  "license": "CC0"
+ },
+ "metal_office_desk": {
+  "source": "polyhaven",
+  "id": "metal_office_desk",
+  "title": "Metal Office Desk",
+  "author": "Ulan Cabanilla",
+  "url": "https://polyhaven.com/a/metal_office_desk",
+  "license": "CC0"
+ },
+ "drawer_cabinet": {
+  "source": "polyhaven",
+  "id": "drawer_cabinet",
+  "title": "Drawer Cabinet",
+  "author": "Ulan Cabanilla",
+  "url": "https://polyhaven.com/a/drawer_cabinet",
+  "license": "CC0"
+ },
+ "schoolchair_01": {
+  "source": "polyhaven",
+  "id": "SchoolChair_01",
+  "title": "School Chair 01",
+  "author": "Ethan Place",
+  "url": "https://polyhaven.com/a/SchoolChair_01",
+  "license": "CC0"
+ },
+ "wetfloorsign_01": {
+  "source": "polyhaven",
+  "id": "WetFloorSign_01",
+  "title": "Wet Floor Sign 01",
+  "author": "Fran Calvente",
+  "url": "https://polyhaven.com/a/WetFloorSign_01",
+  "license": "CC0"
+ },
+ "barrel_01": {
+  "source": "polyhaven",
+  "id": "Barrel_01",
+  "title": "Barrel_01",
+  "author": "Jorge Camacho",
+  "url": "https://polyhaven.com/a/Barrel_01",
+  "license": "CC0",
+  "variant": "oxide_green"
+ },
+ "barrel_02": {
+  "source": "polyhaven",
+  "id": "Barrel_02",
+  "title": "Barrel 02",
+  "author": "Jorge Camacho",
+  "url": "https://polyhaven.com/a/Barrel_02",
+  "license": "CC0"
+ },
+ "barrel_03": {
+  "source": "polyhaven",
+  "id": "barrel_03",
+  "title": "Barrel 03",
+  "author": "Serhii Khromov",
+  "url": "https://polyhaven.com/a/barrel_03",
+  "license": "CC0"
+ },
+ "wooden_barrels_01": {
+  "source": "polyhaven",
+  "id": "wooden_barrels_01",
+  "title": "Wooden Barrels 01",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/wooden_barrels_01",
+  "license": "CC0"
+ },
+ "wine_barrel_01": {
+  "source": "polyhaven",
+  "id": "wine_barrel_01",
+  "title": "Wine Barrel 01",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/wine_barrel_01",
+  "license": "CC0"
+ },
+ "ocean_buoy": {
+  "source": "polyhaven",
+  "id": "ocean_buoy",
+  "title": "Ocean Buoy",
+  "author": "Mateusz Sadek",
+  "url": "https://polyhaven.com/a/ocean_buoy",
+  "license": "CC0"
+ },
+ "lifebuoy": {
+  "source": "polyhaven",
+  "id": "lifebuoy",
+  "title": "Lifebuoy",
+  "author": "Hank Kaamura",
+  "url": "https://polyhaven.com/a/lifebuoy",
+  "license": "CC0"
+ },
+ "shrub_01": {
+  "source": "polyhaven",
+  "id": "shrub_01",
+  "title": "Shrub 01",
+  "author": "Rico Cilliers",
+  "url": "https://polyhaven.com/a/shrub_01",
+  "license": "CC0"
+ },
+ "shrub_02": {
+  "source": "polyhaven",
+  "id": "shrub_02",
+  "title": "Shrub 02",
+  "author": "Rico Cilliers",
+  "url": "https://polyhaven.com/a/shrub_02",
+  "license": "CC0"
+ },
+ "tree_small_02": {
+  "source": "polyhaven",
+  "id": "tree_small_02",
+  "title": "Tree Small 02",
+  "author": "Rico Cilliers",
+  "url": "https://polyhaven.com/a/tree_small_02",
+  "license": "CC0"
+ },
+ "fir_sapling": {
+  "source": "polyhaven",
+  "id": "fir_sapling",
+  "title": "Fir Sapling",
+  "author": "Rob Tuytel (photography), Rico Cilliers (modeling)",
+  "url": "https://polyhaven.com/a/fir_sapling",
+  "license": "CC0"
+ },
+ "planter_box_01": {
+  "source": "polyhaven",
+  "id": "planter_box_01",
+  "title": "Planter Box 01",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/planter_box_01",
+  "license": "CC0"
+ },
+ "modular_metal_gutter": {
+  "source": "polyhaven",
+  "id": "modular_metal_gutter",
+  "title": "Modular Metal Gutter",
+  "author": "Maxim Domnin",
+  "url": "https://polyhaven.com/a/modular_metal_gutter",
+  "license": "CC0"
+ },
+ "modular_pipes": {
+  "source": "polyhaven",
+  "id": "modular_pipes",
+  "title": "Modular Pipes",
+  "author": "Kuutti Siitonen",
+  "url": "https://polyhaven.com/a/modular_pipes",
+  "license": "CC0"
+ },
+ "covered_car": {
+  "source": "polyhaven",
+  "id": "covered_car",
+  "title": "Covered Car",
+  "author": "MP",
+  "url": "https://polyhaven.com/a/covered_car",
+  "license": "CC0"
+ },
+ "planter_box_02": {
+  "source": "polyhaven",
+  "id": "planter_box_02",
+  "title": "Planter Box 02",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/planter_box_02",
+  "license": "CC0"
+ },
+ "planter_box_03": {
+  "source": "polyhaven",
+  "id": "planter_box_03",
+  "title": "Planter Box 03",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/planter_box_03",
+  "license": "CC0"
+ },
+ "potted_plant_02": {
+  "source": "polyhaven",
+  "id": "potted_plant_02",
+  "title": "Potted Plant 02",
+  "author": "Rico Cilliers",
+  "url": "https://polyhaven.com/a/potted_plant_02",
+  "license": "CC0"
+ },
+ "wooden_crate_02": {
+  "source": "polyhaven",
+  "id": "wooden_crate_02",
+  "title": "Wooden Crate 02",
+  "author": "James Ray Cock, Jurita Burger",
+  "url": "https://polyhaven.com/a/wooden_crate_02",
+  "license": "CC0"
+ },
+ "lantern_01": {
+  "source": "polyhaven",
+  "id": "Lantern_01",
+  "title": "Lantern 01",
+  "author": "Rajil Jose Macatangay",
+  "url": "https://polyhaven.com/a/Lantern_01",
+  "license": "CC0"
+ },
+ "industrial_wall_lamp": {
+  "source": "polyhaven",
+  "id": "industrial_wall_lamp",
+  "title": "Industrial Wall Lamp",
+  "author": "Kuutti Siitonen",
+  "url": "https://polyhaven.com/a/industrial_wall_lamp",
+  "license": "CC0"
+ },
+ "barrel_stove": {
+  "source": "polyhaven",
+  "id": "barrel_stove",
+  "title": "Barrel Stove",
+  "author": "MP",
+  "url": "https://polyhaven.com/a/barrel_stove",
+  "license": "CC0"
+ },
+ "wooden_bucket_01": {
+  "source": "polyhaven",
+  "id": "wooden_bucket_01",
+  "title": "Wooden Bucket 01",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/wooden_bucket_01",
+  "license": "CC0"
+ },
+ "metal_jerrycan": {
+  "source": "polyhaven",
+  "id": "metal_jerrycan",
+  "title": "Metal Jerrycan",
+  "author": "Sean Buckley",
+  "url": "https://polyhaven.com/a/metal_jerrycan",
+  "license": "CC0"
+ },
+ "hanging_picture_frame_01": {
+  "source": "polyhaven",
+  "id": "hanging_picture_frame_01",
+  "title": "Hanging Picture Frame 01",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/hanging_picture_frame_01",
+  "license": "CC0"
+ },
+ "wall_clock": {
+  "source": "polyhaven",
+  "id": "wall_clock",
+  "title": "Wall Clock",
+  "author": "PierreB3D",
+  "url": "https://polyhaven.com/a/wall_clock",
+  "license": "CC0"
+ },
+ "korean_fire_extinguisher_01": {
+  "source": "polyhaven",
+  "id": "korean_fire_extinguisher_01",
+  "title": "Korean Fire Extinguisher 01",
+  "author": "UM JOORIN",
+  "url": "https://polyhaven.com/a/korean_fire_extinguisher_01",
+  "license": "CC0"
+ },
+ "fire_alarm": {
+  "source": "polyhaven",
+  "id": "fire_alarm",
+  "title": "Fire Alarm",
+  "author": "Slinc",
+  "url": "https://polyhaven.com/a/fire_alarm",
+  "license": "CC0"
+ },
+ "steel_frame_shelves_02": {
+  "source": "polyhaven",
+  "id": "steel_frame_shelves_02",
+  "title": "Steel Frame Shelves 02",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/steel_frame_shelves_02",
+  "license": "CC0"
+ },
+ "street_rat": {
+  "source": "polyhaven",
+  "id": "street_rat",
+  "title": "Street Rat",
+  "author": "Sean Buckley",
+  "url": "https://polyhaven.com/a/street_rat",
+  "license": "CC0"
+ },
+ "can_rusted": {
+  "source": "polyhaven",
+  "id": "can_rusted",
+  "title": "Can Rusted",
+  "author": "Rahul Chaudhary",
+  "url": "https://polyhaven.com/a/can_rusted",
+  "license": "CC0"
+ },
+ "plastic_bottle_gallon": {
+  "source": "polyhaven",
+  "id": "plastic_bottle_gallon",
+  "title": "Plastic Bottle Gallon",
+  "author": "Rahul Chaudhary",
+  "url": "https://polyhaven.com/a/plastic_bottle_gallon",
+  "license": "CC0"
+ },
+ "wine_bottles_01": {
+  "source": "polyhaven",
+  "id": "wine_bottles_01",
+  "title": "Wine Bottles 01",
+  "author": "Rico Cilliers, Jurita Burger",
+  "url": "https://polyhaven.com/a/wine_bottles_01",
+  "license": "CC0"
+ },
+ "compost_bags": {
+  "source": "polyhaven",
+  "id": "compost_bags",
+  "title": "Compost Bags",
+  "author": "James Ray Cock",
+  "url": "https://polyhaven.com/a/compost_bags",
+  "license": "CC0"
+ },
+ "plastic_crate_02": {
+  "source": "polyhaven",
+  "id": "plastic_crate_02",
+  "title": "Plastic Crate 02",
+  "author": "Fabi_G",
+  "url": "https://polyhaven.com/a/plastic_crate_02",
+  "license": "CC0"
+ },
+ "plastic_monobloc_chair_01": {
+  "source": "polyhaven",
+  "id": "plastic_monobloc_chair_01",
+  "title": "Plastic Monobloc Chair 01",
+  "author": "Kuutti Siitonen",
+  "url": "https://polyhaven.com/a/plastic_monobloc_chair_01",
+  "license": "CC0"
+ },
+ "wooden_broom": {
+  "source": "polyhaven",
+  "id": "wooden_broom",
+  "title": "Wooden Broom",
+  "author": "Balen",
+  "url": "https://polyhaven.com/a/wooden_broom",
+  "license": "CC0"
+ },
+ "wooden_ladder": {
+  "source": "polyhaven",
+  "id": "wooden_ladder",
+  "title": "Wooden Ladder",
+  "author": "Miroslav Turura",
+  "url": "https://polyhaven.com/a/wooden_ladder",
+  "license": "CC0"
+ },
+ "rusted_wheel_rim_01": {
+  "source": "polyhaven",
+  "id": "rusted_wheel_rim_01",
+  "title": "Rusted Wheel Rim 01",
+  "author": "John Hutcheson",
+  "url": "https://polyhaven.com/a/rusted_wheel_rim_01",
+  "license": "CC0"
+ },
+ "stone_01": {
+  "source": "polyhaven",
+  "id": "stone_01",
+  "title": "Stone 01",
+  "author": "Dario Barresi, Rico Cilliers",
+  "url": "https://polyhaven.com/a/stone_01",
+  "license": "CC0"
+ },
+ "standing_chalkboard_01": {
+  "source": "polyhaven",
+  "id": "standing_chalkboard_01",
+  "title": "Standing Chalkboard 01",
+  "author": "ParzivalCG",
+  "url": "https://polyhaven.com/a/standing_chalkboard_01",
+  "license": "CC0"
+ },
+ "watering_can_metal_01": {
+  "source": "polyhaven",
+  "id": "watering_can_metal_01",
+  "title": "Watering Can Metal 01",
+  "author": "Charles Nderitu",
+  "url": "https://polyhaven.com/a/watering_can_metal_01",
+  "license": "CC0"
+ },
+ "sand_rocks_small_01": {
+  "source": "polyhaven",
+  "id": "sand_rocks_small_01",
+  "title": "Sand Rocks Small 01",
+  "author": "Rob Tuytel, Rico Cilliers",
+  "url": "https://polyhaven.com/a/sand_rocks_small_01",
+  "license": "CC0"
+ },
+ "rock_moss_set_01": {
+  "source": "polyhaven",
+  "id": "rock_moss_set_01",
+  "title": "Rock Moss Set 01",
+  "author": "Kless Gyzen",
+  "url": "https://polyhaven.com/a/rock_moss_set_01",
+  "license": "CC0"
+ },
+ "g36": {
+  "uid": "de744d8804ce4231ba3c76f791980832",
+  "title": "G36 with attachments",
+  "author": "Kelisei Ventura (frankestudios71)",
+  "url": "https://sketchfab.com/3d-models/de744d8804ce4231ba3c76f791980832",
+  "license": "CC BY 4.0"
+ },
+ "hk416": {
+  "uid": "a16768f0ffa24737a4fe324a411cfbd9",
+  "title": "HK 416 A7 (free download)",
+  "author": "r4m",
+  "url": "https://sketchfab.com/3d-models/a16768f0ffa24737a4fe324a411cfbd9",
+  "license": "CC BY 4.0"
+ },
+ "akm": {
+  "uid": "fe8b79ae8a8142fb9ba706912c6b9df8",
+  "title": "AKM",
+  "author": "Armored Wave (armoredwave)",
+  "url": "https://sketchfab.com/3d-models/fe8b79ae8a8142fb9ba706912c6b9df8",
+  "license": "CC BY 4.0"
+ },
+ "awm": {
+  "uid": "b3a829d236004a769c0b3ac07cc3a9ad",
+  "title": "L115A3",
+  "author": "Oxenci",
+  "url": "https://sketchfab.com/3d-models/b3a829d236004a769c0b3ac07cc3a9ad",
+  "license": "CC BY 4.0"
+ },
+ "g28": {
+  "uid": "997840668e1e4c1384c7220563323085",
+  "title": "HK G28 Sniper Rifle",
+  "author": "trolosqlfod",
+  "url": "https://sketchfab.com/3d-models/997840668e1e4c1384c7220563323085",
+  "license": "CC BY 4.0"
+ },
+ "svd": {
+  "uid": "306d7c8a716f411cb73e28dfaaa16581",
+  "title": "SVD_FULL",
+  "author": "binh6675",
+  "url": "https://sketchfab.com/3d-models/306d7c8a716f411cb73e28dfaaa16581",
+  "license": "CC BY 4.0"
+ },
+ "mg5": {
+  "uid": "ec3211a736344f748616cbd1b8d054fc",
+  "title": "HK21E",
+  "author": "notcplkerry",
+  "url": "https://sketchfab.com/3d-models/ec3211a736344f748616cbd1b8d054fc",
+  "license": "CC BY 4.0"
+ },
+ "pkm": {
+  "uid": "ee7b308b1a7d45479776aa1ca57faf0f",
+  "title": "PKP_pecheneg",
+  "author": "chipmunkman",
+  "url": "https://sketchfab.com/3d-models/ee7b308b1a7d45479776aa1ca57faf0f",
+  "license": "CC BY 4.0"
+ },
+ "mp7": {
+  "uid": "d64bdb37ae224897917f6ad65a35a562",
+  "title": "MP7",
+  "author": "Siedh",
+  "url": "https://sketchfab.com/3d-models/d64bdb37ae224897917f6ad65a35a562",
+  "license": "CC BY 4.0"
+ },
+ "bizon": {
+  "uid": "bb157e507b7444ccabd75490366fb618",
+  "title": "Bizon Smg",
+  "author": "TORI106",
+  "url": "https://sketchfab.com/3d-models/bb157e507b7444ccabd75490366fb618",
+  "license": "CC BY 4.0"
+ },
+ "mp5": {
+  "uid": "a73b61932a0e4eecb5db5c63c158aa24",
+  "title": "MP5 Submachine Gun",
+  "author": "Rotuma",
+  "url": "https://sketchfab.com/3d-models/a73b61932a0e4eecb5db5c63c158aa24",
+  "license": "CC BY 4.0"
+ },
+ "ump": {
+  "uid": "9f1c89e7d4764ff4bceffb6c67839c7a",
+  "title": "UMP_45mm",
+  "author": "TORI106",
+  "url": "https://sketchfab.com/3d-models/9f1c89e7d4764ff4bceffb6c67839c7a",
+  "license": "CC BY 4.0"
+ },
+ "usp": {
+  "uid": "b87a309997bf4ac990f14d8010a2ee5a",
+  "title": "HK Heckler & Koch USP 9x19 LowPoly free download",
+  "author": "Aleksandr Goncharov (goncharov)",
+  "url": "https://sketchfab.com/3d-models/b87a309997bf4ac990f14d8010a2ee5a",
+  "license": "CC BY 4.0"
+ },
+ "mp443": {
+  "uid": "f7d1225a025b482d823457e87b3ecb38",
+  "title": "PYA Grach (Mid-Poly)",
+  "author": "Langvey (langvey1066)",
+  "url": "https://sketchfab.com/3d-models/f7d1225a025b482d823457e87b3ecb38",
+  "license": "CC BY 4.0"
+ },
+ "p30": {
+  "uid": "b1b315fa57af475f8fb1fa9433d9586c",
+  "title": "VP9_Pistol",
+  "author": "lorjason34",
+  "url": "https://sketchfab.com/3d-models/b1b315fa57af475f8fb1fa9433d9586c",
+  "license": "CC BY 4.0"
+ },
+ "revolver": {
+  "uid": "3def6e3980e64dfa832f298004ce1b94",
+  "title": "GameReady: Colt Python Revolver",
+  "author": "HYQQM",
+  "url": "https://sketchfab.com/3d-models/3def6e3980e64dfa832f298004ce1b94",
+  "license": "CC BY 4.0"
+ },
+ "benelli": {
+  "uid": "a4cb85ebf36c40f9af47dd3e38d340a2",
+  "title": "Shotgun BENELLI M4 Super 90 14\"",
+  "author": "drcrazzie",
+  "url": "https://sketchfab.com/3d-models/a4cb85ebf36c40f9af47dd3e38d340a2",
+  "license": "CC BY 4.0"
+ }
+}
