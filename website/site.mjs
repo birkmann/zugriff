@@ -8,7 +8,7 @@ if (document.documentElement.dataset.releaseAccess !== 'public') {
     headers: { Accept: 'application/vnd.github+json' }, signal: AbortSignal.timeout(8000),
   });
   if (response.status === 404) {
-    status.textContent = 'The first desktop release is being prepared. Follow development on GitHub.';
+    status.textContent = 'No published release was found. Check GitHub Releases for available downloads.';
   } else {
     if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
     const release = await response.json();

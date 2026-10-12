@@ -89,3 +89,5 @@ h1 span {display: inline-block}
 }
 
 @media(max-width:380px){.spec-strip>div{flex-direction:column;align-items:flex-start;gap:8px}.spec-strip span{max-width:none}}
+
+.play-options p a{text-decoration:underline;text-underline-offset:3px}
