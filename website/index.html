@@ -12,14 +12,24 @@
   <link rel="stylesheet" href="style.css">
   <script type="module" src="site.mjs"></script>
   <script type="module" src="gallery.mjs"></script>
+  <script type="module" src="navigation.mjs"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="header">
   <a class="brand" href="#" aria-label="Zugriff home"><img src="favicon.svg" width="34" height="34" alt="">ZUGRIFF<span class="brand-code">TACTICAL FPS</span></a>
-  <nav aria-label="Main navigation"><a href="#game">The game</a><a class="nav-screens" href="#screenshots">Screenshots</a><a href="#maps">Maps</a></nav>
+  <nav id="main-navigation" aria-label="Main navigation">
+    <p class="mobile-nav-heading">EXPLORE ZUGRIFF</p>
+    <a href="#game"><span class="nav-index" aria-hidden="true">01</span><span>The game</span><span class="nav-arrow" aria-hidden="true">↗</span></a>
+    <a class="nav-screens" href="#screenshots"><span class="nav-index" aria-hidden="true">02</span><span>Screenshots</span><span class="nav-arrow" aria-hidden="true">↗</span></a>
+    <a href="#maps"><span class="nav-index" aria-hidden="true">03</span><span>Maps</span><span class="nav-arrow" aria-hidden="true">↗</span></a>
+    <a class="mobile-nav-link" href="#faq"><span class="nav-index" aria-hidden="true">04</span><span>Questions &amp; setup</span><span class="nav-arrow" aria-hidden="true">↗</span></a>
+    <div class="mobile-nav-footer"><a class="button" href="#download">DOWNLOAD THE GAME <span aria-hidden="true">↘</span></a><p>Windows · Linux · macOS</p></div>
+  </nav>
   <a href="#download" class="nav-download">Download <span aria-hidden="true">↗</span></a>
+  <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-navigation" hidden><span></span><span></span></button>
 </header>
+<div class="nav-backdrop" aria-hidden="true"></div>
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-copy">
@@ -90,7 +100,7 @@
     <noscript><p>Find available downloads on <a href="https://github.com/birkmann/zugriff/releases">GitHub Releases</a>.</p></noscript>
     <div class="download-footer"><a href="https://github.com/birkmann/zugriff#play">Installation guide ↗</a><a href="https://github.com/birkmann/zugriff/releases">Release notes &amp; checksums ↗</a></div>
   </section>
-  <section class="faq section"><div class="section-label"><span>QUESTIONS &amp; SETUP</span></div><div class="faq-layout"><h2>COMMON<br><span>QUESTIONS.</span></h2><div><details><summary>Can I play offline?</summary><p>Yes. Start a local match from the game menu. Bots play both sides, with four difficulty levels and radio orders. You only need a network connection for multiplayer.</p></details><details><summary>How do I play with friends?</summary><p>One player runs the included server. Everyone adds its address in the multiplayer menu, then joins the same room. See the setup instructions for local networks and internet play in the <a href="https://github.com/birkmann/zugriff#multiplayer">README</a>.</p></details><details><summary>Is the game finished?</summary><p>No. ZUGRIFF is in early development, so you may encounter bugs and features may change. The game interface is currently German. Report problems on the GitHub issue tracker.</p></details><details><summary>Where can I follow development?</summary><p>Find the code, build instructions, credits, and release history in the <a href="https://github.com/birkmann/zugriff">ZUGRIFF repository</a>.</p></details></div></div></section>
+  <section id="faq" class="faq section"><div class="section-label"><span>QUESTIONS &amp; SETUP</span></div><div class="faq-layout"><h2>COMMON<br><span>QUESTIONS.</span></h2><div><details><summary>Can I play offline?</summary><p>Yes. Start a local match from the game menu. Bots play both sides, with four difficulty levels and radio orders. You only need a network connection for multiplayer.</p></details><details><summary>How do I play with friends?</summary><p>One player runs the included server. Everyone adds its address in the multiplayer menu, then joins the same room. See the setup instructions for local networks and internet play in the <a href="https://github.com/birkmann/zugriff#multiplayer">README</a>.</p></details><details><summary>Is the game finished?</summary><p>No. ZUGRIFF is in early development, so you may encounter bugs and features may change. The game interface is currently German. Report problems on the GitHub issue tracker.</p></details><details><summary>Where can I follow development?</summary><p>Find the code, build instructions, credits, and release history in the <a href="https://github.com/birkmann/zugriff">ZUGRIFF repository</a>.</p></details></div></div></section>
 </main>
 <footer><a class="brand" href="#"><img src="favicon.svg" width="30" height="30" alt="">ZUGRIFF</a><span>AN INDEPENDENT GAME BY BIRKMANN</span><div><a href="https://github.com/birkmann/zugriff">GitHub ↗</a><a href="https://github.com/birkmann/zugriff/issues">Report an issue ↗</a><a href="https://github.com/birkmann/zugriff/blob/main/THIRD_PARTY.md">Credits ↗</a></div></footer>
 </body>
