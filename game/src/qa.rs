@@ -26,6 +26,9 @@ impl Plugin for QaPlugin {
         if arg("--keys").is_some() {
             app.add_systems(PreUpdate, press_keys.after(bevy::input::InputSystems));
         }
+        if arg("--clicks").is_some() {
+            app.add_systems(First, click_ui.before(bevy::picking::PickingSystems::Input));
+        }
         let Some(shot) = arg("--shot") else { return };
         let wait = arg("--wait").and_then(|f| f.parse().ok()).unwrap_or(5.0);
         let shots = arg("--shots").and_then(|f| f.parse().ok()).unwrap_or(1);
@@ -146,5 +149,44 @@ fn press_keys(mut keys: ResMut<ButtonInput<KeyCode>>, time: Res<Time>, mut done:
         keys.press(code);
         *held = Some(code);
         return;
+    }
+}
+
+/// `--clicks "500,250@5;180,640@9"`: click UI coordinates in the 1080-high design space.
+/// Feed window input, not button actions, so captures exercise normal UI hit testing.
+fn click_ui(
+    window: Single<(Entity, &mut Window), With<bevy::window::PrimaryWindow>>,
+    mut events: MessageWriter<bevy::window::WindowEvent>,
+    mut mouse: MessageWriter<bevy::input::mouse::MouseButtonInput>,
+    time: Res<Time>,
+    mut done: Local<Vec<usize>>,
+    mut release: Local<bool>,
+) {
+    use bevy::input::{ButtonState, mouse::MouseButtonInput};
+    use bevy::window::{CursorMoved, WindowEvent};
+    let (entity, mut window) = window.into_inner();
+    if *release {
+        let input = MouseButtonInput { window: entity, button: MouseButton::Left, state: ButtonState::Released };
+        mouse.write(input);
+        events.write(WindowEvent::MouseButtonInput(input));
+        *release = false;
+    }
+    for (i, part) in crate::args::get("clicks").unwrap_or_default().split(';').enumerate() {
+        let Some((xy, at)) = part.split_once('@') else { continue };
+        let Some((x, y)) = xy.split_once(',') else { continue };
+        let (Ok(x), Ok(y), Ok(at)) = (x.parse::<f32>(), y.parse::<f32>(), at.parse::<f32>()) else { continue };
+        if done.contains(&i) || time.elapsed_secs() < at { continue; }
+        let position = Vec2::new(x, y) * (window.height() / 1080.0).clamp(0.45, 2.0);
+        // Update the position consumed by UI without asking the OS to warp its cursor
+        // (Wayland disallows warping an unlocked cursor).
+        window.bypass_change_detection().set_cursor_position(Some(position));
+        events.write(WindowEvent::CursorMoved(CursorMoved { window: entity, position, delta: None }));
+        let input = MouseButtonInput { window: entity, button: MouseButton::Left, state: ButtonState::Pressed };
+        mouse.write(input);
+        events.write(WindowEvent::MouseButtonInput(input));
+        info!("qa: clicking UI at {x},{y}");
+        done.push(i);
+        *release = true;
+        break;
     }
 }

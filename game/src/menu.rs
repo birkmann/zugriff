@@ -419,14 +419,7 @@ fn emblem(c: &mut ChildSpawnerCommands, size: f32) {
 /// Maps on the left, the operator in the middle, the settings and the start on the right.
 fn lobby(body: &mut ChildSpawnerCommands, f: &Fonts, server: &AssetServer, setup: &MatchSettings) {
     body.spawn(Node { width: Val::Percent(100.0), height: Val::Percent(100.0), column_gap: Val::Px(32.0), ..default() }).with_children(|row| {
-        // Maps.
-        row.spawn(Node { width: Val::Px(430.0), flex_shrink: 0.0, flex_direction: FlexDirection::Column, row_gap: Val::Px(12.0), ..default() }).with_children(|col| {
-            section(col, f, "Einsatzgebiet");
-            col.spawn(Node { height: Val::Px(2.0), ..default() });
-            for (i, m) in MAPS.iter().enumerate() {
-                map_card(col, f, server, i, m, setup.map == m.name);
-            }
-        });
+        map_picker(row, f, server, &setup.map, Act::Map);
         // The operator.
         row.spawn(Node { flex_grow: 1.0, height: Val::Percent(100.0), flex_direction: FlexDirection::Column, justify_content: JustifyContent::End, align_items: AlignItems::Center, min_width: Val::Px(0.0), ..default() }).with_children(|mid| {
             let sides: Vec<Team> = setup.team.map_or(vec![Team::Ksk, Team::Opfor], |t| vec![t]);
@@ -511,30 +504,36 @@ fn nameplate(c: &mut ChildSpawnerCommands, f: &Fonts, t: Team) {
     });
 }
 
-fn map_card(c: &mut ChildSpawnerCommands, f: &Fonts, server: &AssetServer, i: usize, m: &MapInfo, on: bool) {
-    let border = if on { AMBER } else { LINE };
-    c.spawn((
-        Button,
-        Node { width: Val::Percent(100.0), height: Val::Px(128.0), border: UiRect::all(Val::Px(if on { 2.0 } else { 1.0 })), border_radius: BorderRadius::all(Val::Px(12.0)), overflow: Overflow::clip(), align_items: AlignItems::End, ..default() },
-        BackgroundColor(GLASS_HI),
-        BorderColor::all(border),
-        Hover::new(GLASS_HI, GLASS_HI, border, if on { AMBER_HI } else { LINE_HI }),
-        BoxShadow::new(if on { Color::srgba(1.0, 0.6, 0.0, 0.25) } else { Color::srgba(0.0, 0.0, 0.0, 0.4) }, Val::Px(0.0), Val::Px(6.0), Val::Px(0.0), Val::Px(20.0)),
-        Act::Map(i),
-    ))
-    .with_children(|card| {
-        // The picture (5:3), centred in the strip.
-        card.spawn((Node { position_type: PositionType::Absolute, left: Val::Px(0.0), top: Val::Px(-65.0), width: Val::Percent(100.0), aspect_ratio: Some(5.0 / 3.0), ..default() }, ImageNode::new(server.load(format!("thumbs/{}.jpg", m.name))).with_color(if on { Color::srgb(0.8, 0.8, 0.8) } else { Color::srgb(0.42, 0.44, 0.46) }), Pickable::IGNORE));
-        card.spawn((full(), BackgroundGradient::from(LinearGradient::to_right(vec![ColorStop::percent(Color::srgba(0.01, 0.015, 0.02, 0.92), 0.0), ColorStop::percent(Color::srgba(0.01, 0.015, 0.02, 0.0), 100.0)])), Pickable::IGNORE));
-        if on {
-            card.spawn((Node { position_type: PositionType::Absolute, left: Val::Px(0.0), top: Val::Px(0.0), bottom: Val::Px(0.0), width: Val::Px(5.0), ..default() }, BackgroundColor(AMBER), Pickable::IGNORE));
-        }
-        card.spawn((Node { flex_direction: FlexDirection::Column, padding: UiRect::new(Val::Px(22.0), Val::Px(16.0), Val::Px(0.0), Val::Px(14.0)), row_gap: Val::Px(4.0), ..default() }, Pickable::IGNORE)).with_children(|t| {
-            t.spawn((text(m.title, &f.bold, 36.0, Color::WHITE), TextShadow { offset: Vec2::splat(2.0), color: Color::srgba(0.0, 0.0, 0.0, 0.6) }, Pickable::IGNORE));
-            t.spawn(Node { column_gap: Val::Px(10.0), align_items: AlignItems::Center, ..default() }).with_children(|r| {
-                r.spawn((caps(m.objective, &f.bold, 14.0, objective_color(m.objective)), Pickable::IGNORE));
-                r.spawn((caps(m.name, &f.label, 13.0, DIM), Pickable::IGNORE));
-            });
+/// The same map choices in solo play and room creation. Keep the full preview visible;
+/// labels live below the image so even an unselected map is easy to recognise.
+pub(crate) fn map_picker<A: Component>(c: &mut ChildSpawnerCommands, f: &Fonts, server: &AssetServer, selected: &str, action: impl Fn(usize) -> A) {
+    c.spawn(Node { width: Val::Px(600.0), flex_shrink: 0.0, flex_direction: FlexDirection::Column, row_gap: Val::Px(18.0), ..default() }).with_children(|col| {
+        section(col, f, "Karte wählen");
+        col.spawn(Node { display: Display::Grid, width: Val::Percent(100.0), grid_template_columns: RepeatedGridTrack::flex(2, 1.0), column_gap: Val::Px(16.0), row_gap: Val::Px(16.0), ..default() }).with_children(|grid| {
+            for (i, m) in MAPS.iter().enumerate() {
+                let on = selected == m.name;
+                let border = if on { AMBER } else { LINE_HI };
+                grid.spawn((
+                    Button,
+                    Node { min_width: Val::Px(0.0), border: UiRect::all(Val::Px(2.0)), border_radius: BorderRadius::all(Val::Px(8.0)), overflow: Overflow::clip(), flex_direction: FlexDirection::Column, ..default() },
+                    BackgroundColor(INK),
+                    BorderColor::all(border),
+                    Hover::new(INK, GLASS_HI, border, if on { AMBER_HI } else { SOFT }),
+                    action(i),
+                )).with_children(|card| {
+                    card.spawn((Node { width: Val::Percent(100.0), aspect_ratio: Some(16.0 / 9.0), flex_shrink: 0.0, ..default() }, ImageNode::new(server.load(format!("thumbs/{}.jpg", m.name))), Pickable::IGNORE)).with_children(|preview| {
+                        if on {
+                            preview.spawn((Node { position_type: PositionType::Absolute, top: Val::Px(10.0), left: Val::Px(10.0), padding: UiRect::axes(Val::Px(10.0), Val::Px(5.0)), border_radius: BorderRadius::all(Val::Px(3.0)), ..default() }, BackgroundColor(AMBER), Pickable::IGNORE)).with_children(|badge| {
+                                badge.spawn((caps("Ausgewählt", &f.bold, 14.0, INK), Pickable::IGNORE));
+                            });
+                        }
+                    });
+                    card.spawn((Node { flex_direction: FlexDirection::Column, padding: UiRect::all(Val::Px(16.0)), row_gap: Val::Px(6.0), ..default() }, Pickable::IGNORE)).with_children(|caption| {
+                        caption.spawn((text(m.title, &f.bold, 32.0, Color::WHITE), Pickable::IGNORE));
+                        caption.spawn((caps(if m.name == "dev_arena" { "Training" } else { m.objective }, &f.label, 15.0, objective_color(m.objective)), Pickable::IGNORE));
+                    });
+                });
+            }
         });
     });
 }
@@ -993,7 +992,7 @@ fn loading(mut commands: Commands, pending: Res<Pending>, warmup: Res<crate::war
         commands.entity(e).with_children(|c| {
             // The picture fills the screen (cropped to its middle), darkened toward the text.
             c.spawn(Node { overflow: Overflow::clip(), justify_content: JustifyContent::Center, align_items: AlignItems::Center, ..full() }).with_children(|p| {
-                p.spawn((Node { width: Val::Percent(100.0), min_height: Val::Percent(100.0), aspect_ratio: Some(5.0 / 3.0), flex_shrink: 0.0, ..default() }, ImageNode::new(server.load(format!("thumbs/{}.jpg", settings.map))).with_color(Color::srgb(0.55, 0.58, 0.62))));
+                p.spawn((Node { width: Val::Percent(100.0), min_height: Val::Percent(100.0), aspect_ratio: Some(16.0 / 9.0), flex_shrink: 0.0, ..default() }, ImageNode::new(server.load(format!("thumbs/{}.jpg", settings.map))).with_color(Color::srgb(0.55, 0.58, 0.62))));
             });
             c.spawn((full(), BackgroundGradient::from(LinearGradient::to_top(vec![ColorStop::percent(Color::srgba(0.01, 0.015, 0.02, 0.97), 0.0), ColorStop::percent(Color::srgba(0.01, 0.015, 0.02, 0.6), 45.0), ColorStop::percent(Color::srgba(0.01, 0.015, 0.02, 0.15), 100.0)]))));
             c.spawn(Node { position_type: PositionType::Absolute, left: Val::Px(120.0), right: Val::Px(120.0), bottom: Val::Px(90.0), flex_direction: FlexDirection::Column, row_gap: Val::Px(12.0), ..default() }).with_children(|col| {

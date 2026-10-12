@@ -42,3 +42,16 @@ public so Pages and public-repository runners can be used.
 - All 73 simulation tests and the bundled-map integration check passed. The 0.1.3
   Linux bundle smoke test passed; the native renderer loaded the final water shader
   and ship materials without errors. The Hafen website image is a fresh 1080p capture.
+
+## Map selection (0.1.4)
+
+- Solo and multiplayer setup now share a two-column map grid. Each card shows a
+  complete 16:9 preview, separate map/objective labels, and an amber selected badge.
+- Refreshed all four map previews at 1280 × 720, including Sachsen at Hafen and
+  a new training-courtyard capture. Loading screens use the same aspect ratio.
+- Inspected native captures at 1920 × 1080 and 1280 × 720. Scripted mouse input
+  selected all four solo maps through image/caption hit areas; the load log
+  confirmed each map. Multiplayer selection updated its badge and room summary.
+- Client and server compiled. The Linux 0.1.4 bundle smoke check passed.
+- Refreshed the website/README menu capture. Static asset checks and the eight-image
+  gallery check passed, including viewer navigation and desktop/mobile layouts.

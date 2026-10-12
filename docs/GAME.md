@@ -82,6 +82,7 @@ Launch options (`?name=value` in the address on the web, `--name value` natively
 |---|---|
 | `play=<map>` | Start a match on that map straight away (no menu). With `team=ksk|opfor`, `mode=dm`, `warmup=<s>`, `rounds=<n>` (match length; 2 ends quickly, for the end screen). |
 | `menu=options\|controls\|credits\|pause\|buy` | Open that page for screenshots: the first three from the lobby; `pause` once a `play=` match is live; `buy` while it can buy, kept open without a captured mouse, with `cursor=x,y` (UI pixels at 1080p) to show an item's details. |
+| `--clicks "500,250@5;180,640@9"` | Native QA: click menu positions at the given seconds (coordinates in the 1080-high UI design space). Combine with `--shot` to capture the result; this exercises UI hit testing. |
 | `autoplay` | A bot plays for the local player (natively a bare `--autoplay`); for watching and testing. |
 | `map=<map>` + `pose=x,y,z,yaw,pitch` | A still view of a map without menu (metres, degrees), for screenshots. |
 | `noactors`, `nobots`, `noshadow`, `nohud`, `nofx` | Performance bisection: leave out the bodies, the bots' thinking, sun shadows, the HUD, the effects. |
