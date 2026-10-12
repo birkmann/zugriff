@@ -12,3 +12,9 @@ Validated locally on Linux on 2026-10-12:
 Windows and macOS packages are configured in GitHub Actions; they have not been compiled or run
 locally. Each release job runs simulation tests and a packaged server smoke test. The GUI needs
 platform-specific playtesting. GitHub Pages needs to be enabled by a repository administrator.
+
+Release 0.1.1 adds a Linux AppImage, verified with `--appimage-extract-and-run --version`.
+The GitHub failures were diagnosed through authenticated API access: jobs never started because
+an Actions budget prevented runner use. Enabling Pages returned HTTP 422 because the current
+account plan does not support Pages for this private repository. These are account restrictions,
+not compiler or site build failures.
