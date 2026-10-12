@@ -10,6 +10,7 @@ import plistlib
 import shutil
 import subprocess
 import tarfile
+import tomllib
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -44,7 +45,7 @@ def main():
         with (app / 'Info.plist').open('wb') as f:
             plistlib.dump({'CFBundleName': 'ZUGRIFF', 'CFBundleDisplayName': 'ZUGRIFF',
                           'CFBundleIdentifier': 'com.birkmann.zugriff', 'CFBundleExecutable': 'zugriff',
-                          'CFBundlePackageType': 'APPL', 'CFBundleShortVersionString': '0.1.0',
+                          'CFBundlePackageType': 'APPL', 'CFBundleShortVersionString': tomllib.loads((ROOT / 'game/Cargo.toml').read_text())['package']['version'],
                           'NSHighResolutionCapable': True}, f)
     else:
         binaries = resources = stage

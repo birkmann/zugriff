@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { downloads, filenames } from './releases.mjs';
-const asset = { name: filenames.linux, state: 'uploaded', size: 1024 ** 2, browser_download_url: 'https://github.com/birkmann/zugriff/releases/download/v0.1.0/zugriff-linux-x86_64.tar.gz' };
+const asset = { name: filenames.linux, state: 'uploaded', size: 1024 ** 2, browser_download_url: 'https://github.com/birkmann/zugriff/releases/download/v0.1.0/zugriff-linux-x86_64.AppImage' };
 test('only a published matching platform asset enables a download', () => {
   assert.deepEqual(Object.keys(downloads({ assets: [asset] })), ['linux']);
   assert.equal(downloads({ assets: [asset] }).linux.size, 1);

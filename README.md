@@ -10,7 +10,7 @@ Fliegerhorst. Early development; the in-game interface is German.
 
 Download a package from Releases and extract it completely. Keep `assets/` beside the executable.
 
-- **Linux x86_64:** extract the `.tar.gz` and run `./zugriff`. A recent Vulkan-capable graphics driver,
+- **Linux x86_64:** make the `.AppImage` executable and run it, or extract the `.tar.gz` and run `./zugriff`. A recent Vulkan-capable graphics driver,
   ALSA, udev, Wayland/X11 and xkbcommon runtime libraries are required. CI builds on Ubuntu 22.04.
 - **Windows x86_64:** extract the ZIP and open `zugriff.exe`.
 - **macOS Apple silicon:** open the DMG, copy `ZUGRIFF.app` to Applications, then open it. Builds are
@@ -29,6 +29,7 @@ sudo apt-get install build-essential pkg-config libasound2-dev libudev-dev libwa
 cargo run --locked --profile native -p zugriff
 cargo test --locked -p zugriff_sim -p zugriff_server
 python3 packaging/package.py
+python3 packaging/appimage.py  # Linux: also make a single-file AppImage
 ```
 
 The packager creates an archive in `dist/`, bundles all game assets and the dedicated server, and
@@ -68,7 +69,7 @@ be public even when its source repository is private; only `website/` is deploye
 or binary bundles. Enabling Pages is an explicit repository setting.
 
 Push a `v*` tag (for example `v0.1.0`) to build Linux, Windows and Apple silicon macOS packages and
-publish a GitHub release after all packages pass. Running `Release` manually produces workflow
+publish the successful packages to a GitHub release. A failed platform does not block the other downloads; rerunning its failed job adds the missing package. Running `Release` manually produces workflow
 artifacts without publishing. The `Checks` workflow tests the simulation, server and site.
 
 The optional browser client remains available: install the `wasm32-unknown-unknown` Rust target,

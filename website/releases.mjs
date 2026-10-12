@@ -1,6 +1,6 @@
 export const repository = 'https://github.com/birkmann/zugriff';
 export const filenames = {
-  linux: 'zugriff-linux-x86_64.tar.gz',
+  linux: 'zugriff-linux-x86_64.AppImage',
   windows: 'zugriff-windows-x86_64.zip',
   macos: 'zugriff-macos-arm64.dmg',
 };
