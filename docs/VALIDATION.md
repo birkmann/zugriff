@@ -16,5 +16,6 @@ platform-specific playtesting. GitHub Pages needs to be enabled by a repository 
 Release 0.1.1 adds a Linux AppImage, verified with `--appimage-extract-and-run --version`.
 The GitHub failures were diagnosed through authenticated API access: jobs never started because
 an Actions budget prevented runner use. Enabling Pages returned HTTP 422 because the current
-account plan does not support Pages for this private repository. These are account restrictions,
-not compiler or site build failures.
+account plan does not support Pages for this private repository. These were account restrictions,
+not compiler or site build failures. The owner subsequently authorized making the repository
+public so Pages and public-repository runners can be used.

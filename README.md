@@ -59,14 +59,9 @@ provide HTTP status and room listings. On macOS the server binary is inside
 `website/` is a static site with local fonts and real game screenshots. Preview with
 `python3 -m http.server 8080 --directory website`. GitHub Pages uses the `Website` workflow; set
 **Settings → Pages → Source → GitHub Actions** once. All site paths work under `/zugriff/`.
-The repository currently stays private. Download buttons lead to GitHub Releases, where visitors
-must sign in with repository access. No credentials are embedded in the website. If the repository
-later becomes public, set `data-release-access="public"` on the site's `<html>` element to enable
-per-platform discovery from the latest release, with graceful empty/error states.
-
-GitHub Pages availability for private repositories depends on the account plan. A Pages site may
-be public even when its source repository is private; only `website/` is deployed, never game source
-or binary bundles. Enabling Pages is an explicit repository setting.
+The repository and downloads are public. Platform buttons discover the latest published release
+assets from GitHub; unavailable platforms keep a link to Releases. No credentials are needed.
+The website is deployed by GitHub Actions to https://birkmann.github.io/zugriff/.
 
 Push a `v*` tag (for example `v0.1.0`) to build Linux, Windows and Apple silicon macOS packages and
 publish the successful packages to a GitHub release. A failed platform does not block the other downloads; rerunning its failed job adds the missing package. Running `Release` manually produces workflow
