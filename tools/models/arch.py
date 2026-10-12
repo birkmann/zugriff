@@ -1905,18 +1905,15 @@ VEHICLES = {
     "veh_nh90": ("nh90.glb", 24000, (3.0, 15.0), 0, ["fliegerhorst"]),
     "veh_leopard": ("leopard2a8.glb", 26000, (3.8, 9.5), 0, ["fliegerhorst", "hafen"]),
     "veh_patriot": ("patriot.glb", 24000, (3.0, 11.0), 0, ["fliegerhorst"]),
-    "veh_f124": ("f124.glb", 60000, None, 0, ["hafen"]),
+    "veh_f124": ("f124.glb", 80000, None, 0, ["hafen"]),
 }
 
 
-# A factor on the baked colour (linear) for vehicles whose paint reads too light here.
-VEHICLE_TINT = {"veh_f124": 0.62}
-
-
 def vehicle(name: str) -> dict:
-    """A catalogue vehicle as a placed model: its parts joined, decimated to the budget, rebaked into one 2048 px
-    material, a collision box round the hull (not the wings or rotor)."""
+    """Import a placed vehicle with lightmap UVs and hull collision. Aircraft are rebaked;
+    Sachsen keeps its original exterior materials and markings at their source resolution."""
     src, budget, collide, turn, theme = VEHICLES[name]
+    preserve_finish = name == "veh_f124"  # Keep Sachsen markings, railings and tiled weathering.
     build.reset()
     objs = build.load(NEXUS / src)
     parts = build.meshes(objs)
@@ -1928,14 +1925,14 @@ def vehicle(name: str) -> dict:
         o.data.transform(o.matrix_world)
         o.matrix_world = Matrix.Identity(4)
     body = build._join(parts)
-    # Left out: decals (serial, roundels, crest, flag: see-through overlays would bake as black patches), the
-    # engines' flame, the crew and the cockpit's insides (a parked aircraft, its canopy opaque in the bake).
+    # Effects and hidden interiors are omitted. Rebaked vehicles also omit transparent markings;
+    # Sachsen keeps those as separate materials, so their alpha survives the import.
     drop = ("jet-", "crew-", "cockpit-", "display-", "hud-", "|interior", "muzzle-flash", "rotor-disc")
 
     def dropped(mt) -> bool:
         n = mt.name.lower()
         # (markings are named "kind:text"; everything else see-through but glass is an effect)
-        return ":" in n or any(d in n for d in drop) or (mt.blend_method == "BLEND" and "glass" not in n and "canopy" not in n)
+        return any(d in n for d in drop) or (not preserve_finish and (":" in n or (mt.blend_method == "BLEND" and "glass" not in n and "canopy" not in n)))
 
     bm = bmesh.new()
     bm.from_mesh(body.data)
@@ -1960,7 +1957,7 @@ def vehicle(name: str) -> dict:
                         stack.append(g)
         vs = {v for f in island for v in f.verts}
         ext = sorted(max(v.co[i] for v in vs) - min(v.co[i] for v in vs) for i in range(3))
-        if ext[2] > 3.0 and ext[1] < 0.08:
+        if not preserve_finish and ext[2] > 3.0 and ext[1] < 0.08:
             strands += island
     bm.faces.ensure_lookup_table()
     if strands:
@@ -2018,28 +2015,19 @@ def vehicle(name: str) -> dict:
         bmesh.ops.delete(bm, geom=out, context="FACES")
     bm.to_mesh(body.data)
     bm.free()
-    build._clean(body)
+    if not preserve_finish:
+        build._clean(body)
     if not body.data.uv_layers:
         body.data.uv_layers.new(name="UVMap")
-    build._rebake(body, name, 2048)
-    bake_ao(body, name, 2048, distance=0.5, strength=0.7)
-    if name in VEHICLE_TINT:
-        # Darken the baked colour (the catalogue's naval grey is tuned for its own renderer; here it came out white).
-        import numpy as np
-
-        im = bpy.data.images[f"{name}_baseColor"]
-        px = np.empty(im.size[0] * im.size[1] * 4, dtype=np.float32)
-        im.pixels.foreach_get(px)
-        px = px.reshape(-1, 4)
-        px[:, :3] *= VEHICLE_TINT[name]
-        im.pixels.foreach_set(px.ravel())
-        im.update()
+    if not preserve_finish:
+        build._rebake(body, name, 2048)
+        bake_ao(body, name, 2048, distance=0.5, strength=0.7)
     build._select(body)
     bpy.ops.object.shade_smooth_by_angle(angle=math.radians(40), keep_sharp_edges=False)
     _, lo0, _ = build._bounds(body)
     zmin = float(lo0[2])
     build._to_origin(body, None)
-    fill = build._lightmap_uv(body, 0.004)
+    fill = build._lightmap_uv(body, 0.0004 if preserve_finish else 0.004)
     path = build._export_prop(name, body)
     check = build._glb_check(path)
     _, lo, hi = build._bounds(body)
@@ -2051,7 +2039,9 @@ def vehicle(name: str) -> dict:
         "area": round(build._area(body), 3),
         "lightmap_fill": round(fill, 3),
         "collide": [round(collide[0] / 2, 3), round(size[1] / 2, 3), round(collide[1] / 2, 3)] if collide else None,
-        "albedo": build._albedo(body),
+        # The source ship uses texture × tint × vertex colour. The generic sampler only reads
+        # its near-white weather texture; use the naval paint reflectance for indirect lighting.
+        "albedo": [0.52, 0.54, 0.55] if preserve_finish else build._albedo(body),
         "theme": theme,
         # (the model's lowest point: for a ship, how far its keel is below the waterline, which is its y = 0)
         "bottom": round(zmin, 3),

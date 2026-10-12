@@ -101,10 +101,8 @@ ground((XW - 400, 1650), (XE + 60, QY), CONC)
 # Quay wall down to the water, steel coping on its edge, and the water itself.
 k.blk((XW - 400, QY - 16, WATER - 16), (XE + 60, QY, -16), {"sides": NODRAW, "+y": T("concrete_dirty"), "top": NODRAW, "bottom": NODRAW})
 k.dblk((XW - 400, QY - 20, 0), (XE + 60, QY + 2, 3), {"sides": T("metal_rust"), "top": T("metal_rust"), "bottom": NODRAW, "-y": NODRAW})
-# Water: a strip along the quay (the frigate hides the rest) and open water past its ends.
-# Water: a flat brush below the quay (the client draws dev/water dark and glossy); the frigate hides the rest.
-for (x0, y0, x1, y1) in ((-3000, QY, 3000, QY + 400), (-3000, QY + 400, -2500, 2950), (1500, QY + 400, 3000, 2950)):
-    k.ground(x0, y0, x1, y1, "dev/water", 620, WATER - 16, WATER)
+# Open harbour water continues behind the frigate and beyond both ends of the quay.
+k.ground(-9000, QY, 9000, 8500, "dev/water", 1800, WATER - 16, WATER)
 # Rubber fenders on the quay wall.
 for x in range(-2500, 2600, 400):
     k.add(prism((QY + 14, -40), 14, x - 48, x + 48, 8, TRIM, rot=22.5, axis="x"))
@@ -445,8 +443,10 @@ k.crate(760, 690, 0, 48)
 for x0 in (-700, -250, 250):
     k.add(hull([(x0, 1600, 0), (x0 + 320, 1600, 0), (x0, 1632, 0), (x0 + 320, 1632, 0),
                 (x0, 1610, 32), (x0 + 320, 1610, 32), (x0, 1622, 32), (x0 + 320, 1622, 32)], T("concrete_dirty")))
+# Tall cargo beside the barriers gives cover on the approach to the quay.
+k.crate(250, 1510, 0, 80)
 # The gantry: four lattice legs, portal girders, a boom, trolley, cab and a hanging container.
-RED, STEEL = T("metal_rusty_paint"), T("metal_plate")
+RED, STEEL = T("metal_painted_red"), T("metal_plate")
 CZ = 600  # girder bottom
 
 
@@ -493,6 +493,14 @@ for x in (-1100, -500, 100, 700):
 k.blk((-1100, 1044, CZ + 326), (1000, 1056, CZ + 336), RED)
 k.blk((-940, 640, CZ + 72), (-860, 1460, CZ + 152), {"sides": RED, "top": RED, "bottom": RED})
 k.blk((860, 640, CZ + 72), (940, 1460, CZ + 152), {"sides": RED, "top": RED, "bottom": RED})
+# Stiffener plates and guarded service walks break up the long painted girders.
+for y in (650, 1450):
+    for x in range(-840, 900, 120):
+        k.dblk((x - 3, y - 36, CZ + 72), (x + 3, y + 36, CZ + 152), STEEL)
+    k.railing(-850, y - 42, 850, y - 42, CZ + 152, 36, STEEL)
+for x in (-600, 600):
+    for y in (650, 1450):
+        k.decal("hazard_stripes", (x, y - 49, 14), "-y", size=(2.3, 0.3))
 # Machine house on top, the operator cab under the boom, trolley and spreader with a container.
 k.blk((600, 980, CZ + 236), (900, 1120, CZ + 330), {"sides": T("plaster_white"), "top": STEEL, "bottom": NODRAW})
 k.blk((620, 978, CZ + 290), (880, 982, CZ + 310), TRIM)
@@ -516,12 +524,35 @@ for x in (-900, 0, 900):
     k.lamp(x, QY - 120, 0, 320, "-y")
 k.crate(-600, 2000, 0, 48)
 k.crate(640, 1780, 0, 56)
+# Mooring lines fan out from the bollards to the ship's fairleads. They stay beyond the playable edge.
+for x, ship_x in ((-2000, -1650), (-1500, -1900), (1500, 1900), (2000, 1650)):
+    for dx in (-5, 5):
+        m.point("zg_wire", (x + dx, QY - 38, 26), end=f"{ship_x + dx} {QY + 375} 98",
+                sag="0.6", radius="0.04")
+# Quay services: emergency rings, power cabinets, cargo staged beside the traffic lane.
+for x in (-1250, 1250, 2400):
+    k.post(x, QY - 75, 0, 64, 5, T("metal_painted_red"))
+    k.prop("lifebuoy", x, QY - 80, 27, yaw=270, solid=False)
+    k.prop("utility_box_02", x + 65, QY - 75, 0.25, yaw=270, solid=True)
+for x, y, yaw in ((-950, 1760, 12), (1000, 1750, -8), (2130, 1810, 90)):
+    k.prop("pallet_boxes", x, y, 0.25, yaw=yaw, solid=True)
+    k.prop("pallet_sacks", x + 65, y + 22, 0.25, yaw=yaw + 4, solid=True)
+    k.prop("industrial_storage_cart", x + 100, y - 75, 0.25, yaw=yaw + 90, solid=True)
+    k.decal("oil_stain_b", (x, y - 50, 0.2), "+z", size=(1.8, 2.2))
 # Gangway to the ship (visual, blocked by the quay clip).
 k.add(hull([(80, QY + 20, 40), (200, QY + 20, 40), (80, QY + 320, 170), (200, QY + 320, 170),
             (80, QY + 20, 46), (200, QY + 20, 46), (80, QY + 320, 176), (200, QY + 320, 176)], STEEL))
 k.blk((80, QY - 40, 0), (200, QY + 20, 46), {"sides": STEEL, "top": STEEL, "bottom": NODRAW})
 k.railing(80, QY - 40, 80, QY + 20, 46, 40, T("metal_painted_blue"))
 k.railing(200, QY - 40, 200, QY + 20, 46, 40, T("metal_painted_blue"))
+
+# Handrails and toe boards follow the gangway slope.
+for x in (84, 196):
+    k.bar((x, QY + 20, 88), (x, QY + 320, 218), 3, STEEL)
+    k.bar((x, QY + 20, 64), (x, QY + 320, 194), 2, STEEL)
+    for y in range(QY + 20, QY + 321, 60):
+        z = 46 + (y - QY - 20) * 130 / 300
+        k.post(x, y, z, z + 42, 2, STEEL)
 
 # ---------------------------------------------------------------------------------------------------------------
 # Site A: the west end of the quay. Stacked site office with outside stairs (the high ground), cover.
@@ -641,6 +672,8 @@ if SHIP:
     # Scaled to the brush hull's length, its waterline at the water, the bow towards +x.
     sc = (BOW - SX0) / (props_info()["veh_f124"]["size"][2] * 39.37)
     k.prop("veh_f124", (SX0 + BOW) / 2, HYM, WATER + props_info()["veh_f124"]["bottom"] * sc * 39.37, yaw=0, scale=round(sc, 4), solid=False)
+    # A 123 m ship needs a larger lighting chart than an ordinary prop.
+    m.entities[-1].props["lmsize"] = "256"
 
 # ---------------------------------------------------------------------------------------------------------------
 # Backdrop: the granary east of B, an office block east of the forecourt, the port office south of the gate.
@@ -746,7 +779,7 @@ k.decal("sign_notausgang", (WX0, (WDOOR[0] + WDOOR[1]) / 2, 140), "-x")
 k.decal("stop_line", (0, YS + 420, 0), "+z", size=(4.0, 1.9))
 for y in (-1000, -400, 200):
     k.decal("floor_arrow", (160, y, 0), "+z")
-for x in (-600, -200, 200, 600):
+for x in range(-2400, 2600, 400):
     k.decal("hazard_stripes", (x, QY - 30, 0), "+z", size=(3.0, 0.29))
 k.dress(budget=200)
 k.finish()

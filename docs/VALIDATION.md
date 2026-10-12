@@ -29,3 +29,16 @@ public so Pages and public-repository runners can be used.
 - All 73 simulation tests and the bundled-map compilation check passed again.
 - The Linux client rendered the updated hangar using the bundled MiG and lighting.
   `website/assets/hangar.webp` is a capture from this build.
+
+## Sachsen and Hafen docks (0.1.3)
+
+- Exported F219 Sachsen from the `eu-ui` model code in Chromium. Unlike the older
+  stored GLB, the export includes rendered hull markings and deck fittings.
+  Running the checked-in export tool reproduced the same GLB checksum.
+- Retained separate hull, deck, glass, and marking materials; corrected hull
+  shading and packed lighting UVs; rebuilt Hafen navigation and baked lighting.
+- Added mooring lines, quay services, cargo, gangway rails and crane detailing.
+  Harbour ripples now fade fine detail with distance to reduce shimmering.
+- All 73 simulation tests and the bundled-map integration check passed. The 0.1.3
+  Linux bundle smoke test passed; the native renderer loaded the final water shader
+  and ship materials without errors. The Hafen website image is a fresh 1080p capture.

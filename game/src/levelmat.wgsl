@@ -175,14 +175,18 @@ fn fragment(in: VertexOutput, @builtin(front_facing) is_front: bool) -> Fragment
     if (detail.w > 0.5) {
         let t = globals.time;
         let p = wp.xz;
+        // Broad, irregular harbour ripples; fade fine detail before it aliases on the horizon.
+        let footprint = max(length(dpdx(p)), length(dpdy(p)));
+        let fine = 1.0 - smoothstep(0.12, 0.8, footprint);
+        let phase = vnoise(p * 0.13) * 3.0;
         var g = vec2<f32>(0.0);
-        g += vec2<f32>(0.8, 0.6) * cos(dot(p, vec2<f32>(0.8, 0.6)) * 5.1 + t * 1.9) * 0.05;
-        g += vec2<f32>(-0.5, 0.86) * cos(dot(p, vec2<f32>(-0.5, 0.86)) * 7.3 + t * 2.3) * 0.035;
-        g += vec2<f32>(0.2, -0.98) * cos(dot(p, vec2<f32>(0.2, -0.98)) * 11.7 + t * 3.1) * 0.02;
+        g += vec2<f32>(0.8, 0.6) * cos(dot(p, vec2<f32>(0.8, 0.6)) * 1.6 + phase + t * 0.8) * 0.04;
+        g += vec2<f32>(-0.5, 0.86) * cos(dot(p, vec2<f32>(-0.5, 0.86)) * 2.8 + t * 1.2) * 0.024 * fine;
+        g += vec2<f32>(0.2, -0.98) * cos(dot(p, vec2<f32>(0.2, -0.98)) * 4.1 + t * 1.6) * 0.014 * fine;
         let e = 0.07;
         let q = p * 2.3 + vec2<f32>(t * 0.21, t * 0.13);
-        g += vec2<f32>(vnoise(q + vec2<f32>(e, 0.0)) - vnoise(q - vec2<f32>(e, 0.0)), vnoise(q + vec2<f32>(0.0, e)) - vnoise(q - vec2<f32>(0.0, e))) * 0.35;
-        pbr_input.N = normalize(vec3<f32>(-g.x * 2.2, 1.0, -g.y * 2.2));
+        g += vec2<f32>(vnoise(q + vec2<f32>(e, 0.0)) - vnoise(q - vec2<f32>(e, 0.0)), vnoise(q + vec2<f32>(0.0, e)) - vnoise(q - vec2<f32>(0.0, e))) * 0.18 * fine;
+        pbr_input.N = normalize(vec3<f32>(-g.x * 1.2, 1.0, -g.y * 1.2));
     }
     let n = abs(normalize(in.world_normal));
     // World coordinates across the face's plane, for noise that runs on across neighbouring faces.

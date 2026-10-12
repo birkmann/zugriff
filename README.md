@@ -34,7 +34,7 @@ Real in-game captures. Select an image to view it at full resolution.
 
 | Hafen | Altstadt | Fliegerhorst |
 | --- | --- | --- |
-| [![Frigate, cargo crane and container yard at Hafen](website/assets/hafen.webp)](website/assets/hafen.webp) | [![Altstadt church square with its fountain and colorful shopfronts](website/assets/altstadt.webp)](website/assets/altstadt.webp) | [![NH90 helicopter outside the hangar at Fliegerhorst](website/assets/fliegerhorst.webp)](website/assets/fliegerhorst.webp) |
+| [![F219 Sachsen, mooring lines and cargo cranes at Hafen](website/assets/hafen.webp)](website/assets/hafen.webp) | [![Altstadt church square with its fountain and colorful shopfronts](website/assets/altstadt.webp)](website/assets/altstadt.webp) | [![NH90 helicopter outside the hangar at Fliegerhorst](website/assets/fliegerhorst.webp)](website/assets/fliegerhorst.webp) |
 | Warehouses, cargo and contested sightlines. | Town squares, narrow streets and market stalls. | Hangars, open ground and the air-base apron. |
 
 ## Develop

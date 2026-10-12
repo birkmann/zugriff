@@ -2824,7 +2824,7 @@ def credits():
         "`crate_pine`/`crate_old`, `sandbags_1m` and the `truck_*` semis are modelled by `tools/models/arch.py` and shaded with",
         "the Poly Haven and ambientCG CC0 textures listed in `assets/textures/CREDITS.md`. The vehicles `veh_mig29`, `veh_tornado`,",
         "`veh_nh90`, `veh_leopard`, `veh_patriot` and `veh_f124` are this workspace's own Nexus Sim models",
-        "(`apps/bevy-spike/bevy/assets/models`), decimated and rebaked by arch.py.",
+        "(`apps/bevy-spike/bevy/assets/models`), imported by arch.py; Sachsen retains its original exterior materials and markings.",
     ]
     (OUT / "CREDITS.md").write_text("\n".join(lines) + "\n")
 

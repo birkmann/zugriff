@@ -55,6 +55,13 @@ ZUGRIFF_VEHICLE_SOURCES=../eu-ui/apps/bevy-spike/bevy/assets/models \
     ~/.local/bin/uv run --python 3.11 --with "bpy==4.2.*" python tools/models/arch.py veh_mig29
 # Then regenerate zg_fliegerhorst, its navigation and lightmap using the commands above.
 
+# Sachsen: export in Chromium so the hull markings render, retaining deck fittings.
+node tools/models/export_sachsen.cjs ../eu-ui /tmp/nexus-vehicles
+ZUGRIFF_VEHICLE_SOURCES=/tmp/nexus-vehicles \
+    ~/.local/bin/uv run --python 3.11 --with "bpy==4.2.*" python tools/models/arch.py veh_f124
+# Then regenerate zg_hafen, navigation and lighting. esbuild/Playwright come from eu-ui.
+
+
 # Balance: bot-against-bot matches, headless.
 cargo run --release -p zugriff_sim --bin zg-balance -- assets/maps/zg_hafen.map --seeds 6 --rounds 16 [--why]
 

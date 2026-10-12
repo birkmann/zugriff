@@ -112,7 +112,7 @@ pub fn tuning(set: &str) -> Vec4 {
 
 /// Water (`dev/water`): dark and glossy, the sky's reflection on it, ripples moving over it (the shader's `w` flag).
 pub fn water(sky: Handle<Image>) -> LevelMaterial {
-    let base = StandardMaterial { base_color: Color::srgb(0.05, 0.085, 0.09), perceptual_roughness: 0.05, metallic: 0.0, reflectance: 0.5, ..default() };
+    let base = StandardMaterial { base_color: Color::srgb(0.05, 0.085, 0.09), perceptual_roughness: 0.12, metallic: 0.0, reflectance: 0.5, ..default() };
     let reflect = if crate::args::flag("noreflect") { Vec4::new(0.0, 1.0, 1.0, 0.0) } else { Vec4::new(crate::sky::BRIGHTNESS * crate::view::exposure_gain(), OPEN_SKY, 1.0, 0.0) };
     ExtendedMaterial {
         base,

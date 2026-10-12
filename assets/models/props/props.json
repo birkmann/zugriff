@@ -3762,20 +3762,20 @@
   "made": "arch.py"
  },
  "veh_f124": {
-  "tris": 45932,
-  "bytes": 3556472,
+  "tris": 56024,
+  "bytes": 3676656,
   "size": [
    20.072,
    41.16,
    145.75
   ],
-  "area": 22170.39,
-  "lightmap_fill": 0.428,
+  "area": 22366.321,
+  "lightmap_fill": 0.804,
   "collide": null,
   "albedo": [
-   0.219,
-   0.218,
-   0.216
+   0.52,
+   0.54,
+   0.55
   ],
   "theme": [
    "hafen"
