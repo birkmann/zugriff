@@ -6,7 +6,7 @@
   side, muzzle to the right, in white with studio shading and cavities, on transparent ground; the menu tints them.
   Equipment the game has no model for (vest, helmet, kit, flash and smoke grenades) is built here from primitives.
 - operators (`assets/ui/operator-ksk.png`, `operator-opfor.png`, 900×1400): a soldier of each side in its idle pose,
-  a rifle on the chest socket as in the game, lit key/rim/fill with Cycles on transparent ground, for the lobby.
+  a rifle fitted to both hands at low ready, lit key/rim/fill with Cycles on transparent ground, for the lobby.
 """
 
 import math
@@ -271,8 +271,13 @@ def empty(name, location):
     return o
 
 
-# Where the hands go on each rifle (its own frame: muzzle +Y, up +Z): the pistol grip and under the handguard.
-HOLDS = {"m4.glb": (Vector((0.0, 0.10, 0.0)), Vector((0.0, 0.44, 0.04))), "ak.glb": (Vector((0.0, 0.09, 0.0)), Vector((0.0, 0.44, 0.04)))}
+# Contact points measured on each prop in Blender space (+Y muzzle, +Z up).
+# The rifles have different origins and handguard lengths; sharing these points
+# put the AK support hand on its barrel and left the M4 trigger hand behind its grip.
+HOLDS = {
+    "m4.glb": {"butt": (-0.028, -0.145, 0.065), "R": (-0.028, 0.115, -0.020), "L": (-0.028, 0.365, 0.075)},
+    "ak.glb": {"butt": (0.016, -0.180, 0.030), "R": (0.016, 0.075, -0.012), "L": (0.016, 0.325, 0.075)},
+}
 
 
 def frame(forward, up_hint):
@@ -283,90 +288,104 @@ def frame(forward, up_hint):
     return Matrix((x, y, z)).transposed()
 
 
+def finger_chain(first):
+    return [first, first.children[0], first.children[0].children[0]]
+
+
+def grasp_center(w, chain):
+    """Centre of the curled middle finger, rather than the back of the palm."""
+    return sum([w @ b.head for b in chain] + [w @ chain[-1].tail], Vector()) / 4
+
+
 def low_ready(arm, rifle):
-    """The rifle at the low ready with both hands on it. The idle clip is a rifle idle: its hands already hold an
-    (invisible) rifle, fingers curled. So the rifle is fitted into those hands (pistol grip in the right palm, handguard
-    in the left), then rifle and hands are tilted down together about the right hand; IK takes each wrist to its
-    tilted place and the hands keep their grip by copying their tilted rotation."""
-    w = arm.matrix_world
+    """Fit each hand independently to the rifle, then solve only the two arm bones.
+
+    The retargeted idle provides curled fingers, not a reliable weapon orientation.
+    Derive a grasp frame from each hand's knuckles: the right wraps the pistol grip;
+    the left cups the handguard. Anchor the butt ahead of the right shoulder and
+    point the muzzle down/forward. Leave the clavicles and torso in their idle pose.
+    """
+    w = arm.matrix_world.copy()
     hand = {s: bone(arm, rf"({s}_Hand|{'Left' if s == 'L' else 'Right'}Hand)_\d+$") for s in "LR"}
     mid = {s: bone(arm, rf"({s}_Mid1|{'Left' if s == 'L' else 'Right'}HandMiddle1)_\d+$") for s in "LR"}
+    index = {s: bone(arm, rf"({s}_Index1|{'Left' if s == 'L' else 'Right'}HandIndex1)_\d+$") for s in "LR"}
     fore = {s: bone(arm, rf"({s}_Forearm|{'Left' if s == 'L' else 'Right'}ForeArm)_\d+$") for s in "LR"}
     upper = {s: bone(arm, rf"({s}_Upperarm|{'Left' if s == 'L' else 'Right'}Arm)_\d+$") for s in "LR"}
-    palm = {s: (w @ hand[s].head + w @ mid[s].head) / 2 for s in "LR"}
-    wrist = {s: w @ hand[s].head for s in "LR"}
-    hand_rot = {s: (w @ hand[s].matrix).to_3x3().normalized() for s in "LR"}
-    grip, fore_grip = HOLDS[rifle]
-    # The rifle in the idle hands.
-    fit = frame(palm["L"] - palm["R"], Vector((0, 0, 1))) @ frame(fore_grip - grip, Vector((0, 0, 1))).inverted()
-    fit_loc = palm["R"] - fit @ grip
-    # The carry: the rifle across the body, nearly level, muzzle to the soldier's left and a little up and
-    # forward, its top rolled out; the pistol grip in front of the stomach (clear of the vest), a little right of
-    # the middle. (The soldiers face -Y; their left is +X.)
     shoulder = {s: w @ upper[s].head for s in "LR"}
-    reach_of = {s: (w @ fore[s].head - shoulder[s]).length + (w @ hand[s].head - w @ fore[s].head).length for s in "LR"}
-    width = (shoulder["L"] - shoulder["R"]).length
-    mid_sh = (shoulder["L"] + shoulder["R"]) / 2
-    env = lambda k, v: [float(x) for x in os.environ.get(k, v).split(",")]
-    d = Vector(env("CARRY_DIR", "1,-0.2,0.28")).normalized()
-    roll = Vector(env("CARRY_UP", "0,-0.45,1"))
-    gx, gy, gz = env("CARRY_GRIP", "-0.22,-0.3,-0.42")
-    grip_at = mid_sh + Vector((gx * width, gy, gz))
-    carry = frame(d, roll) @ frame(fore_grip - grip, Vector((0, 0, 1))).inverted()
-    # Hands and rifle move together from the idle hold into the carry.
-    rel = carry @ fit.inverted()
-    pivot = palm["R"]
-    tilt = rel
-
-    def move(p):
-        return rel @ (p - pivot) + grip_at
-
+    contacts = HOLDS[rifle]
+    rot = frame(Vector((0.75, -0.55, -0.45)), Vector((0, 0, 1)))
+    loc = shoulder["R"] + Vector((0.025, -0.20, -0.055)) - rot @ Vector(contacts["butt"])
+    gun_transform = Matrix.Translation(loc) @ rot.to_4x4()
     gun = load(MODELS / rifle)
-    rot = tilt @ fit
-    for r in (o for o in gun if o.parent is None):
-        r.rotation_mode = "QUATERNION"
-        r.rotation_quaternion = rot.to_quaternion()
-        r.location = move(fit_loc)
-    # Elbows down, out and a little back.
-    poles = {"R": mid_sh + Vector((-width * 1.4, 0.35, -0.7)), "L": mid_sh + Vector((width * 1.4, 0.35, -0.7))}
+    for root in (o for o in gun if o.parent is None):
+        root.matrix_world = gun_transform @ root.matrix_world
+
     for s in "LR":
-        # On the hand, without its tail: the chain is collarbone, upper arm and forearm (the shoulder gives a little
-        # reach, as a real one does), and what reaches the target is the wrist itself.
-        c = hand[s].constraints.new("IK")
-        c.use_tail = False
-        c.target = empty(f"ik-{s}", move(wrist[s]))
-        pole = empty(f"pole-{s}", poles[s])
-        c.pole_target = pole
-        c.chain_count = 3
-        # The pole angle that turns the elbow towards the pole differs by rig: try them, keep the one that does.
+        chain = finger_chain(mid[s])
+        center = grasp_center(w, chain)
+        wrist = w @ hand[s].head
+        row = w @ index[s].head - w @ mid[s].head
+        source = frame(w @ mid[s].head - wrist, row) if s == "R" else frame(row, w.to_3x3() @ (chain[1].head - mid[s].head))
+        relative = rot @ source.inverted()
+        grip = loc + rot @ Vector(contacts[s])
+        goal = grip + relative @ (wrist - center)
+        hand_rotation = (relative @ (w @ hand[s].matrix).to_3x3().normalized()).to_quaternion()
+
+        # Keep elbows below the shoulders. A two-bone chain avoids the unnatural
+        # clavicle lift caused by including the shoulder in the previous solve.
+        ik = fore[s].constraints.new("IK")
+        ik.use_tail = True
+        ik.target = empty(f"ik-{s}", goal)
+        ik.chain_count = 2
+        ik.use_stretch = False
+        pole = empty(f"pole-{s}", shoulder[s] + Vector((-0.18 if s == "R" else 0.16, 0.04, -0.42)))
+        ik.pole_target = pole
         best = None
-        for deg in range(-180, 180, 15):
-            c.pole_angle = math.radians(deg)
+        for deg in range(-180, 180, 10):
+            ik.pole_angle = math.radians(deg)
             bpy.context.view_layer.update()
-            elbow = arm.matrix_world @ fore[s].head
-            dist = (elbow - pole.location).length
-            if best is None or dist < best[0]:
-                best = (dist, deg)
-        c.pole_angle = math.radians(best[1])
-        # One rig's hands sit a fixed step away from where the chain ends: aim off by the error until the wrist lands.
-        goal = move(wrist[s])
-        for _ in range(8):
+            distance = (w @ fore[s].head - pole.location).length
+            if best is None or distance < best[0]:
+                best = (distance, deg)
+        ik.pole_angle = math.radians(best[1])
+        # Imported rigs can offset the hand head from the forearm tail.
+        for _ in range(10):
             bpy.context.view_layer.update()
-            miss = arm.matrix_world @ hand[s].head - goal
-            if miss.length < 0.003:
+            error = w @ hand[s].head - goal
+            if error.length < 0.002:
                 break
-            c.target.location -= miss
-        # The hand keeps its grip: its idle rotation, tilted with the rifle.
-        grip_to = empty(f"grip-{s}", move(wrist[s]))
-        grip_to.rotation_mode = "QUATERNION"
-        grip_to.rotation_quaternion = (tilt @ hand_rot[s]).to_quaternion()
-        cr = hand[s].constraints.new("COPY_ROTATION")
-        cr.target = grip_to
-        cr.target_space = "WORLD"
-        cr.owner_space = "WORLD"
+            ik.target.location -= error
+        orient = empty(f"grip-{s}", goal)
+        orient.rotation_mode = "QUATERNION"
+        orient.rotation_quaternion = hand_rotation
+        constraint = hand[s].constraints.new("COPY_ROTATION")
+        constraint.target = orient
+        constraint.target_space = "WORLD"
+        constraint.owner_space = "WORLD"
         bpy.context.view_layer.update()
-        reach = (arm.matrix_world @ hand[s].head - move(wrist[s])).length
-        print(f"  {s} hand: pole angle {best[1]}°, wrist {reach * 100:.1f} cm from its place; shoulder→target {(move(wrist[s]) - shoulder[s]).length:.2f} m, arm {reach_of[s]:.2f} m")
+
+        # Rotation can shift the curled fingers on the imported, scaled rigs.
+        # Finish the solve against the actual posed contact, not just the wrist.
+        for _ in range(12):
+            error = grasp_center(w, chain) - grip
+            if error.length < 0.002:
+                break
+            ik.target.location -= error
+            bpy.context.view_layer.update()
+
+        if s == "R":
+            # The resting index finger follows the receiver outside the trigger guard.
+            for j, finger in enumerate(finger_chain(index[s])):
+                head = w @ finger.head
+                direction = (w.to_3x3() @ (finger.tail - finger.head)).normalized()
+                aim = (rot @ Vector((0, 1, -0.04 * j))).normalized()
+                delta = direction.rotation_difference(aim).to_matrix().to_4x4()
+                finger.matrix = w.inverted() @ Matrix.Translation(head) @ delta @ Matrix.Translation(-head) @ w @ finger.matrix
+                bpy.context.view_layer.update()
+        error = (grasp_center(w, chain) - grip).length
+        print(f"  {s} grip error: {error * 1000:.1f} mm; elbow pole {best[1]}°")
+        if error > 0.005:
+            raise RuntimeError(f"{rifle}: {s} hand missed its grip by {error:.3f} m")
 
 
 def operator(side, soldier, rifle, key_color, rim_color):

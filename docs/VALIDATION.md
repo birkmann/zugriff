@@ -64,3 +64,16 @@ public so Pages and public-repository runners can be used.
   the two-column layout introduced in 0.1.4.
 - The native build passed; scripted clicks loaded all four maps. The website and
   README menu image were refreshed from the restored layout.
+
+## Menu rifle carry (0.1.6)
+
+- Reposed both menu operators using separate M4/AK grip points, a lowered muzzle,
+  shoulder-adjacent stock, and two-bone arm solves that preserve the clavicles.
+  The support hand cups the handguard and the resting index follows the receiver.
+- The Blender render script checks the posed grasp centres against their targets;
+  all four contacts finished within 1.1 mm. Both transparent assets were rendered
+  at 900 × 1400 and inspected in native 1920 × 1080 menu captures, including a
+  scripted switch from KSK to OPFOR.
+- The native client/server build and relocated Linux bundle smoke check passed.
+  The website/README menu capture and gallery thumbnail were refreshed.
+  This change affects menu portraits, not gameplay weapon animations.
