@@ -5,14 +5,82 @@
 @media(max-width:600px){.header{height:68px}.brand{font-size:25px}.brand-code{display:none}nav{gap:17px;font-size:11px}nav>a:first-child{display:none}nav .nav-download{padding:8px 10px}.nav-download span{padding-left:8px}.eyebrow{font-size:8px;letter-spacing:.1em}.edition{margin-left:0}.hero-description{font-size:12px;max-width:320px}.hero-note{font-size:7px}.spec-strip{grid-template-columns:repeat(2,1fr);gap:25px;padding-top:25px;padding-bottom:25px}.spec-strip>div{flex-direction:row;align-items:center}.spec-strip>div:nth-child(2){border:0}.spec-strip strong{font-size:30px}.spec-strip span{font-size:8px;max-width:72px}.section{padding-top:45px;padding-bottom:50px}.section-label{margin-bottom:32px;gap:20px;font-size:7px}.section-label>span:last-child{text-align:right;max-width:135px}.intro,.map-heading,.download-heading{display:block}.intro>p,.map-heading>p{margin-top:25px;font-size:12px}.mode-grid,.map-grid,.play-layout,.download-grid,.faq-layout{grid-template-columns:1fr}.mode-grid article{border-right:0;border-bottom:1px solid var(--line);padding:26px}.mode-number{margin-bottom:24px}.mode-grid p{max-width:none}.map-grid{gap:20px}.map-info{padding:22px}.map-info h3{font-size:40px}.play-layout{gap:35px}.download-heading>div{margin-top:28px}.download-grid article{border-right:0;border-bottom:1px solid #b0b4a3;padding:24px}.download-grid .button{font-size:12px}.download-grid small{font-size:11px}.download-footer{gap:25px;font-size:9px}.faq-layout{gap:34px}footer .brand{font-size:23px}footer>span{font-size:6px}footer>div{gap:20px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
-/* Real game captures, kept uncropped and clear of the headline. */
-.hero{padding:36px 0 40px;background:radial-gradient(ellipse at 85% 20%,#25271d 0,transparent 65%)}
-h1{font-size:clamp(48px,4.4vw,96px);line-height:.98;letter-spacing:-.02em;margin:14px 0}h1 span{display:inline-block}
-.hero-copy{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 24px 30px}.hero-copy .eyebrow{justify-content:center}.hero-copy .hero-description{max-width:none}.hero-copy .hero-note{margin-top:16px}.hero .eyebrow{font-size:8px;letter-spacing:.12em;gap:9px}.hero-description{font-size:14px}.hero-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:26px;margin:22px 0 0}.hero-note{font-size:8px}
-.showcase{min-width:0}.showcase-heading{display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:8px;letter-spacing:.13em;margin:0 24px 15px}.showcase-heading>span:first-child{color:var(--text);display:flex;gap:9px;align-items:center}
-.capture{margin:0;border-block:1px solid #515343;background:#090b08;box-shadow:0 22px 65px #0005}.capture-open{display:block;position:relative;cursor:zoom-in}.capture-open>img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}.capture-expand{position:absolute;right:12px;bottom:12px;background:#10110fe6;border:1px solid #777b67;color:var(--text);width:32px;height:32px;display:grid;place-items:center;font-size:20px}.capture figcaption{display:flex;justify-content:space-between;gap:12px;padding:13px 16px;font-size:8px;letter-spacing:.1em;color:var(--muted)}.capture figcaption>span:first-child{color:var(--accent)}
-.capture-picker{display:grid;grid-template-columns:repeat(4,minmax(0,200px));justify-content:center;gap:12px;margin:16px 24px 0}.capture-choice{display:block;border-bottom:2px solid var(--line);padding-bottom:9px;color:var(--muted);transition:border-color .2s,color .2s}.capture-choice img{width:100%;height:auto;aspect-ratio:16/9;opacity:.65;transition:opacity .2s}.capture-choice>span{display:flex;justify-content:center;gap:8px;font-size:8px;letter-spacing:.05em;line-height:1.5;margin-top:9px}.capture-choice b{font-weight:400;color:#777e6a}.capture-choice[aria-current=true],.capture-choice:hover{border-color:var(--accent);color:var(--text)}.capture-choice[aria-current=true] img,.capture-choice:hover img{opacity:1}.capture-choice[aria-current=true] b{color:var(--accent)}
-.capture-dialog{padding:16px;border:1px solid #525744;background:#10110f;color:var(--text);width:96vw;max-width:none;max-height:96svh;overflow:auto}.capture-dialog::backdrop{background:#000e;backdrop-filter:blur(8px)}.viewer-toolbar,.viewer-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:10px;letter-spacing:.06em}.viewer-toolbar{margin-bottom:12px;color:var(--accent)}.viewer-controls{margin-top:12px}.viewer-controls>span{font-size:8px;color:var(--muted)}.capture-dialog button{background:transparent;border:1px solid #4e5343;padding:12px;color:var(--text);font:600 10px Inter,sans-serif;cursor:pointer}.capture-dialog button:hover{border-color:var(--accent);color:var(--accent)}button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}#viewer-image{width:100%;max-height:calc(96svh - 140px);object-fit:contain}body:has(.capture-dialog[open]){overflow:hidden}
-@media(max-width:700px){.hero{padding:26px 0 30px}.hero-copy{padding:0 18px 26px}h1{font-size:clamp(44px,10vw,66px);margin:18px 0;line-height:.98}.hero-description{font-size:13px}.hero-actions{flex-direction:row;align-items:center;gap:20px;margin:20px 0 16px}.hero-actions .button{padding:14px 18px;gap:20px}.hero-actions .text-link{font-size:10px;gap:8px}.showcase-heading{font-size:7px;gap:12px;margin-inline:12px}.capture figcaption{font-size:7px;padding:10px;min-height:34px}.capture figcaption>span:last-child{display:none}.capture-picker{gap:8px;margin:12px 12px 0}.capture-choice>span{font-size:7px;gap:4px;letter-spacing:0}.capture-choice b{display:none}.capture-expand{width:26px;height:26px;right:8px;bottom:8px}.capture-dialog{padding:10px}.viewer-toolbar{font-size:8px}.viewer-controls>span{display:none}}
+/* A shared content width keeps the header and game gallery aligned on wide displays. */
+.header {
+  height: 84px;
+  padding-inline: max(24px, calc((100% - 1440px) / 2));
+  background: #10110ff5;
+}
+.header .brand {font-size: 32px; gap: 12px}
+.header nav {gap: 32px; font-size: 13px}
+.header .nav-download {padding: 11px 20px; border-color: #62674f}
+.header .nav-download:hover {background: #ffb620; border-color: #ffb620; color: #10110f}
+.hero {
+  padding: 56px 24px 56px;
+  background: radial-gradient(ellipse at 50% 30%, #26281b 0, #14160f 42%, #10110f 75%);
+}
+.hero-copy {
+  max-width: 1120px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 44px;
+}
+.hero .eyebrow {justify-content: center; font-size: 10px; letter-spacing: .16em; gap: 10px; color: #bec2b1}
+h1 {font-size: clamp(56px, 6.5vw, 108px); line-height: .98; letter-spacing: -.015em; margin: 22px 0 18px}
+h1 span {display: inline-block}
+.hero-copy .hero-description {max-width: 580px; font-size: 16px; color: #c0c4b5}
+.hero-actions {display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 26px}
+.hero-actions .button {min-width: 190px; min-height: 54px}
+.hero-actions .text-link {min-height: 54px; padding: 14px 22px; align-items: center; border: 1px solid #464c39}
+.hero-actions .text-link:hover {border-color: var(--accent)}
+.hero-copy .hero-note {margin-top: 18px; font-size: 9px; letter-spacing: .12em; color: #919785}
+.showcase {width: 100%; max-width: 1440px; margin-inline: auto; min-width: 0}
+.showcase-heading {display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 9px; letter-spacing: .12em; margin-bottom: 14px}
+.showcase-heading>span:first-child {color: var(--text); display: flex; gap: 9px; align-items: center}
+.capture {margin: 0; border: 1px solid #4a503d; background: #0b0e09; box-shadow: 0 24px 70px #0006}
+.capture-open {display: block; position: relative; cursor: zoom-in}
+.capture-open>img {width: 100%; height: auto; aspect-ratio: 16/9; object-fit: contain}
+.capture-expand {position: absolute; right: 16px; bottom: 16px; background: #10110fe6; border: 1px solid #777b67; color: var(--text); width: 40px; height: 40px; display: grid; place-items: center; font-size: 24px}
+.capture figcaption {display: flex; justify-content: space-between; gap: 12px; padding: 15px 18px; font-size: 9px; letter-spacing: .1em; color: var(--muted)}
+.capture figcaption>span:first-child {color: var(--accent)}
+.capture-picker {display: grid; grid-template-columns: repeat(4, minmax(0, 200px)); justify-content: center; gap: 14px; margin: 20px auto 0}
+.capture-choice {display: block; border-bottom: 2px solid var(--line); padding-bottom: 10px; color: var(--muted); transition: border-color .2s, color .2s}
+.capture-choice img {width: 100%; height: auto; aspect-ratio: 16/9; opacity: .7; transition: opacity .2s}
+.capture-choice>span {display: flex; justify-content: center; gap: 10px; font-size: 9px; letter-spacing: .06em; line-height: 1.5; margin-top: 10px}
+.capture-choice b {font-weight: 400; color: #777e6a}
+.capture-choice[aria-current=true], .capture-choice:hover {border-color: var(--accent); color: var(--text)}
+.capture-choice[aria-current=true] img, .capture-choice:hover img {opacity: 1}
+.capture-choice[aria-current=true] b {color: var(--accent)}
+.capture-dialog{padding:16px;border:1px solid #525744;background:#10110f;color:var(--text);width:min(96vw,1954px);max-width:none;max-height:96svh;overflow:auto}.capture-dialog::backdrop{background:#000e;backdrop-filter:blur(8px)}.viewer-toolbar,.viewer-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:10px;letter-spacing:.06em}.viewer-toolbar{margin-bottom:12px;color:var(--accent)}.viewer-controls{margin-top:12px}.viewer-controls>span{font-size:8px;color:var(--muted)}.capture-dialog button{background:transparent;border:1px solid #4e5343;padding:12px;color:var(--text);font:600 10px Inter,sans-serif;cursor:pointer}.capture-dialog button:hover{border-color:var(--accent);color:var(--accent)}button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}#viewer-image{width:100%;max-height:calc(96svh - 140px);object-fit:contain}body:has(.capture-dialog[open]){overflow:hidden}
+@media(max-width:700px) {
+  .header {height: 72px; padding-inline: 18px}
+  .header .brand {font-size: 27px; gap: 8px}
+  .header .brand-code {display: none}
+  .header nav {gap: 16px; font-size: 11px}
+  .header .nav-screens {display: none}
+  .header .nav-download {padding: 9px 12px}
+  .hero {padding: 36px 16px 36px}
+  .hero-copy {padding-bottom: 32px}
+  .hero .eyebrow {font-size: 8px; letter-spacing: .1em}
+  h1 {font-size: clamp(46px, 10.8vw, 70px); margin: 20px 0 16px}
+  .hero-copy .hero-description {font-size: 13px; max-width: 310px}
+  .hero-actions {gap: 10px; margin-top: 22px}
+  .hero-actions .button {min-width: 150px; padding: 14px 16px; gap: 20px}
+  .hero-actions .text-link {font-size: 11px; padding: 14px; gap: 10px}
+  .hero-copy .hero-note {font-size: 8px}
+  .showcase-heading {font-size: 7px; gap: 12px; margin-bottom: 10px}
+  .capture figcaption {font-size: 7px; padding: 11px; min-height: 34px}
+  .capture figcaption>span:last-child {display: none}
+  .capture-picker {gap: 8px; margin-top: 12px}
+  .capture-choice>span {font-size: 7px; gap: 4px; letter-spacing: 0}
+  .capture-choice b {display: none}
+  .capture-expand {width: 28px; height: 28px; right: 8px; bottom: 8px; font-size: 20px}
+  .capture-dialog {padding: 10px}
+  .viewer-toolbar {font-size: 8px}
+  .viewer-controls>span {display: none}
+}
 
 @media(max-width:380px){.spec-strip>div{flex-direction:column;align-items:flex-start;gap:8px}.spec-strip span{max-width:none}}
