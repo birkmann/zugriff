@@ -7,10 +7,11 @@
   <meta name="description" content="A standalone tactical shooter. Play with bots, bring your squad, or host your own server. Three maps. Three modes. Download ZUGRIFF for desktop.">
   <meta property="og:title" content="ZUGRIFF — Every round is a new plan.">
   <meta property="og:description" content="A tactical shooter built for the next round. Offline bots. Online squads. Your own server.">
-  <meta property="og:image" content="https://birkmann.github.io/zugriff/assets/gameplay.jpg">
+  <meta property="og:image" content="https://birkmann.github.io/zugriff/assets/menu.webp">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script type="module" src="site.mjs"></script>
+  <script type="module" src="gallery.mjs"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -20,17 +21,35 @@
 </header>
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
-    <img class="hero-image" src="assets/gameplay.jpg" width="1280" height="800" alt="First-person gameplay in Hafen, with a rifle overlooking a brick warehouse and cargo crane" fetchpriority="high">
-    <div class="hero-shade"></div>
     <div class="hero-copy">
-      <p class="eyebrow"><span class="status-dot"></span> INDEPENDENT TACTICAL SHOOTER <span class="edition">/ 001</span></p>
-      <h1 id="hero-title">EVERY ROUND.<br>A NEW <span>PLAN.</span></h1>
-      <p class="hero-description">Read the map. Trust your squad. Make your move.<br>A standalone shooter where the next round is yours to take.</p>
+      <p class="eyebrow"><span class="status-dot"></span> INDEPENDENT TACTICAL SHOOTER</p>
+      <h1 id="hero-title">EVERY ROUND.<br>A NEW<br> <span>PLAN.</span></h1>
+      <p class="hero-description">Read the map. Trust your squad.<br>Make your move.</p>
       <div class="hero-actions"><a class="button" href="#download">GET ZUGRIFF <span aria-hidden="true">↘</span></a><a class="text-link" href="#game">Explore the game <span aria-hidden="true">↓</span></a></div>
-      <p class="hero-note">EARLY DEVELOPMENT <span>·</span> DESKTOP <span>·</span> BUILT WITH BEVY</p>
+      <p class="hero-note">EARLY DEVELOPMENT <span>·</span> DESKTOP</p>
     </div>
-    <div class="hero-caption"><span>IN-GAME CAPTURE</span><span>ZG_HAFEN / KSK</span></div>
+    <div class="showcase" aria-label="Screenshots from Zugriff">
+      <div class="showcase-heading"><span><span class="status-dot"></span> INSIDE ZUGRIFF</span><span>IN-GAME CAPTURES / 01—04</span></div>
+      <figure class="capture">
+        <a class="capture-open" href="assets/menu.webp" aria-label="Enlarge selected game screenshot">
+          <img id="capture-image" src="assets/menu.webp" width="1920" height="1080" alt="Zugriff's main menu, with a detailed KSK operator, map selection and match settings" fetchpriority="high">
+          <span class="capture-expand" aria-hidden="true">↗</span>
+        </a>
+        <figcaption><span id="capture-title" aria-live="polite">01 / PREPARE YOUR OPERATION</span><span>CLICK TO EXPAND ↗</span></figcaption>
+      </figure>
+      <div class="capture-picker" aria-label="Choose a screenshot">
+        <a href="assets/menu.webp" class="capture-choice" aria-current="true" data-title="01 / PREPARE YOUR OPERATION" data-alt="Zugriff's main menu, with a detailed KSK operator, map selection and match settings"><img src="assets/menu-thumb.webp" width="480" height="270" alt=""><span><b>01</b> THE MENU</span></a>
+        <a href="assets/altstadt-action.webp" class="capture-choice" data-title="02 / FIREFIGHT IN ALTSTADT" data-alt="First-person G95 firefight across Altstadt's colorful market square"><img src="assets/altstadt-action-thumb.webp" width="480" height="270" alt=""><span><b>02</b> IN ACTION</span></a>
+        <a href="assets/arsenal.webp" class="capture-choice" data-title="03 / FIND YOUR LOADOUT" data-alt="The arsenal menu showing detailed weapon models and selectable G95 finishes"><img src="assets/arsenal-thumb.webp" width="480" height="270" alt=""><span><b>03</b> THE ARSENAL</span></a>
+        <a href="assets/fliegerhorst.webp" class="capture-choice" data-title="04 / ON THE GROUND AT FLIEGERHORST" data-alt="NH90 helicopter model on the apron outside Fliegerhorst's hangar"><img src="assets/fliegerhorst-thumb.webp" width="480" height="270" alt=""><span><b>04</b> THE WORLD</span></a>
+      </div>
+    </div>
   </section>
+  <dialog class="capture-dialog" aria-label="Game screenshot viewer">
+    <div class="viewer-toolbar"><span id="viewer-title"></span><button type="button" class="viewer-close" aria-label="Close screenshot viewer">CLOSE ×</button></div>
+    <img id="viewer-image" width="1920" height="1080" alt="">
+    <div class="viewer-controls"><button type="button" class="viewer-prev" aria-label="Previous screenshot">← PREVIOUS</button><span>IN-GAME CAPTURE</span><button type="button" class="viewer-next" aria-label="Next screenshot">NEXT →</button></div>
+  </dialog>
   <div class="spec-strip" aria-label="Game features"><div><strong>5 v 5</strong><span>SQUAD TACTICS</span></div><div><strong>03</strong><span>BATTLEGROUNDS</span></div><div><strong>66 Hz</strong><span>SIMULATION</span></div><div><strong>YOUR CALL</strong><span>OFFLINE OR ONLINE</span></div></div>
   <section id="game" class="game section">
     <div class="section-label"><span>01 / THE GAME</span><span>COMMIT TO THE ROUND</span></div>
@@ -45,9 +64,9 @@
     <div class="section-label"><span>02 / KNOW YOUR GROUND</span><span>THREE PLACES TO MAKE YOUR PLAY</span></div>
     <div class="map-heading"><h2>LEARN EVERY<br><span>ANGLE.</span></h2><p>From harbor warehouses to old-town streets.<br>Three distinct settings. A new way in, every time.</p></div>
     <div class="map-grid">
-      <article class="map-card"><img src="assets/zg_hafen.jpg" width="500" height="300" loading="lazy" alt="Hafen's industrial harbor map"><div class="map-info"><span>01 / HARBOR</span><h3>HAFEN</h3><p>Warehouses. Cargo. Contested sightlines.</p></div></article>
-      <article class="map-card"><img src="assets/zg_altstadt.jpg" width="500" height="300" loading="lazy" alt="Altstadt's square with a fountain and church"><div class="map-info"><span>02 / OLD TOWN</span><h3>ALTSTADT</h3><p>Town squares. Tight streets. Close calls.</p></div></article>
-      <article class="map-card"><img src="assets/zg_fliegerhorst.jpg" width="500" height="300" loading="lazy" alt="Fliegerhorst air base map"><div class="map-info"><span>03 / AIR BASE</span><h3>FLIEGERHORST</h3><p>Hangars. Open ground. Watch your flank.</p></div></article>
+      <article class="map-card"><img src="assets/hafen.webp" width="1920" height="1080" loading="lazy" alt="A frigate moored beside the red cargo crane and container yard in Hafen"><div class="map-info"><span>01 / HARBOR</span><h3>HAFEN</h3><p>Warehouses. Cargo. Contested sightlines.</p></div></article>
+      <article class="map-card"><img src="assets/altstadt.webp" width="1920" height="1080" loading="lazy" alt="Altstadt church square with its fountain, market stalls and colorful shopfronts"><div class="map-info"><span>02 / OLD TOWN</span><h3>ALTSTADT</h3><p>Town squares. Tight streets. Close calls.</p></div></article>
+      <article class="map-card"><img src="assets/fliegerhorst.webp" width="1920" height="1080" loading="lazy" alt="NH90 helicopter outside the hangar at Fliegerhorst air base"><div class="map-info"><span>03 / AIR BASE</span><h3>FLIEGERHORST</h3><p>Hangars. Open ground. Watch your flank.</p></div></article>
     </div>
   </section>
   <section class="play section">
