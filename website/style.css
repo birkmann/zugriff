@@ -7,13 +7,16 @@
 
 /* A shared content width keeps the header and game gallery aligned on wide displays. */
 .header {
-  height: 84px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  height: 80px;
   padding-inline: max(24px, calc((100% - 1440px) / 2));
   background: #10110ff5;
 }
-.header .brand {font-size: 32px; gap: 12px}
-.header nav {gap: 32px; font-size: 13px}
-.header .nav-download {padding: 11px 20px; border-color: #62674f}
+.header .brand {justify-self: start; font-size: 30px; gap: 10px}
+.header nav {justify-self: center; gap: 32px; font-size: 13px}
+.header .nav-download {justify-self: end; display: inline-flex; align-items: center; gap: 24px; padding: 11px 20px; border: 1px solid #62674f; font-size: 13px; font-weight: 600}
+.header .nav-download span {padding-left: 0}
 .header .nav-download:hover {background: #ffb620; border-color: #ffb620; color: #10110f}
 .hero {
   padding: 56px 24px 56px;
@@ -33,7 +36,7 @@ h1 {font-size: clamp(56px, 6.5vw, 108px); line-height: .98; letter-spacing: -.01
 h1 span {display: inline-block}
 .hero-copy .hero-description {max-width: 580px; font-size: 16px; color: #c0c4b5}
 .hero-actions {display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 26px}
-.hero-actions .button {min-width: 190px; min-height: 54px}
+.hero-actions>a {width: 190px; min-height: 54px; justify-content: space-between}
 .hero-actions .text-link {min-height: 54px; padding: 14px 22px; align-items: center; border: 1px solid #464c39}
 .hero-actions .text-link:hover {border-color: var(--accent)}
 .hero-copy .hero-note {margin-top: 18px; font-size: 9px; letter-spacing: .12em; color: #919785}
@@ -55,20 +58,22 @@ h1 span {display: inline-block}
 .capture-choice[aria-current=true] img, .capture-choice:hover img {opacity: 1}
 .capture-choice[aria-current=true] b {color: var(--accent)}
 .capture-dialog{padding:16px;border:1px solid #525744;background:#10110f;color:var(--text);width:min(96vw,1954px);max-width:none;max-height:96svh;overflow:auto}.capture-dialog::backdrop{background:#000e;backdrop-filter:blur(8px)}.viewer-toolbar,.viewer-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:10px;letter-spacing:.06em}.viewer-toolbar{margin-bottom:12px;color:var(--accent)}.viewer-controls{margin-top:12px}.viewer-controls>span{font-size:8px;color:var(--muted)}.capture-dialog button{background:transparent;border:1px solid #4e5343;padding:12px;color:var(--text);font:600 10px Inter,sans-serif;cursor:pointer}.capture-dialog button:hover{border-color:var(--accent);color:var(--accent)}button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}#viewer-image{width:100%;max-height:calc(96svh - 140px);object-fit:contain}body:has(.capture-dialog[open]){overflow:hidden}
+@media(max-width:1000px) {.header .brand-code {display: none}}
 @media(max-width:700px) {
-  .header {height: 72px; padding-inline: 18px}
+  .header {height: 72px; padding-inline: 18px; grid-template-columns: 1fr auto}
   .header .brand {font-size: 27px; gap: 8px}
   .header .brand-code {display: none}
-  .header nav {gap: 16px; font-size: 11px}
+  .header nav {display: none}
   .header .nav-screens {display: none}
-  .header .nav-download {padding: 9px 12px}
+  .header .nav-download {padding: 9px 12px; gap: 14px; font-size: 11px}
   .hero {padding: 36px 16px 36px}
   .hero-copy {padding-bottom: 32px}
   .hero .eyebrow {font-size: 8px; letter-spacing: .1em}
   h1 {font-size: clamp(46px, 10.8vw, 70px); margin: 20px 0 16px}
   .hero-copy .hero-description {font-size: 13px; max-width: 310px}
   .hero-actions {gap: 10px; margin-top: 22px}
-  .hero-actions .button {min-width: 150px; padding: 14px 16px; gap: 20px}
+  .hero-actions>a {width: 150px}
+  .hero-actions .button {padding: 14px 16px; gap: 20px}
   .hero-actions .text-link {font-size: 11px; padding: 14px; gap: 10px}
   .hero-copy .hero-note {font-size: 8px}
   .showcase-heading {font-size: 7px; gap: 12px; margin-bottom: 10px}
