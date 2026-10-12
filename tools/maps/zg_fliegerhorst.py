@@ -101,12 +101,39 @@ DOOR = (-1850, -1150, 290)
 vault_wall(k, SX0, SX1, SY0, SY0 + 40, zin, [DOOR], SH)
 vault_wall(k, SX0, SX1, SY1 - 40, SY1, zin, [(-1560, -1440, 120)], SH)
 k.ground(SX0, SY0, SX1, SY1, T("concrete_hangar"), 640, -16, 0.01)
-# Pendant lamps along the vault: pools of warm light over the jet (baked: light_zg from the kit's lamp table).
-if "hanging_industrial_lamp" in props_info():
-    lamp_h = props_info()["hanging_industrial_lamp"]["size"][1] * 39.37
-    for y in (SY0 + 330, SY0 + 700, SY1 - 330):
-        for x in ((SX0 + SX1) / 2 - 260, (SX0 + SX1) / 2 + 260):
-            k.prop("hanging_industrial_lamp", x, y, zin(x) - lamp_h - 4)
+# Steel ribs follow the concrete vault. Service rails carry broad, neutral work lights.
+for y in (-160, 140, 440, 740, 1020):
+    xs = [SX0 + (SX1 - SX0) * i / 12 for i in range(13)]
+    for xa, xb in zip(xs, xs[1:]):
+        k.bar((xa, y, max(6, zin(xa) - 8)), (xb, y, max(6, zin(xb) - 8)), 10, TRIM)
+for x in (-1780, -1220):
+    h = zin(x) - 30
+    k.bar((x, -160, h), (x, 1020, h), 5, TRIM)
+    for y in (-80, 260, 600, 940):
+        k.dblk((x - 5, y - 48, h - 5), (x + 5, y + 48, h), TRIM)
+        m.point("light_zg", (x, y, h - 6), kind="area", power="350",
+                color="236 242 255", dir="0 0 -1", size="2.3 0.18", along="0 1 0")
+# Worn paint decals mark the aircraft bay without thin coplanar brush faces.
+for y in (-220, 960):
+    k.decal("taxiway_line", (-1500, y, 0.7), "+z", size=(17.3, 0.18))
+for y in range(-260, 920, 100):
+    k.decal("taxiway_line", (-1500, y + 27, 0.7), "+z", size=(0.16, 1.4))
+for x in (-1840, -1160):
+    k.decal("hazard_stripes", (x, 360, 0.7), "+z", size=(0.22, 30.0))
+# Maintenance stations stay against the walls, leaving both exits and aisles open.
+for x, yaw in ((-1970, 90), (-1030, 270)):
+    for y in (170, 850):
+        k.prop("steel_frame_shelves_01", x, y, 0.25, yaw=yaw, solid=True)
+        k.prop("metal_tool_chest", x, y + 70, 0.25, yaw=yaw, solid=True)
+        k.prop("korean_fire_extinguisher_01", x, y - 45, 0.25, yaw=yaw)
+        k.prop("ammo_box", x, y, 36, yaw=yaw, solid=False)
+    # Workbench with steel legs, a timber top and equipment.
+    for y in (420, 530):
+        for xx in (x - 18, x + 18):
+            k.post(xx, y, 0, 36, 3, TRIM)
+    k.blk((x - 23, 412, 36), (x + 23, 538, 40), T("wood_beam"))
+    k.prop("metal_jerrycan_green", x, 450, 40, yaw=yaw, solid=False)
+    k.prop("ammo_box", x, 505, 40, yaw=yaw, solid=False)
 # The sliding door leaves, pushed open to the sides in front of the shelter.
 for xa, xb in ((SX0 - 120, -1850), (-1150, SX1 + 120)):
     k.blk((xa, SY0 - 70, 0.25), (xb, SY0 - 30, 300), {"sides": T("metal_painted_green"), "top": T("metal_painted_green"), "bottom": NODRAW})
@@ -118,56 +145,12 @@ k.add(hull([(-1650, SY1, 0), (-1350, SY1, 0), (-1650, SY1 + 160, 0), (-1350, SY1
             (-1650, SY1, 200), (-1350, SY1, 200)], SH))
 
 
-def jet(x, y):
-    """A fighter jet silhouette (nose to +y): fuselage, intakes, swept wings, tail fin, stabilisers, gear."""
-    G = T("concrete_painted")
-    # fuselage: an octagonal body, a tapering nose, a jet pipe.
-    k.add(prism((x, 90), 38, y - 260, y + 200, 8, G, rot=22.5, axis="y"))
-    frustum_pts = []
-    for yy, r in ((y + 200, 38), (y + 360, 6)):
-        for i in range(8):
-            a = math.radians(22.5 + 45 * i)
-            frustum_pts.append((x + r * math.cos(a), yy, 90 + r * math.sin(a) + (8 if yy > y + 300 else 0)))
-    k.add(hull(frustum_pts, G))
-    k.add(prism((x, 90), 30, y - 300, y - 260, 8, TRIM, rot=22.5, axis="y"))
-    # canopy
-    k.add(hull([(x - 20, y + 120, 124), (x + 20, y + 120, 124), (x - 14, y + 230, 112), (x + 14, y + 230, 112),
-                (x - 12, y + 150, 150), (x + 12, y + 150, 150), (x, y + 60, 120)], TRIM))
-    # intakes
-    for s in (-1, 1):
-        k.blk((x + s * 38 - (24 if s < 0 else 0), y - 60, 60), (x + s * 38 + (24 if s > 0 else 0), y + 120, 104), {"sides": G, "top": G, "bottom": G})
-        k.panel("y", x + s * 38 - (24 if s < 0 else 0), x + s * 38 + (24 if s > 0 else 0), y + 120, 1, 64, 100, 1, TRIM)
-    # wings (swept, thin)
-    for s in (-1, 1):
-        k.add(hull([(x + s * 30, y + 80, 80), (x + s * 30, y - 180, 80), (x + s * 330, y - 170, 80), (x + s * 330, y - 110, 80),
-                    (x + s * 30, y + 80, 88), (x + s * 30, y - 180, 88), (x + s * 330, y - 170, 86), (x + s * 330, y - 110, 86)], G))
-        k.add(hull([(x + s * 30, y - 200, 88), (x + s * 30, y - 290, 88), (x + s * 160, y - 300, 88), (x + s * 160, y - 260, 88),
-                    (x + s * 30, y - 200, 94), (x + s * 30, y - 290, 94), (x + s * 160, y - 300, 93), (x + s * 160, y - 260, 93)], G))
-    # fin
-    k.add(hull([(x - 4, y - 120, 120), (x + 4, y - 120, 120), (x - 4, y - 300, 120), (x + 4, y - 300, 120),
-                (x - 3, y - 250, 270), (x + 3, y - 250, 270), (x - 3, y - 310, 270), (x + 3, y - 310, 270)], G))
-    # gear legs and wheels
-    for gx, gy in ((x, y + 230), (x - 70, y - 80), (x + 70, y - 80)):
-        k.post(gx, gy, 20, 60, 6, TRIM, solid=True)
-        k.wheel(gx, gy, 0.25, 14, 10, axis="x")
-
-
-# The Tornado (the catalogue's model, arch.py) where it is built; the brush silhouette otherwise. Its box collides
-# round the fuselage, the wings are open.
-if "veh_tornado" in props_info():
-    k.prop("veh_tornado", -1500, 410, 0.25, yaw=90, solid=True)
-else:
-    jet(-1500, 380)
-# Ground equipment in the shelter: a power cart, a tow tractor, tool chests, crates.
-k.blk((-1900, 700, 0.25), (-1780, 780, 60), {"sides": T("metal_painted_green"), "top": T("metal_painted_green"), "bottom": NODRAW})
-k.blk((-1250, -150, 0.25), (-1120, -60, 50), {"sides": T("metal_painted_green"), "top": T("metal_plate"), "bottom": NODRAW})
-k.blk((-1200, -100, 50), (-1150, -70, 90), {"sides": T("metal_painted_green"), "top": T("metal_plate"), "bottom": NODRAW})
-for x, y in ((-2000, 900), (-1010, 900), (-2000, 100)):
-    k.blk((x - 25, y - 40, 0.25), (x + 25, y + 40, 70), {"sides": T("metal_painted_red"), "top": T("metal_plate"), "bottom": NODRAW})
-k.crate(-1100, 750, 0, 56)
-k.crate(-1060, 700, 0, 48)
-k.crate(-1080, 725, 56, 40)
-k.crate(-1900, 250, 0, 48)
+# Nexus MiG-29, with a fuselage collision hull and open space beneath the wings.
+k.prop("veh_mig29", -1500, 410, 0.25, yaw=90, solid=True)
+# Ground equipment and supplies sit outside the marked aircraft bay.
+k.prop("pallet_boxes", -1940, 730, 0.25, yaw=90, solid=True)
+k.prop("pallet", -1070, 710, 0.25, yaw=90)
+k.prop("wooden_military_crate", -1070, 710, 6, yaw=90, solid=True)
 for x in (-1800, -1200):
     k.lamp(x, -500, 0, 280, "+y")
 # Sandbag walls on the apron (cover in front of the shelter).
@@ -575,7 +558,6 @@ placed += k.props_at("metal_tool_chest", [(-1960, -180, 90), (-1040, 40, 270)])
 placed += k.props_at("portable_generator", [(-1960, 540, 90)])
 placed += k.props_at("metal_jerrycan_green", [(-1965, 620, 90), (-1965, 640, 95), (-1965, 660, 85)])
 placed += k.props_at("wooden_military_crate", [(-1040, 480, 270), (-1040, 530, 270)])
-placed += k.props_at("hanging_industrial_lamp", [(x, y, 0) for x in (-1750, -1250) for y in (0, 500)], z=300)
 # East hardstand: the hangar's number, kit by the helicopter and the fuel truck.
 k.decal("hangar_02", (XE + 20, 480, 180), "-x", size=(1.6, 1.6))
 placed += k.props_at("portable_generator", [(2240, -420, 180)])

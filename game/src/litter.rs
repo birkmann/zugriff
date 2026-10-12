@@ -38,6 +38,10 @@ fn mix(set: &str, map: &str) -> Option<Mix> {
     let s = set.to_ascii_lowercase();
     let town = map.contains("altstadt");
     let port = map.contains("hafen");
+    // Aircraft maintenance floors are kept clear of loose debris.
+    if s.contains("concrete_hangar") {
+        return None;
+    }
     if s.contains("grass") {
         return Some(Mix { per_m2: 0.25, leaves: 0.6, paper: 0.05, stones: 0.2, twigs: 0.15, cans: 0.0, butts: 0.0 });
     }

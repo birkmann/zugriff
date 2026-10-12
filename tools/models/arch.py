@@ -1900,6 +1900,7 @@ NEXUS = Path(os.environ.get("ZUGRIFF_VEHICLE_SOURCES", str(HERE / "sources" / "v
 # name: (source model, triangle budget, collision (width, length) in metres or None, turn about the up axis in
 # degrees so the nose points along the model's +Z front, maps).
 VEHICLES = {
+    "veh_mig29": ("mig29.glb", 65000, (3.8, 17.3), 0, ["fliegerhorst"]),
     "veh_tornado": ("tornado.glb", 40000, (3.2, 15.5), 0, ["fliegerhorst"]),
     "veh_nh90": ("nh90.glb", 24000, (3.0, 15.0), 0, ["fliegerhorst"]),
     "veh_leopard": ("leopard2a8.glb", 26000, (3.8, 9.5), 0, ["fliegerhorst", "hafen"]),

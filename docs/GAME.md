@@ -50,6 +50,11 @@ cargo run --release -p zugriff_sim --bin zg-compile -- assets/maps/zg_hafen.map 
 ~/.local/bin/uv run --python 3.11 --with "bpy==4.2.*" python tools/lightmap/bake.py \
     /tmp/zg_hafen.bake.json assets/maps/zg_hafen.lightmap.hdr --samples 256
 
+# Reimport the MiG-29 from a sibling eu-ui checkout (the ready-to-use GLB is bundled).
+ZUGRIFF_VEHICLE_SOURCES=../eu-ui/apps/bevy-spike/bevy/assets/models \
+    ~/.local/bin/uv run --python 3.11 --with "bpy==4.2.*" python tools/models/arch.py veh_mig29
+# Then regenerate zg_fliegerhorst, its navigation and lightmap using the commands above.
+
 # Balance: bot-against-bot matches, headless.
 cargo run --release -p zugriff_sim --bin zg-balance -- assets/maps/zg_hafen.map --seeds 6 --rounds 16 [--why]
 

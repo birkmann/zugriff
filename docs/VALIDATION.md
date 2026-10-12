@@ -19,3 +19,13 @@ an Actions budget prevented runner use. Enabling Pages returned HTTP 422 because
 account plan does not support Pages for this private repository. These were account restrictions,
 not compiler or site build failures. The owner subsequently authorized making the repository
 public so Pages and public-repository runners can be used.
+
+## MiG-29 hangar update (0.1.2)
+
+- Imported the Nexus MiG-29 from `eu-ui` through `arch.py`: 65,000 triangles,
+  baked materials, a second UV set for lighting, and a fuselage collision hull.
+- Regenerated Fliegerhorst geometry, navigation, and its Cycles lightmap after
+  adding roof ribs, strip lights, maintenance stations, and floor markings.
+- All 73 simulation tests and the bundled-map compilation check passed again.
+- The Linux client rendered the updated hangar using the bundled MiG and lighting.
+  `website/assets/hangar.webp` is a capture from this build.

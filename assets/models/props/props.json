@@ -4340,5 +4340,32 @@
    "open_x": -0.0
   },
   "made": "arch.py"
+ },
+ "veh_mig29": {
+  "tris": 65000,
+  "bytes": 4866012,
+  "size": [
+   10.96,
+   4.8,
+   17.27
+  ],
+  "area": 448.61,
+  "lightmap_fill": 0.348,
+  "collide": [
+   1.9,
+   2.4,
+   8.65
+  ],
+  "albedo": [
+   0.409,
+   0.419,
+   0.413
+  ],
+  "theme": [
+   "fliegerhorst"
+  ],
+  "bottom": 0.0,
+  "mount": "floor",
+  "made": "arch.py"
  }
 }
