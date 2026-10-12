@@ -10,7 +10,7 @@ use crate::link::{self, Link, LinkEvent};
 use crate::menu::{MenuState, Screen, MAPS};
 use crate::net::{Net, Stage};
 use crate::options::Options;
-use crate::ui_kit::{caps, ghost, glass, primary, rule, section, segmented, Hover, AMBER_HI, DANGER, DIM, INK, LINE, LINE_HI, MONEY, SOFT};
+use crate::ui_kit::{caps, ghost, glass, primary, rule, section, segmented, Hover, AMBER_HI, DANGER, DIM, GLASS_HI, INK, LINE, LINE_HI, MONEY, SOFT};
 use bevy::input::keyboard::{Key, KeyboardInput};
 use bevy::input::ButtonState;
 use bevy::prelude::*;
@@ -621,7 +621,30 @@ fn create_page(body: &mut ChildSpawnerCommands, f: &Fonts, server: &AssetServer,
     let ui = v.ui;
     let s = &ui.setup;
     body.spawn(Node { width: Val::Percent(100.0), height: Val::Percent(100.0), column_gap: Val::Px(28.0), ..default() }).with_children(|row| {
-        crate::menu::map_picker(row, f, server, &s.map, NetAct::Map);
+        // Maps.
+        row.spawn(Node { width: Val::Px(430.0), flex_shrink: 0.0, flex_direction: FlexDirection::Column, row_gap: Val::Px(12.0), ..default() }).with_children(|col| {
+            section(col, f, "Karte");
+            for (i, m) in MAPS.iter().enumerate() {
+                let on = s.map == m.name;
+                let border = if on { AMBER } else { LINE };
+                col.spawn((
+                    Button,
+                    Node { width: Val::Percent(100.0), height: Val::Px(112.0), border: UiRect::all(Val::Px(if on { 2.0 } else { 1.0 })), border_radius: BorderRadius::all(Val::Px(12.0)), overflow: Overflow::clip(), align_items: AlignItems::End, ..default() },
+                    BackgroundColor(GLASS_HI),
+                    BorderColor::all(border),
+                    Hover::new(GLASS_HI, GLASS_HI, border, if on { AMBER_HI } else { LINE_HI }),
+                    NetAct::Map(i),
+                ))
+                .with_children(|card| {
+                    card.spawn((Node { position_type: PositionType::Absolute, left: Val::Px(0.0), top: Val::Px(-65.0), width: Val::Percent(100.0), aspect_ratio: Some(16.0 / 9.0), ..default() }, ImageNode::new(server.load(format!("thumbs/{}.jpg", m.name))).with_color(if on { Color::srgb(0.8, 0.8, 0.8) } else { Color::srgb(0.42, 0.44, 0.46) }), Pickable::IGNORE));
+                    card.spawn((Node { position_type: PositionType::Absolute, width: Val::Percent(100.0), height: Val::Percent(100.0), ..default() }, BackgroundGradient::from(LinearGradient::to_right(vec![ColorStop::percent(Color::srgba(0.01, 0.015, 0.02, 0.92), 0.0), ColorStop::percent(Color::srgba(0.01, 0.015, 0.02, 0.0), 100.0)])), Pickable::IGNORE));
+                    card.spawn((Node { flex_direction: FlexDirection::Column, padding: UiRect::new(Val::Px(20.0), Val::Px(16.0), Val::Px(0.0), Val::Px(12.0)), ..default() }, Pickable::IGNORE)).with_children(|t| {
+                        t.spawn((text(m.title, &f.bold, 32.0, Color::WHITE), Pickable::IGNORE));
+                        t.spawn((caps(m.objective, &f.bold, 13.0, if m.objective == "Geiselrettung" { KSK } else { AMBER }), Pickable::IGNORE));
+                    });
+                });
+            }
+        });
         // Rules.
         row.spawn(glass(Node { flex_grow: 1.0, min_width: Val::Px(0.0), flex_direction: FlexDirection::Column, row_gap: Val::Px(16.0), padding: UiRect::all(Val::Px(28.0)), ..default() })).with_children(|p| {
             section(p, f, "Regeln");

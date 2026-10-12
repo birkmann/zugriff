@@ -55,3 +55,12 @@ public so Pages and public-repository runners can be used.
 - Client and server compiled. The Linux 0.1.4 bundle smoke check passed.
 - Refreshed the website/README menu capture. Static asset checks and the eight-image
   gallery check passed, including viewer navigation and desktop/mobile layouts.
+
+## Original map-list layout restored (0.1.5)
+
+- Restored the original narrow vertical map list, overlaid titles/objectives,
+  selected-card accent, and operator spacing in solo and multiplayer setup.
+- Kept the refreshed map captures and their 16:9 proportions. This supersedes
+  the two-column layout introduced in 0.1.4.
+- The native build passed; scripted clicks loaded all four maps. The website and
+  README menu image were refreshed from the restored layout.
